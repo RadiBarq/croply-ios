@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */; };
+		CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */; };
+		CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5AF62326FC77002F8DC7 /* ContentView.swift */; };
+		CD1C5AF92326FC79002F8DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1C5AF82326FC79002F8DC7 /* Assets.xcassets */; };
+		CD1C5AFC2326FC79002F8DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1C5AFB2326FC79002F8DC7 /* Preview Assets.xcassets */; };
+		CD1C5AFF2326FC79002F8DC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */; };
+		CD1C5B0A2326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B092326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift */; };
+		CD1C5B152326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */; };
+		CD406C942328291B00B5DBD1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C932328291B00B5DBD1 /* LoginView.swift */; };
+		CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C972329509900B5DBD1 /* SignUpView.swift */; };
+		CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */; };
+		CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */; };
+		CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9D2329AEF200B5DBD1 /* CameraView.swift */; };
+		CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9F2329AF0500B5DBD1 /* HomeView.swift */; };
+		CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */; };
+		CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD1C5B062326FC7A002F8DC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1C5AE72326FC77002F8DC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1C5AEE2326FC77002F8DC7;
+			remoteInfo = PlantsDiseaseApp;
+		};
+		CD1C5B112326FC7A002F8DC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1C5AE72326FC77002F8DC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1C5AEE2326FC77002F8DC7;
+			remoteInfo = PlantsDiseaseApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD1C5AEF2326FC77002F8DC7 /* PlantsDiseaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsDiseaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD1C5AF62326FC77002F8DC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD1C5AF82326FC79002F8DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD1C5AFB2326FC79002F8DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD1C5AFE2326FC79002F8DC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD1C5B002326FC79002F8DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1C5B052326FC7A002F8DC7 /* PlantsDiseaseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsDiseaseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1C5B092326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDiseaseAppTests.swift; sourceTree = "<group>"; };
+		CD1C5B0B2326FC7A002F8DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1C5B102326FC7A002F8DC7 /* PlantsDiseaseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsDiseaseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDiseaseAppUITests.swift; sourceTree = "<group>"; };
+		CD1C5B162326FC7A002F8DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD406C932328291B00B5DBD1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CD406C972329509900B5DBD1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CD406C9D2329AEF200B5DBD1 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		CD406C9F2329AF0500B5DBD1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
+		CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD1C5AEC2326FC77002F8DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B022326FC7A002F8DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B0D2326FC7A002F8DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD1C5AE62326FC77002F8DC7 = {
+			isa = PBXGroup;
+			children = (
+				CD1C5AF12326FC77002F8DC7 /* PlantsDiseaseApp */,
+				CD1C5B082326FC7A002F8DC7 /* PlantsDiseaseAppTests */,
+				CD1C5B132326FC7A002F8DC7 /* PlantsDiseaseAppUITests */,
+				CD1C5AF02326FC77002F8DC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD1C5AF02326FC77002F8DC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5AEF2326FC77002F8DC7 /* PlantsDiseaseApp.app */,
+				CD1C5B052326FC7A002F8DC7 /* PlantsDiseaseAppTests.xctest */,
+				CD1C5B102326FC7A002F8DC7 /* PlantsDiseaseAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD1C5AF12326FC77002F8DC7 /* PlantsDiseaseApp */ = {
+			isa = PBXGroup;
+			children = (
+				CDF6F7A7232B053000FAE0A9 /* TapBar */,
+				CDF6F7A6232B051800FAE0A9 /* Home */,
+				CDF6F7A5232B050E00FAE0A9 /* Camera */,
+				CDF6F7A4232B04D500FAE0A9 /* Login_SignUp_ForgotPassword */,
+				CDF6F7A3232B047D00FAE0A9 /* Utility */,
+				CDF6F7A1232B044100FAE0A9 /* Profile */,
+				CD1C5AF82326FC79002F8DC7 /* Assets.xcassets */,
+				CD1C5AFA2326FC79002F8DC7 /* Preview Content */,
+			);
+			path = PlantsDiseaseApp;
+			sourceTree = "<group>";
+		};
+		CD1C5AFA2326FC79002F8DC7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5AFB2326FC79002F8DC7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD1C5B082326FC7A002F8DC7 /* PlantsDiseaseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5B092326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift */,
+				CD1C5B0B2326FC7A002F8DC7 /* Info.plist */,
+			);
+			path = PlantsDiseaseAppTests;
+			sourceTree = "<group>";
+		};
+		CD1C5B132326FC7A002F8DC7 /* PlantsDiseaseAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */,
+				CD1C5B162326FC7A002F8DC7 /* Info.plist */,
+			);
+			path = PlantsDiseaseAppUITests;
+			sourceTree = "<group>";
+		};
+		CDF6F7A1232B044100FAE0A9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */,
+				CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */,
+				CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CDF6F7A3232B047D00FAE0A9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5B002326FC79002F8DC7 /* Info.plist */,
+				CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */,
+				CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */,
+				CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CDF6F7A4232B04D500FAE0A9 /* Login_SignUp_ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */,
+				CD406C972329509900B5DBD1 /* SignUpView.swift */,
+				CD406C932328291B00B5DBD1 /* LoginView.swift */,
+			);
+			path = Login_SignUp_ForgotPassword;
+			sourceTree = "<group>";
+		};
+		CDF6F7A5232B050E00FAE0A9 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C9D2329AEF200B5DBD1 /* CameraView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		CDF6F7A6232B051800FAE0A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CD406C9F2329AF0500B5DBD1 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CDF6F7A7232B053000FAE0A9 /* TapBar */ = {
+			isa = PBXGroup;
+			children = (
+				CD1C5AF62326FC77002F8DC7 /* ContentView.swift */,
+			);
+			path = TapBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD1C5AEE2326FC77002F8DC7 /* PlantsDiseaseApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1C5B192326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseApp" */;
+			buildPhases = (
+				CD1C5AEB2326FC77002F8DC7 /* Sources */,
+				CD1C5AEC2326FC77002F8DC7 /* Frameworks */,
+				CD1C5AED2326FC77002F8DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantsDiseaseApp;
+			productName = PlantsDiseaseApp;
+			productReference = CD1C5AEF2326FC77002F8DC7 /* PlantsDiseaseApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD1C5B042326FC7A002F8DC7 /* PlantsDiseaseAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1C5B1C2326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseAppTests" */;
+			buildPhases = (
+				CD1C5B012326FC7A002F8DC7 /* Sources */,
+				CD1C5B022326FC7A002F8DC7 /* Frameworks */,
+				CD1C5B032326FC7A002F8DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1C5B072326FC7A002F8DC7 /* PBXTargetDependency */,
+			);
+			name = PlantsDiseaseAppTests;
+			productName = PlantsDiseaseAppTests;
+			productReference = CD1C5B052326FC7A002F8DC7 /* PlantsDiseaseAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD1C5B0F2326FC7A002F8DC7 /* PlantsDiseaseAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1C5B1F2326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseAppUITests" */;
+			buildPhases = (
+				CD1C5B0C2326FC7A002F8DC7 /* Sources */,
+				CD1C5B0D2326FC7A002F8DC7 /* Frameworks */,
+				CD1C5B0E2326FC7A002F8DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1C5B122326FC7A002F8DC7 /* PBXTargetDependency */,
+			);
+			name = PlantsDiseaseAppUITests;
+			productName = PlantsDiseaseAppUITests;
+			productReference = CD1C5B102326FC7A002F8DC7 /* PlantsDiseaseAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD1C5AE72326FC77002F8DC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = RadiBarq;
+				TargetAttributes = {
+					CD1C5AEE2326FC77002F8DC7 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					CD1C5B042326FC7A002F8DC7 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CD1C5AEE2326FC77002F8DC7;
+					};
+					CD1C5B0F2326FC7A002F8DC7 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CD1C5AEE2326FC77002F8DC7;
+					};
+				};
+			};
+			buildConfigurationList = CD1C5AEA2326FC77002F8DC7 /* Build configuration list for PBXProject "PlantsDiseaseApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD1C5AE62326FC77002F8DC7;
+			productRefGroup = CD1C5AF02326FC77002F8DC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD1C5AEE2326FC77002F8DC7 /* PlantsDiseaseApp */,
+				CD1C5B042326FC7A002F8DC7 /* PlantsDiseaseAppTests */,
+				CD1C5B0F2326FC7A002F8DC7 /* PlantsDiseaseAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD1C5AED2326FC77002F8DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1C5AFF2326FC79002F8DC7 /* LaunchScreen.storyboard in Resources */,
+				CD1C5AFC2326FC79002F8DC7 /* Preview Assets.xcassets in Resources */,
+				CD1C5AF92326FC79002F8DC7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B032326FC7A002F8DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B0E2326FC7A002F8DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD1C5AEB2326FC77002F8DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */,
+				CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */,
+				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
+				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
+				CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */,
+				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,
+				CD406C942328291B00B5DBD1 /* LoginView.swift in Sources */,
+				CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */,
+				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
+				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
+				CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B012326FC7A002F8DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1C5B0A2326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1C5B0C2326FC7A002F8DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1C5B152326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD1C5B072326FC7A002F8DC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1C5AEE2326FC77002F8DC7 /* PlantsDiseaseApp */;
+			targetProxy = CD1C5B062326FC7A002F8DC7 /* PBXContainerItemProxy */;
+		};
+		CD1C5B122326FC7A002F8DC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1C5AEE2326FC77002F8DC7 /* PlantsDiseaseApp */;
+			targetProxy = CD1C5B112326FC7A002F8DC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD1C5AFE2326FC79002F8DC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD1C5B172326FC7A002F8DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD1C5B182326FC7A002F8DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD1C5B1A2326FC7A002F8DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PlantsDiseaseApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PlantsDiseaseApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD1C5B1B2326FC7A002F8DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PlantsDiseaseApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PlantsDiseaseApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD1C5B1D2326FC7A002F8DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				INFOPLIST_FILE = PlantsDiseaseAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantsDiseaseApp.app/PlantsDiseaseApp";
+			};
+			name = Debug;
+		};
+		CD1C5B1E2326FC7A002F8DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				INFOPLIST_FILE = PlantsDiseaseAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantsDiseaseApp.app/PlantsDiseaseApp";
+			};
+			name = Release;
+		};
+		CD1C5B202326FC7A002F8DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				INFOPLIST_FILE = PlantsDiseaseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlantsDiseaseApp;
+			};
+			name = Debug;
+		};
+		CD1C5B212326FC7A002F8DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				INFOPLIST_FILE = PlantsDiseaseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RadiBaraq.PlantsDiseaseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlantsDiseaseApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD1C5AEA2326FC77002F8DC7 /* Build configuration list for PBXProject "PlantsDiseaseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1C5B172326FC7A002F8DC7 /* Debug */,
+				CD1C5B182326FC7A002F8DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1C5B192326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1C5B1A2326FC7A002F8DC7 /* Debug */,
+				CD1C5B1B2326FC7A002F8DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1C5B1C2326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1C5B1D2326FC7A002F8DC7 /* Debug */,
+				CD1C5B1E2326FC7A002F8DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1C5B1F2326FC7A002F8DC7 /* Build configuration list for PBXNativeTarget "PlantsDiseaseAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1C5B202326FC7A002F8DC7 /* Debug */,
+				CD1C5B212326FC7A002F8DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD1C5AE72326FC77002F8DC7 /* Project object */;
+}
