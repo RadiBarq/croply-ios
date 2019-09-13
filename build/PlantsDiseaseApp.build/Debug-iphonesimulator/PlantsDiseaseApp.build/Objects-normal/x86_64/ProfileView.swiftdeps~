@@ -21,17 +21,18 @@ depends-top-level:
 - "FloatLiteralType"
 - !private "ForEach"
 - !private "HStack"
+- !private "Image"
 - !private "IntegerLiteralType"
 - "PreviewProvider"
 - "ProfileView"
 - "ProfileView_Previews"
-- !private "ScrollView"
 - !private "Spacer"
 - "State"
 - "StringLiteralType"
 - !private "Text"
 - !private "VStack"
 - "View"
+- !private "ZStack"
 - "optionClicked"
 depends-member:
 - !private ["7SwiftUI6ButtonV", "init"]
@@ -40,57 +41,62 @@ depends-member:
 - !private ["16PlantsDiseaseApp18ChangePasswordViewV", "deinit"]
 - !private ["16PlantsDiseaseApp18ChangePasswordViewV", "init"]
 - !private ["7SwiftUI5ColorV", "black"]
-- !private ["7SwiftUI5ColorV", "green"]
-- !private ["s28CustomDebugStringConvertibleP", "bold"]
-- !private ["s28CustomDebugStringConvertibleP", "green"]
+- !private ["7SwiftUI5ColorV", "white"]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "semibold"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
-- !private ["s17CustomReflectableP", "bold"]
-- !private ["s17CustomReflectableP", "green"]
+- !private ["s17CustomReflectableP", "black"]
+- !private ["s17CustomReflectableP", "semibold"]
 - !private ["s17CustomReflectableP", "title"]
 - !private ["s23CustomStringConvertibleP", "black"]
-- !private ["s23CustomStringConvertibleP", "green"]
-- !private ["Se", "bold"]
-- !private ["Se", "green"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- !private ["Se", "black"]
+- !private ["Se", "semibold"]
 - !private ["Se", "title"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["7SwiftUI18DynamicViewContentP", "init"]
-- !private ["SE", "bold"]
-- !private ["SE", "green"]
+- !private ["7SwiftUI18DynamicViewContentP", "padding"]
+- !private ["SE", "black"]
+- !private ["SE", "semibold"]
 - !private ["SE", "title"]
 - !private ["SQ", "black"]
-- !private ["SQ", "bold"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
 - !private ["SQ", "foregroundColor"]
-- !private ["SQ", "green"]
-- !private ["SQ", "horizontal"]
+- !private ["SQ", "frame"]
 - !private ["SQ", "init"]
 - !private ["SQ", "padding"]
+- !private ["SQ", "resizable"]
+- !private ["SQ", "semibold"]
 - !private ["SQ", "title"]
 - !private ["SQ", "top"]
+- !private ["SQ", "white"]
 - !private ["s25ExpressibleByArrayLiteralP", "bottom"]
-- !private ["s25ExpressibleByArrayLiteralP", "horizontal"]
 - !private ["s25ExpressibleByArrayLiteralP", "top"]
-- !private ["s23ExpressibleByNilLiteralP", "bold"]
-- !private ["s23ExpressibleByNilLiteralP", "green"]
+- !private ["s23ExpressibleByNilLiteralP", "black"]
+- !private ["s23ExpressibleByNilLiteralP", "semibold"]
 - !private ["s23ExpressibleByNilLiteralP", "title"]
 - !private ["7SwiftUI4FontV", "title"]
 - !private ["7SwiftUI7ForEachV", "init"]
-- !private ["7SwiftUI7GestureP", "bold"]
-- !private ["7SwiftUI7GestureP", "green"]
+- !private ["7SwiftUI7ForEachV", "padding"]
+- !private ["7SwiftUI7GestureP", "black"]
+- !private ["7SwiftUI7GestureP", "semibold"]
 - !private ["7SwiftUI7GestureP", "title"]
 - !private ["7SwiftUI6HStackV", "init"]
+- !private ["7SwiftUI6HStackV", "padding"]
 - !private ["SH", "black"]
-- !private ["SH", "bold"]
-- !private ["SH", "green"]
+- !private ["SH", "semibold"]
 - !private ["SH", "title"]
+- !private ["SH", "white"]
+- !private ["7SwiftUI5ImageV", "frame"]
+- !private ["7SwiftUI5ImageV", "init"]
+- !private ["7SwiftUI5ImageV", "resizable"]
 - !private ["s9OptionSetP", "bottom"]
-- !private ["s9OptionSetP", "horizontal"]
 - !private ["s9OptionSetP", "top"]
-- !private ["Sq", "bold"]
-- !private ["Sq", "green"]
+- !private ["Sq", "black"]
+- !private ["Sq", "semibold"]
 - !private ["Sq", "title"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
 - !private ["7SwiftUI15PreviewProviderP", "ProfileView"]
@@ -100,8 +106,10 @@ depends-member:
 - ["7SwiftUI15PreviewProviderP", "_previews"]
 - ["7SwiftUI15PreviewProviderP", "platform"]
 - ["7SwiftUI15PreviewProviderP", "previews"]
-- ["16PlantsDiseaseApp11ProfileViewV", "$selectedItem"]
-- ["16PlantsDiseaseApp11ProfileViewV", "$shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "$city"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "$selectedItem"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "$shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "$userName"]
 - ["16PlantsDiseaseApp11ProfileViewV", "Body"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Button"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ChangeEmailView"]
@@ -109,23 +117,28 @@ depends-member:
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Color"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ForEach"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "HStack"]
-- !private ["16PlantsDiseaseApp11ProfileViewV", "ScrollView"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "Image"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Spacer"]
 - ["16PlantsDiseaseApp11ProfileViewV", "State"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Text"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "VStack"]
 - ["16PlantsDiseaseApp11ProfileViewV", "View"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "ZStack"]
 - ["16PlantsDiseaseApp11ProfileViewV", "_Default_Body"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "_city"]
 - ["16PlantsDiseaseApp11ProfileViewV", "_makeView"]
 - ["16PlantsDiseaseApp11ProfileViewV", "_makeViewList"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "_selectedItem"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "_shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "_userName"]
 - ["16PlantsDiseaseApp11ProfileViewV", "body"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "city"]
 - ["16PlantsDiseaseApp11ProfileViewV", "deinit"]
 - ["16PlantsDiseaseApp11ProfileViewV", "init"]
 - ["16PlantsDiseaseApp11ProfileViewV", "optionsTitle"]
-- ["16PlantsDiseaseApp11ProfileViewV", "selectedItem"]
-- ["16PlantsDiseaseApp11ProfileViewV", "shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "selectedItem"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "userName"]
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "Previews"]
 - !private ["16PlantsDiseaseApp20ProfileView_PreviewsV", "ProfileView"]
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "View"]
@@ -137,18 +150,13 @@ depends-member:
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "platform"]
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "previews"]
 - !private ["SY", "bottom"]
-- !private ["SY", "horizontal"]
 - !private ["SY", "top"]
-- !private ["7SwiftUI10ScrollViewV", "init"]
-- !private ["7SwiftUI10ScrollViewV", "padding"]
 - !private ["7SwiftUI4EdgeO3SetV", "bottom"]
-- !private ["7SwiftUI4AxisO3SetV", "horizontal"]
 - !private ["7SwiftUI4EdgeO3SetV", "top"]
 - !private ["s10SetAlgebraP", "bottom"]
-- !private ["s10SetAlgebraP", "horizontal"]
 - !private ["s10SetAlgebraP", "top"]
 - !private ["7SwiftUI10ShapeStyleP", "black"]
-- !private ["7SwiftUI10ShapeStyleP", "green"]
+- !private ["7SwiftUI10ShapeStyleP", "white"]
 - !private ["7SwiftUI6SpacerV", "init"]
 - ["7SwiftUI5StateV", "init"]
 - ["7SwiftUI5StateV", "wrappedValue"]
@@ -158,6 +166,7 @@ depends-member:
 - !private ["7SwiftUI4TextV", "init"]
 - !private ["7SwiftUI4TextV", "padding"]
 - !private ["7SwiftUI6VStackV", "background"]
+- !private ["7SwiftUI6VStackV", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI4ViewP", "$shouldPresentSheet"]
 - ["7SwiftUI4ViewP", "Body"]
@@ -167,10 +176,11 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "Color"]
 - !private ["7SwiftUI4ViewP", "ForEach"]
 - !private ["7SwiftUI4ViewP", "HStack"]
-- !private ["7SwiftUI4ViewP", "ScrollView"]
+- !private ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "VStack"]
+- !private ["7SwiftUI4ViewP", "ZStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
 - ["7SwiftUI4ViewP", "_makeView"]
@@ -178,24 +188,33 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "background"]
 - !private ["7SwiftUI4ViewP", "black"]
 - ["7SwiftUI4ViewP", "body"]
-- !private ["7SwiftUI4ViewP", "bold"]
+- !private ["7SwiftUI4ViewP", "city"]
+- !private ["7SwiftUI4ViewP", "cornerRadius"]
 - !private ["7SwiftUI4ViewP", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "fontWeight"]
 - !private ["7SwiftUI4ViewP", "foregroundColor"]
-- !private ["7SwiftUI4ViewP", "green"]
+- !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "offset"]
 - !private ["7SwiftUI4ViewP", "optionsTitle"]
 - !private ["7SwiftUI4ViewP", "padding"]
+- !private ["7SwiftUI4ViewP", "resizable"]
 - !private ["7SwiftUI4ViewP", "selectedItem"]
+- !private ["7SwiftUI4ViewP", "semibold"]
+- !private ["7SwiftUI4ViewP", "shadow"]
 - !private ["7SwiftUI4ViewP", "sheet"]
 - !private ["7SwiftUI4ViewP", "shouldPresentSheet"]
 - !private ["7SwiftUI4ViewP", "title"]
+- !private ["7SwiftUI4ViewP", "userName"]
+- !private ["7SwiftUI4ViewP", "white"]
+- !private ["7SwiftUI4ViewP", "zIndex"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI11ViewBuilderV", "buildEither"]
-- !private ["7SwiftUI4FontV6WeightV", "bold"]
-- !private ["s21_ObjectiveCBridgeableP", "bold"]
-- !private ["s21_ObjectiveCBridgeableP", "green"]
+- !private ["7SwiftUI4FontV6WeightV", "semibold"]
+- !private ["7SwiftUI6ZStackV", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "black"]
+- !private ["s21_ObjectiveCBridgeableP", "semibold"]
 - !private ["s21_ObjectiveCBridgeableP", "title"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - !private ["7SwiftUI16_PreviewProviderP", "ProfileView"]
@@ -225,15 +244,13 @@ depends-nominal:
 - !private "7SwiftUI7GestureP"
 - !private "7SwiftUI6HStackV"
 - !private "SH"
+- !private "7SwiftUI5ImageV"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
 - "16PlantsDiseaseApp11ProfileViewV"
 - "16PlantsDiseaseApp20ProfileView_PreviewsV"
 - !private "SY"
-- !private "7SwiftUI10ScrollViewV"
-- !private "7SwiftUI4EdgeO3SetV"
-- !private "7SwiftUI4AxisO3SetV"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
@@ -244,6 +261,7 @@ depends-nominal:
 - "7SwiftUI4ViewP"
 - !private "7SwiftUI11ViewBuilderV"
 - !private "7SwiftUI4FontV6WeightV"
+- !private "7SwiftUI6ZStackV"
 - !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
 depends-dynamic-lookup:
@@ -1535,4 +1553,4 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ac593870c340699ed92d1fcb7583c5d7"
+interface-hash: "567320cc19f70f50f6b700485a99d3dd"

@@ -10,37 +10,76 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    var optionsTitle = ["History", "Email", "Password", "About us", "Contct us", "Logout"]
+    var optionsTitle = ["History", "Email", "Password", "Logout"]
     
-    @State var shouldPresentSheet = false
-    @State var selectedItem = ""
+    @State private var shouldPresentSheet = false
+    @State private var selectedItem = ""
+    @State private var userName = "Radi Barq"
+    @State private var city = "nablus"
     
     var body: some View {
         VStack {
-            HStack {
+            Image("half_bowl_of_blueberries")
+                .resizable()
+                .frame(height: 300)
+                .cornerRadius(25)
+            ZStack {
+                
+                VStack {
+                    Text(userName)
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .padding()
+                        .padding(.bottom, 0)
+                        .frame(width: 200)
+                    
+                    Text(city)
+                        .foregroundColor(.black)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        
+                        .padding()
+                        .padding(.top, -30)
+                    
+                }
+                .background(Color.white)
+                .cornerRadius(15)
+                .offset(y: -75)
+                .zIndex(100)
+                .shadow(radius: 25)
+            }
+            VStack {
                 Spacer()
-                ScrollView(.horizontal) {
-                    ForEach(optionsTitle, id: \.self) { title in
-                        Button(action: {
-                            self.selectedItem = title
-                            self.shouldPresentSheet = true
-                        }) {
+                ForEach(optionsTitle, id: \.self) { title in
+                    Button(action: {
+                        self.selectedItem = title
+                        self.shouldPresentSheet = true
+                    }) {
+                        HStack {
+                            Spacer()
                             Text(title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.green)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.black)
                                 .font(.title)
-                                .padding(.bottom, 15)
+                            Spacer()
                         }
+                        .padding(.bottom, 0)
                         
                     }
                 }
-                .padding(.top, 100)
+                .padding(.bottom, 15)
+                .padding(.top, 15)
                 Spacer()
             }
+            .background(Color.white)
+            .cornerRadius(15)
+            .padding()
+        .offset(y: -75)
+            .shadow(radius: 25)
             Spacer()
         }
-        .background(Color.black)
-        .edgesIgnoringSafeArea([.top, .bottom])
+        .edgesIgnoringSafeArea([.top])
         .sheet(isPresented: self.$shouldPresentSheet) {
             if self.selectedItem == "History" {
                 ChangeEmailView()

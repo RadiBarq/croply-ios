@@ -11,12 +11,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var selection = 0
     
-    //    init() {
-    //
-    //        UITabBar.appearance().backgroundColor = UIColor.black
-    //
-    //    }
-    //
+    init() {
+        
+    
+    }
+    
     var body: some View {
         TabView(selection: $selection){
             Text("First View")
@@ -33,25 +32,24 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "plus.circle.fill")
-                            .font(Font.title.weight(.semibold))
-                        
+                            .font(Font.largeTitle.weight(.semibold))
                     }
             }
             .tag(1)
-            
-            Text("Second View")
+            ProfileView()
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image(systemName: "person.fill")
-                          .font(Font.title.weight(.semibold))
-                            
+                            .font(Font.largeTitle.weight(.semibold))
+                            .foregroundColor(.red)
                     }
             }
             .tag(2)
             
-        }.colorScheme(.dark)
-            .accentColor(.green)
+        }
+         .accentColor(.green)
+        .edgesIgnoringSafeArea([.top])
     }
 }
 

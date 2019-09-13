@@ -115,6 +115,7 @@
 		CD1C5AF12326FC77002F8DC7 /* PlantsDiseaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				CD1C5B002326FC79002F8DC7 /* Info.plist */,
 				CDF6F7A7232B053000FAE0A9 /* TapBar */,
 				CDF6F7A6232B051800FAE0A9 /* Home */,
 				CDF6F7A5232B050E00FAE0A9 /* Camera */,
@@ -166,7 +167,6 @@
 		CDF6F7A3232B047D00FAE0A9 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				CD1C5B002326FC79002F8DC7 /* Info.plist */,
 				CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */,
 				CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */,
 				CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */,
