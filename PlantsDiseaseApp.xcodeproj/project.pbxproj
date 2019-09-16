@@ -15,7 +15,6 @@
 		CD1C5AFF2326FC79002F8DC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */; };
 		CD1C5B0A2326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B092326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift */; };
 		CD1C5B152326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */; };
-		CD406C942328291B00B5DBD1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C932328291B00B5DBD1 /* LoginView.swift */; };
 		CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C972329509900B5DBD1 /* SignUpView.swift */; };
 		CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */; };
 		CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */; };
@@ -23,6 +22,7 @@
 		CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9F2329AF0500B5DBD1 /* HomeView.swift */; };
 		CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */; };
 		CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */; };
+		CDB57769232F63C300B19B37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB57768232F63C300B19B37 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		CD1C5B102326FC7A002F8DC7 /* PlantsDiseaseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsDiseaseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDiseaseAppUITests.swift; sourceTree = "<group>"; };
 		CD1C5B162326FC7A002F8DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD406C932328291B00B5DBD1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD406C972329509900B5DBD1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		CD406C9F2329AF0500B5DBD1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
 		CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		CDB57768232F63C300B19B37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +179,7 @@
 			children = (
 				CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */,
 				CD406C972329509900B5DBD1 /* SignUpView.swift */,
-				CD406C932328291B00B5DBD1 /* LoginView.swift */,
+				CDB57768232F63C300B19B37 /* LoginView.swift */,
 			);
 			path = Login_SignUp_ForgotPassword;
 			sourceTree = "<group>";
@@ -345,9 +345,9 @@
 				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
 				CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */,
 				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,
-				CD406C942328291B00B5DBD1 /* LoginView.swift in Sources */,
 				CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */,
 				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
+				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
 				CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */,
 			);

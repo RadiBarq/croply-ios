@@ -19,7 +19,7 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            Image("half_bowl_of_blueberries")
+            Image("profile_background")
                 .resizable()
                 .frame(height: 300)
                 .cornerRadius(25)
@@ -79,6 +79,7 @@ struct ProfileView: View {
             .shadow(radius: 25)
             Spacer()
         }
+            
         .edgesIgnoringSafeArea([.top])
         .sheet(isPresented: self.$shouldPresentSheet) {
             if self.selectedItem == "History" {

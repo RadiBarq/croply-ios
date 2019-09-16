@@ -1,15 +1,15 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "a7660c3cf55dd767216917b3e2cdbc39"
-build_time: [1568410133, 173653000]
+build_time: [1568617363, 408277000]
 inputs:
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Home/HomeView.swift": [1568244663, 96445750]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Profile/ChangePasswordView.swift": [1568328272, 388553045]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Profile/ChangeEmailView.swift": [1568365092, 362785476]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Utility/AppDelegate.swift": [1568398161, 328854468]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Login_SignUp_ForgotPassword/SignUpView.swift": [1568280191, 174935961]
-  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Utility/SceneDelegate.swift": [1568398353, 574586175]
-  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Login_SignUp_ForgotPassword/LoginView.swift": [1568279485, 432717004]
+  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Utility/SceneDelegate.swift": [1568617361, 890846201]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Login_SignUp_ForgotPassword/ForgotPasswordView.swift": [1568245001, 504654576]
-  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Profile/ProfileView.swift": [1568410132, 819193176]
+  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Profile/ProfileView.swift": [1568412107, 398053305]
+  "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Login_SignUp_ForgotPassword/LoginView.swift": [1568617334, 535268797]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/TapBar/ContentView.swift": [1568408851, 929869946]
   "/Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Camera/CameraView.swift": [1568241521, 551804425]

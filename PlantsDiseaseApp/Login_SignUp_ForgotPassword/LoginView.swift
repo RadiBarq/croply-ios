@@ -21,79 +21,101 @@ struct LoginView: View {
                     .resizable()
                     .frame(width: 75, height: 130, alignment: .center)
             }
-            
-            VStack(alignment: .leading) {
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Email")
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                    
+            Form {
+                Section(header: Text("Email")
+                    .fontWeight(.bold)
+                    .font(.headline)
+                    .foregroundColor(.green)
+                    .padding(.top, 15),
+                    footer:
                     TextField("radibaraq@gmail.com", text: $email)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(5)
                         .textContentType(.emailAddress)
+                ) {
+                    EmptyView()
                 }
-                .padding(.top, 15)
-                .padding()
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Password")
-                        .foregroundColor(.green)
+                .cornerRadius(5)
+                .font(.headline)
+                Section(
+                    
+                    header:
+                        Text("Password")
                         .fontWeight(.bold)
-                    SecureField("", text: $password)
+                        .font(.headline)
+                        .foregroundColor(.green)
+                        .padding(.top, 15)
+                    ,
+                    footer: SecureField("", text: $password)
                         .padding()
-                        .background(Color.white)
                         .cornerRadius(5)
-                        .textContentType(.password)
+                        .background(Color.white)
+                        .textContentType(.password)) {
+                            
+                            EmptyView()
                 }
-                .padding()
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        self.loginClicked()
-                    }) {
-                        Text("Log in")
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.white)
+                .cornerRadius(5)
+                .font(.headline)
+                Section(footer:
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            self.loginClicked()
+                        }) {
+                            Text("Log in")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                            
+                        }
+                        .frame(width: 150,alignment: .center)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        Spacer()
                     }
-                    .frame(width: 150,alignment: .center)
-                    .padding()
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    Spacer()
+                    .font(.headline)
+                ){
+                    EmptyView()
                 }
-                .padding()
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        self.signupClicked()
-                    }) {
-                        Text("Forgot password?")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
+                Section(footer:
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            self.signupClicked()
+                        }) {
+                            Text("Forgot password?")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                        }
+                        Spacer()
                     }
-                    Spacer()
+                ){
+                    EmptyView()
                 }
-                .padding()
+                .font(.headline)
+                Section(footer:
                 HStack {
                     Spacer()
                     Text("Don't have an account?")
                         .foregroundColor(.green)
+                        .font(.subheadline)
                     Button(action: {
                         self.signupClicked()
                     }) {
                         Text("Sign up here")
                             .fontWeight(.bold)
                             .foregroundColor(.white)
+                            .font(.subheadline)
                     }
                     Spacer()
+                }){
+                     EmptyView()
                 }
-                .padding()
-                    
-                .padding(.bottom, 15)
             }
-            .background(Color.black)
-            .cornerRadius(20)
+            .colorScheme(.dark)
+            .cornerRadius(15)
+            .frame(height: 440)
             .padding()
             Spacer()
         }
