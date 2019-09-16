@@ -12,11 +12,14 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "Button"
 - !private "Color"
+- !private "EmptyView"
 - "FloatLiteralType"
+- !private "Form"
 - !private "HStack"
 - !private "Image"
 - !private "IntegerLiteralType"
 - "PreviewProvider"
+- !private "Section"
 - "SignUpView"
 - "SignUpView_Previews"
 - !private "Spacer"
@@ -31,75 +34,103 @@ depends-member:
 - !private ["7SwiftUI9AlignmentV", "center"]
 - !private ["7SwiftUI6ButtonV", "frame"]
 - !private ["7SwiftUI6ButtonV", "init"]
+- !private ["s12CaseIterableP", "dark"]
 - !private ["s12CaseIterableP", "fill"]
-- !private ["7SwiftUI5ColorV", "black"]
 - !private ["7SwiftUI5ColorV", "green"]
 - !private ["7SwiftUI5ColorV", "white"]
+- !private ["7SwiftUI11ColorSchemeO", "dark"]
 - !private ["7SwiftUI11ContentModeO", "fill"]
 - !private ["s28CustomDebugStringConvertibleP", "bold"]
 - !private ["s28CustomDebugStringConvertibleP", "emailAddress"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
+- !private ["s28CustomDebugStringConvertibleP", "headline"]
 - !private ["s28CustomDebugStringConvertibleP", "password"]
+- !private ["s28CustomDebugStringConvertibleP", "subheadline"]
+- !private ["s28CustomDebugStringConvertibleP", "username"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s17CustomReflectableP", "bold"]
 - !private ["s17CustomReflectableP", "emailAddress"]
 - !private ["s17CustomReflectableP", "green"]
+- !private ["s17CustomReflectableP", "headline"]
 - !private ["s17CustomReflectableP", "password"]
+- !private ["s17CustomReflectableP", "subheadline"]
+- !private ["s17CustomReflectableP", "username"]
 - !private ["s17CustomReflectableP", "white"]
-- !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["Se", "bold"]
 - !private ["Se", "emailAddress"]
 - !private ["Se", "green"]
+- !private ["Se", "headline"]
 - !private ["Se", "password"]
+- !private ["Se", "subheadline"]
+- !private ["Se", "username"]
 - !private ["Se", "white"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
+- !private ["7SwiftUI9EmptyViewV", "init"]
 - !private ["SE", "bold"]
 - !private ["SE", "emailAddress"]
 - !private ["SE", "green"]
+- !private ["SE", "headline"]
 - !private ["SE", "password"]
+- !private ["SE", "subheadline"]
+- !private ["SE", "username"]
 - !private ["SE", "white"]
 - !private ["SQ", "aspectRatio"]
-- !private ["SQ", "black"]
 - !private ["SQ", "bold"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "center"]
+- !private ["SQ", "dark"]
 - !private ["SQ", "emailAddress"]
 - !private ["SQ", "fill"]
+- !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
 - !private ["SQ", "foregroundColor"]
 - !private ["SQ", "frame"]
 - !private ["SQ", "green"]
+- !private ["SQ", "headline"]
 - !private ["SQ", "init"]
-- !private ["SQ", "leading"]
+- !private ["SQ", "padding"]
 - !private ["SQ", "password"]
 - !private ["SQ", "resizable"]
+- !private ["SQ", "subheadline"]
 - !private ["SQ", "top"]
+- !private ["SQ", "username"]
 - !private ["SQ", "white"]
 - !private ["s25ExpressibleByArrayLiteralP", "bottom"]
 - !private ["s25ExpressibleByArrayLiteralP", "top"]
 - !private ["s23ExpressibleByNilLiteralP", "bold"]
 - !private ["s23ExpressibleByNilLiteralP", "emailAddress"]
 - !private ["s23ExpressibleByNilLiteralP", "green"]
+- !private ["s23ExpressibleByNilLiteralP", "headline"]
 - !private ["s23ExpressibleByNilLiteralP", "password"]
+- !private ["s23ExpressibleByNilLiteralP", "subheadline"]
+- !private ["s23ExpressibleByNilLiteralP", "username"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["7SwiftUI4FontV", "headline"]
+- !private ["7SwiftUI4FontV", "subheadline"]
+- !private ["7SwiftUI4FormV", "colorScheme"]
+- !private ["7SwiftUI4FormV", "init"]
 - !private ["7SwiftUI7GestureP", "bold"]
 - !private ["7SwiftUI7GestureP", "emailAddress"]
 - !private ["7SwiftUI7GestureP", "green"]
+- !private ["7SwiftUI7GestureP", "headline"]
 - !private ["7SwiftUI7GestureP", "password"]
+- !private ["7SwiftUI7GestureP", "subheadline"]
+- !private ["7SwiftUI7GestureP", "username"]
 - !private ["7SwiftUI7GestureP", "white"]
 - !private ["7SwiftUI6HStackV", "init"]
-- !private ["7SwiftUI6HStackV", "padding"]
-- !private ["SH", "black"]
 - !private ["SH", "bold"]
+- !private ["SH", "dark"]
 - !private ["SH", "emailAddress"]
 - !private ["SH", "fill"]
 - !private ["SH", "green"]
+- !private ["SH", "headline"]
 - !private ["SH", "password"]
+- !private ["SH", "subheadline"]
+- !private ["SH", "username"]
 - !private ["SH", "white"]
-- !private ["7SwiftUI19HorizontalAlignmentV", "leading"]
 - !private ["7SwiftUI5ImageV", "aspectRatio"]
 - !private ["7SwiftUI5ImageV", "frame"]
 - !private ["7SwiftUI5ImageV", "init"]
@@ -109,7 +140,10 @@ depends-member:
 - !private ["Sq", "bold"]
 - !private ["Sq", "emailAddress"]
 - !private ["Sq", "green"]
+- !private ["Sq", "headline"]
 - !private ["Sq", "password"]
+- !private ["Sq", "subheadline"]
+- !private ["Sq", "username"]
 - !private ["Sq", "white"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
 - !private ["7SwiftUI15PreviewProviderP", "SignUpView"]
@@ -123,11 +157,13 @@ depends-member:
 - !private ["SY", "emailAddress"]
 - !private ["SY", "password"]
 - !private ["SY", "top"]
+- !private ["SY", "username"]
+- !private ["7SwiftUI7SectionV", "font"]
+- !private ["7SwiftUI7SectionV", "init"]
 - !private ["7SwiftUI4EdgeO3SetV", "bottom"]
 - !private ["7SwiftUI4EdgeO3SetV", "top"]
 - !private ["s10SetAlgebraP", "bottom"]
 - !private ["s10SetAlgebraP", "top"]
-- !private ["7SwiftUI10ShapeStyleP", "black"]
 - !private ["7SwiftUI10ShapeStyleP", "green"]
 - !private ["7SwiftUI10ShapeStyleP", "white"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "$email"]
@@ -135,8 +171,11 @@ depends-member:
 - ["16PlantsDiseaseApp10SignUpViewV", "Body"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "Button"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "Color"]
+- !private ["16PlantsDiseaseApp10SignUpViewV", "EmptyView"]
+- !private ["16PlantsDiseaseApp10SignUpViewV", "Form"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "HStack"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "Image"]
+- !private ["16PlantsDiseaseApp10SignUpViewV", "Section"]
 - !private ["16PlantsDiseaseApp10SignUpViewV", "Spacer"]
 - ["16PlantsDiseaseApp10SignUpViewV", "State"]
 - ["16PlantsDiseaseApp10SignUpViewV", "String"]
@@ -169,24 +208,29 @@ depends-member:
 - !private ["7SwiftUI6SpacerV", "init"]
 - ["7SwiftUI5StateV", "init"]
 - ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["7SwiftUI4TextV", "font"]
 - !private ["7SwiftUI4TextV", "fontWeight"]
 - !private ["7SwiftUI4TextV", "foregroundColor"]
 - !private ["7SwiftUI4TextV", "init"]
+- !private ["7SwiftUI4TextV", "padding"]
 - !private ["7SwiftUI9TextFieldV", "init"]
 - !private ["7SwiftUI9TextFieldV", "padding"]
 - !private ["So17UITextContentTypea", "emailAddress"]
 - !private ["So17UITextContentTypea", "password"]
+- !private ["So17UITextContentTypea", "username"]
 - !private ["7SwiftUI6VStackV", "background"]
 - !private ["7SwiftUI6VStackV", "init"]
-- !private ["7SwiftUI6VStackV", "padding"]
 - !private ["7SwiftUI17VerticalAlignmentV", "center"]
 - !private ["7SwiftUI4ViewP", "$email"]
 - !private ["7SwiftUI4ViewP", "$password"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "Button"]
 - !private ["7SwiftUI4ViewP", "Color"]
+- !private ["7SwiftUI4ViewP", "EmptyView"]
+- !private ["7SwiftUI4ViewP", "Form"]
 - !private ["7SwiftUI4ViewP", "HStack"]
 - !private ["7SwiftUI4ViewP", "Image"]
+- !private ["7SwiftUI4ViewP", "Section"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "TextField"]
@@ -197,32 +241,40 @@ depends-member:
 - ["7SwiftUI4ViewP", "_makeViewList"]
 - !private ["7SwiftUI4ViewP", "aspectRatio"]
 - !private ["7SwiftUI4ViewP", "background"]
-- !private ["7SwiftUI4ViewP", "black"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "bold"]
+- !private ["7SwiftUI4ViewP", "colorScheme"]
 - !private ["7SwiftUI4ViewP", "cornerRadius"]
 - !private ["7SwiftUI4ViewP", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI4ViewP", "emailAddress"]
+- !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "fontWeight"]
 - !private ["7SwiftUI4ViewP", "foregroundColor"]
 - !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "green"]
+- !private ["7SwiftUI4ViewP", "headline"]
 - !private ["7SwiftUI4ViewP", "init"]
 - !private ["7SwiftUI4ViewP", "loginClicked"]
 - !private ["7SwiftUI4ViewP", "padding"]
 - !private ["7SwiftUI4ViewP", "password"]
 - !private ["7SwiftUI4ViewP", "resizable"]
 - !private ["7SwiftUI4ViewP", "signupClicked"]
+- !private ["7SwiftUI4ViewP", "subheadline"]
 - !private ["7SwiftUI4ViewP", "textContentType"]
+- !private ["7SwiftUI4ViewP", "username"]
 - !private ["7SwiftUI4ViewP", "white"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI4FontV6WeightV", "bold"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "emailAddress"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "password"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "username"]
 - !private ["s21_ObjectiveCBridgeableP", "bold"]
 - !private ["s21_ObjectiveCBridgeableP", "emailAddress"]
 - !private ["s21_ObjectiveCBridgeableP", "green"]
+- !private ["s21_ObjectiveCBridgeableP", "headline"]
 - !private ["s21_ObjectiveCBridgeableP", "password"]
+- !private ["s21_ObjectiveCBridgeableP", "subheadline"]
+- !private ["s21_ObjectiveCBridgeableP", "username"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - !private ["7SwiftUI16_PreviewProviderP", "SignUpView"]
@@ -234,30 +286,35 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "previews"]
 - !private ["s20_SwiftNewtypeWrapperP", "emailAddress"]
 - !private ["s20_SwiftNewtypeWrapperP", "password"]
+- !private ["s20_SwiftNewtypeWrapperP", "username"]
 depends-nominal:
 - !private "7SwiftUI9AlignmentV"
 - !private "7SwiftUI6ButtonV"
 - !private "s12CaseIterableP"
 - !private "7SwiftUI5ColorV"
+- !private "7SwiftUI11ColorSchemeO"
 - !private "7SwiftUI11ContentModeO"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
 - !private "Se"
 - "7SwiftUI15DynamicPropertyP"
+- !private "7SwiftUI9EmptyViewV"
 - !private "SE"
 - !private "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- !private "7SwiftUI4FontV"
+- !private "7SwiftUI4FormV"
 - !private "7SwiftUI7GestureP"
 - !private "7SwiftUI6HStackV"
 - !private "SH"
-- !private "7SwiftUI19HorizontalAlignmentV"
 - !private "7SwiftUI5ImageV"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
 - !private "SY"
+- !private "7SwiftUI7SectionV"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"

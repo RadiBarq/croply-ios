@@ -23,6 +23,7 @@
 		CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */; };
 		CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */; };
 		CDB57769232F63C300B19B37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB57768232F63C300B19B37 /* LoginView.swift */; };
+		CDB5776C232FDCA500B19B37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776B232FDCA500B19B37 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
 		CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		CDB57768232F63C300B19B37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CDB5776B232FDCA500B19B37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1C5B002326FC79002F8DC7 /* Info.plist */,
+				CDB5776A232FDBFB00B19B37 /* Models */,
 				CDF6F7A7232B053000FAE0A9 /* TapBar */,
 				CDF6F7A6232B051800FAE0A9 /* Home */,
 				CDF6F7A5232B050E00FAE0A9 /* Camera */,
@@ -152,6 +155,14 @@
 				CD1C5B162326FC7A002F8DC7 /* Info.plist */,
 			);
 			path = PlantsDiseaseAppUITests;
+			sourceTree = "<group>";
+		};
+		CDB5776A232FDBFB00B19B37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5776B232FDCA500B19B37 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CDF6F7A1232B044100FAE0A9 /* Profile */ = {
@@ -347,6 +358,7 @@
 				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,
 				CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */,
 				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
+				CDB5776C232FDCA500B19B37 /* User.swift in Sources */,
 				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
 				CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */,

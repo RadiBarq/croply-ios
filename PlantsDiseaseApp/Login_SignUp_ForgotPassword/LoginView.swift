@@ -36,10 +36,8 @@ struct LoginView: View {
                 ) {
                     EmptyView()
                 }
-                .cornerRadius(5)
                 .font(.headline)
                 Section(
-                    
                     header:
                         Text("Password")
                         .fontWeight(.bold)

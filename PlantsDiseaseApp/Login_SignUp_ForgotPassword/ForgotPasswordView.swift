@@ -35,7 +35,7 @@ struct ForgotPasswordView: View {
                     Button(action: {
                         self.changePasswordClicked()
                     }) {
-                        Text("Change password")
+                        Text("Send email")
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                     }

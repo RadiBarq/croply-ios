@@ -21,45 +21,59 @@ struct SignUpView: View {
                     .resizable()
                     .frame(width: 75, height: 130, alignment: .center)
                 }
-            VStack(alignment: .leading) {
-                
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Username")
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
+            Form {
+                Section(header:
+                    Text("Username")                        .foregroundColor(.green)
+                        .font(.headline)
+                        .padding(.top, 15)
+                    ,
+                    footer:
                     TextField("MohammadGhazal", text: $email)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(5)
-                        .textContentType(.emailAddress)
+                        .font(.headline)
+                        .textContentType(.username)
+                ){
+                    EmptyView()
                 }
-                .padding(.top, 15)
-                .padding()
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Email")
-                        .fontWeight(.bold)
-                        .foregroundColor(.green)
-                    
-                    TextField("radibaraq@gmail.com", text: $email)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .textContentType(.emailAddress)
-                }
-                .padding()
+            
+                Section(
+                    header:
+                        Text("Email")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                            .padding(.top, 15)
+                    ,
+                    footer:
+                        TextField("radibaraq@gmail.com", text: $email)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .font(.headline)
+                            .textContentType(.emailAddress)
+                    ){
+                        EmptyView()
+                    }
                 
-                VStack(alignment: .leading, spacing: 15) {
-                    Text("Password")
-                        .foregroundColor(.green)
-                        .fontWeight(.bold)
-                    TextField("", text: $password)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .textContentType(.password)
-                }
-                .padding()
-                HStack {
+
+                Section (
+                    header:
+                        Text("Password")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                            .padding(.top, 15),
+                    footer:
+                        TextField("", text: $password)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .textContentType(.password)
+                    ){
+                        EmptyView()
+                    }
+                Section(footer:
+                    HStack {
                     Spacer()
                     Button(action: {
                         self.signupClicked()
@@ -73,8 +87,13 @@ struct SignUpView: View {
                     .background(Color.green)
                     .cornerRadius(10)
                     Spacer()
+                    }
+                ){
+                    EmptyView()
                 }
-                .padding()
+                .font(.headline)
+                
+                Section(footer:
                 HStack {
                     Spacer()
                     Text("Have an account?")
@@ -88,11 +107,14 @@ struct SignUpView: View {
                     }
                     Spacer()
                 }
-                .padding()
-                .padding(.bottom, 15)
+                ){
+                   EmptyView()
+                }
+                .font(.subheadline)
             }
-            .background(Color.black)
-            .cornerRadius(20)
+            .colorScheme(.dark)
+            .cornerRadius(15)
+            .frame(height: 500)
             .padding()
             Spacer()
         }
