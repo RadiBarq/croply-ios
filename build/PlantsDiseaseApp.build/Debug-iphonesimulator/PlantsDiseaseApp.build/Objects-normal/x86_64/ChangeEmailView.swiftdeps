@@ -10,7 +10,14 @@ provides-member:
 - ["16PlantsDiseaseApp24ChangeEmailView_PreviewsV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!"
+- !private "APIRequest"
+- !private "ActivityIndicator"
+- !private "Alert"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
 - !private "Button"
+- !private "ChangeEmailRequest"
 - "ChangeEmailView"
 - "ChangeEmailView_Previews"
 - !private "Color"
@@ -21,6 +28,7 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - !private "NavigationView"
 - "PreviewProvider"
+- !private "SessionManager"
 - !private "Spacer"
 - "State"
 - "String"
@@ -29,19 +37,41 @@ depends-top-level:
 - !private "TextField"
 - !private "VStack"
 - "View"
+- !private "~="
 depends-member:
+- !private ["16PlantsDiseaseApp8APIErrorO", "decondingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "encodingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "responseProblem"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "changeEmailRequest"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "init"]
+- !private ["16PlantsDiseaseApp9APIResultV", "result"]
+- !private ["16PlantsDiseaseApp9APIResultV", "user"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "deinit"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "init"]
+- !private ["7SwiftUI5AlertV", "init"]
 - !private ["7SwiftUI9AlignmentV", "center"]
 - !private ["7SwiftUI7BindingV", "wrappedValue"]
+- !private ["7SwiftUI5AlertV6ButtonV", "default"]
 - !private ["7SwiftUI6ButtonV", "frame"]
 - !private ["7SwiftUI6ButtonV", "init"]
+- !private ["16PlantsDiseaseApp18ChangeEmailRequestV", "init"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "$alertMessage"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "$alertTitle"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "$email"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "$shouldShowAlert"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "$showIndicator"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "APIRequest"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "ActivityIndicator"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "Alert"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "Body"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "Button"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "ChangeEmailRequest"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "Color"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "Environment"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "HStack"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "Image"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "NavigationView"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "SessionManager"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "Spacer"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "State"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "String"]
@@ -50,16 +80,24 @@ depends-member:
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "VStack"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "View"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "_Default_Body"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_alertMessage"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_alertTitle"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_email"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "_makeView"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "_makeViewList"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_presentation"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_shouldShowAlert"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "_showIndicator"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "alertMessage"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "alertTitle"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "body"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "changeEmailClicked"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "deinit"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "email"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "init"]
 - ["16PlantsDiseaseApp15ChangeEmailViewV", "presentation"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "shouldShowAlert"]
+- !private ["16PlantsDiseaseApp15ChangeEmailViewV", "showIndicator"]
 - !private ["16PlantsDiseaseApp24ChangeEmailView_PreviewsV", "ChangeEmailView"]
 - ["16PlantsDiseaseApp24ChangeEmailView_PreviewsV", "Previews"]
 - ["16PlantsDiseaseApp24ChangeEmailView_PreviewsV", "View"]
@@ -75,12 +113,14 @@ depends-member:
 - !private ["7SwiftUI5ColorV", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "bold"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "emailAddress"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
 - !private ["s28CustomDebugStringConvertibleP", "headline"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "bold"]
+- !private ["s17CustomReflectableP", "default"]
 - !private ["s17CustomReflectableP", "emailAddress"]
 - !private ["s17CustomReflectableP", "green"]
 - !private ["s17CustomReflectableP", "headline"]
@@ -91,17 +131,22 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["Se", "black"]
 - !private ["Se", "bold"]
+- !private ["Se", "default"]
 - !private ["Se", "emailAddress"]
 - !private ["Se", "green"]
 - !private ["Se", "headline"]
+- !private ["Se", "result"]
 - !private ["Se", "title"]
+- !private ["Se", "user"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["SE", "black"]
 - !private ["SE", "bold"]
+- !private ["SE", "default"]
 - !private ["SE", "emailAddress"]
 - !private ["SE", "green"]
 - !private ["SE", "headline"]
+- !private ["SE", "init"]
 - !private ["SE", "title"]
 - ["7SwiftUI11EnvironmentV", "init"]
 - ["7SwiftUI11EnvironmentV", "wrappedValue"]
@@ -110,7 +155,11 @@ depends-member:
 - !private ["SQ", "bold"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "center"]
+- !private ["SQ", "decondingProblem"]
+- !private ["SQ", "default"]
 - !private ["SQ", "emailAddress"]
+- !private ["SQ", "encodingProblem"]
+- !private ["SQ", "failure"]
 - !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
 - !private ["SQ", "foregroundColor"]
@@ -118,13 +167,19 @@ depends-member:
 - !private ["SQ", "headline"]
 - !private ["SQ", "init"]
 - !private ["SQ", "leading"]
+- !private ["SQ", "responseProblem"]
+- !private ["SQ", "success"]
 - !private ["SQ", "title"]
 - !private ["SQ", "top"]
 - !private ["SQ", "white"]
+- !private ["s5ErrorP", "decondingProblem"]
+- !private ["s5ErrorP", "encodingProblem"]
+- !private ["s5ErrorP", "responseProblem"]
 - !private ["s25ExpressibleByArrayLiteralP", "bottom"]
 - !private ["s25ExpressibleByArrayLiteralP", "top"]
 - !private ["s23ExpressibleByNilLiteralP", "black"]
 - !private ["s23ExpressibleByNilLiteralP", "bold"]
+- !private ["s23ExpressibleByNilLiteralP", "default"]
 - !private ["s23ExpressibleByNilLiteralP", "emailAddress"]
 - !private ["s23ExpressibleByNilLiteralP", "green"]
 - !private ["s23ExpressibleByNilLiteralP", "headline"]
@@ -133,6 +188,7 @@ depends-member:
 - !private ["7SwiftUI4FontV", "title"]
 - !private ["7SwiftUI7GestureP", "black"]
 - !private ["7SwiftUI7GestureP", "bold"]
+- !private ["7SwiftUI7GestureP", "default"]
 - !private ["7SwiftUI7GestureP", "emailAddress"]
 - !private ["7SwiftUI7GestureP", "green"]
 - !private ["7SwiftUI7GestureP", "headline"]
@@ -141,9 +197,15 @@ depends-member:
 - !private ["7SwiftUI6HStackV", "padding"]
 - !private ["SH", "black"]
 - !private ["SH", "bold"]
+- !private ["SH", "decondingProblem"]
+- !private ["SH", "default"]
 - !private ["SH", "emailAddress"]
+- !private ["SH", "encodingProblem"]
+- !private ["SH", "failure"]
 - !private ["SH", "green"]
 - !private ["SH", "headline"]
+- !private ["SH", "responseProblem"]
+- !private ["SH", "success"]
 - !private ["SH", "title"]
 - !private ["SH", "white"]
 - !private ["7SwiftUI19HorizontalAlignmentV", "leading"]
@@ -154,6 +216,7 @@ depends-member:
 - !private ["s9OptionSetP", "top"]
 - !private ["Sq", "black"]
 - !private ["Sq", "bold"]
+- !private ["Sq", "default"]
 - !private ["Sq", "emailAddress"]
 - !private ["Sq", "green"]
 - !private ["Sq", "headline"]
@@ -170,6 +233,9 @@ depends-member:
 - !private ["SY", "bottom"]
 - !private ["SY", "emailAddress"]
 - !private ["SY", "top"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["16PlantsDiseaseApp14SessionManagerV", "user"]
 - !private ["7SwiftUI4EdgeO3SetV", "bottom"]
 - !private ["7SwiftUI4EdgeO3SetV", "top"]
 - !private ["s10SetAlgebraP", "bottom"]
@@ -187,16 +253,24 @@ depends-member:
 - !private ["7SwiftUI9TextFieldV", "init"]
 - !private ["7SwiftUI9TextFieldV", "padding"]
 - !private ["So17UITextContentTypea", "emailAddress"]
+- !private ["7SwiftUI19UIViewRepresentableP", "init"]
 - !private ["7SwiftUI6VStackV", "background"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI6VStackV", "padding"]
 - !private ["7SwiftUI4ViewP", "$email"]
+- !private ["7SwiftUI4ViewP", "$shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "$showIndicator"]
+- !private ["7SwiftUI4ViewP", "APIRequest"]
+- !private ["7SwiftUI4ViewP", "ActivityIndicator"]
+- !private ["7SwiftUI4ViewP", "Alert"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "Button"]
+- !private ["7SwiftUI4ViewP", "ChangeEmailRequest"]
 - !private ["7SwiftUI4ViewP", "Color"]
 - !private ["7SwiftUI4ViewP", "HStack"]
 - !private ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "NavigationView"]
+- !private ["7SwiftUI4ViewP", "SessionManager"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "TextField"]
@@ -205,12 +279,16 @@ depends-member:
 - ["7SwiftUI4ViewP", "_Default_Body"]
 - ["7SwiftUI4ViewP", "_makeView"]
 - ["7SwiftUI4ViewP", "_makeViewList"]
+- !private ["7SwiftUI4ViewP", "alert"]
+- !private ["7SwiftUI4ViewP", "alertMessage"]
+- !private ["7SwiftUI4ViewP", "alertTitle"]
 - !private ["7SwiftUI4ViewP", "background"]
 - !private ["7SwiftUI4ViewP", "black"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "bold"]
 - !private ["7SwiftUI4ViewP", "changeEmailClicked"]
 - !private ["7SwiftUI4ViewP", "cornerRadius"]
+- !private ["7SwiftUI4ViewP", "default"]
 - !private ["7SwiftUI4ViewP", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI4ViewP", "email"]
 - !private ["7SwiftUI4ViewP", "emailAddress"]
@@ -224,14 +302,18 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "navigationBarItems"]
 - !private ["7SwiftUI4ViewP", "padding"]
 - !private ["7SwiftUI4ViewP", "presentation"]
+- !private ["7SwiftUI4ViewP", "shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "showIndicator"]
 - !private ["7SwiftUI4ViewP", "textContentType"]
 - !private ["7SwiftUI4ViewP", "title"]
 - !private ["7SwiftUI4ViewP", "white"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI4FontV6WeightV", "bold"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "emailAddress"]
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "bold"]
+- !private ["s21_ObjectiveCBridgeableP", "default"]
 - !private ["s21_ObjectiveCBridgeableP", "emailAddress"]
 - !private ["s21_ObjectiveCBridgeableP", "green"]
 - !private ["s21_ObjectiveCBridgeableP", "headline"]
@@ -246,9 +328,16 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "previews"]
 - !private ["s20_SwiftNewtypeWrapperP", "emailAddress"]
 depends-nominal:
+- !private "16PlantsDiseaseApp8APIErrorO"
+- !private "16PlantsDiseaseApp10APIRequestV"
+- !private "16PlantsDiseaseApp9APIResultV"
+- !private "16PlantsDiseaseApp17ActivityIndicatorV"
+- !private "7SwiftUI5AlertV"
 - !private "7SwiftUI9AlignmentV"
 - !private "7SwiftUI7BindingV"
+- !private "7SwiftUI5AlertV6ButtonV"
 - !private "7SwiftUI6ButtonV"
+- !private "16PlantsDiseaseApp18ChangeEmailRequestV"
 - "16PlantsDiseaseApp15ChangeEmailViewV"
 - "16PlantsDiseaseApp24ChangeEmailView_PreviewsV"
 - !private "7SwiftUI5ColorV"
@@ -261,6 +350,7 @@ depends-nominal:
 - "7SwiftUI11EnvironmentV"
 - "7SwiftUI17EnvironmentValuesV"
 - !private "SQ"
+- !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
 - !private "7SwiftUI4FontV"
@@ -275,6 +365,8 @@ depends-nominal:
 - !private "7SwiftUI16PresentationModeV"
 - "7SwiftUI15PreviewProviderP"
 - !private "SY"
+- !private "s6ResultO"
+- !private "16PlantsDiseaseApp14SessionManagerV"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
@@ -283,6 +375,7 @@ depends-nominal:
 - !private "7SwiftUI4TextV"
 - !private "7SwiftUI9TextFieldV"
 - !private "So17UITextContentTypea"
+- !private "7SwiftUI19UIViewRepresentableP"
 - !private "7SwiftUI6VStackV"
 - "7SwiftUI4ViewP"
 - !private "7SwiftUI11ViewBuilderV"
@@ -1580,4 +1673,4 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "f8a7f252b7b028a442e84b8caba01827"
+interface-hash: "d597ec6b0aafca24ff0cea607e0f19fd"

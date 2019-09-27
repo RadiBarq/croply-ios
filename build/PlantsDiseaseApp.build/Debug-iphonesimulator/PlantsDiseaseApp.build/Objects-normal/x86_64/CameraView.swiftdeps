@@ -2,30 +2,170 @@
 provides-top-level:
 - "CameraView"
 - "CameraView_Previews"
+- "CameraViewController"
 provides-nominal:
 - "16PlantsDiseaseApp10CameraViewV"
 - "16PlantsDiseaseApp19CameraView_PreviewsV"
+- "16PlantsDiseaseApp20CameraViewControllerV"
+- "16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC"
 provides-member:
 - ["16PlantsDiseaseApp10CameraViewV", ""]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", ""]
+- ["16PlantsDiseaseApp20CameraViewControllerV", ""]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", ""]
 provides-dynamic-lookup:
+- "imagePickerController"
 depends-top-level:
+- !private "!"
+- !private "=="
+- !private "APIRequest"
+- "ActionSheet"
+- !private "ActivityIndicator"
+- !private "Alert"
+- "AssignmentPrecedence"
+- "Binding"
+- "Bool"
+- "BooleanLiteralType"
+- !private "Button"
 - "CameraView"
+- "CameraViewController"
 - "CameraView_Previews"
+- "CastingPrecedence"
+- !private "Color"
+- "FloatLiteralType"
+- !private "HStack"
+- !private "Image"
+- !private "IntegerLiteralType"
+- "NSObject"
 - "PreviewProvider"
-- !private "StringLiteralType"
+- !private "Scan"
+- !private "Spacer"
+- "State"
+- "StringLiteralType"
 - !private "Text"
+- "UIImage"
+- "UIImagePickerController"
+- "UIImagePickerControllerDelegate"
+- "UINavigationControllerDelegate"
+- "UIViewControllerRepresentable"
+- "UIViewControllerRepresentableContext"
+- !private "VStack"
 - "View"
+- !private "~="
 depends-member:
+- !private ["16PlantsDiseaseApp8APIErrorO", "decondingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "encodingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "responseProblem"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "init"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "scanDisease"]
+- !private ["16PlantsDiseaseApp9APIResultV", "result"]
+- !private ["7SwiftUI11ActionSheetV", "init"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "deinit"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "init"]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["7SwiftUI5AlertV", "init"]
+- !private ["7SwiftUI10AnimatableP", "init"]
+- !private ["SB", "init"]
+- !private ["7SwiftUI5AlertV6ButtonV", "cancel"]
+- !private ["7SwiftUI5AlertV6ButtonV", "default"]
+- !private ["7SwiftUI5AlertV6ButtonV", "destructive"]
+- !private ["7SwiftUI6ButtonV", "init"]
+- !private ["7SwiftUI6ButtonV", "padding"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- ["s7CVarArgP", "InfoKey"]
+- !private ["s7CVarArgP", "UIImagePickerController"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_image"]
+- !private ["s7CVarArgP", "_isShown"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "image"]
+- ["s7CVarArgP", "imagePickerController"]
+- ["s7CVarArgP", "imagePickerControllerDidCancel"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isShown"]
+- ["s7CVarArgP", "navigationController"]
+- ["s7CVarArgP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["s7CVarArgP", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "$alertMessage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "$alertTitle"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "$shouldShowAlert"]
+- ["16PlantsDiseaseApp10CameraViewV", "$showAction"]
+- ["16PlantsDiseaseApp10CameraViewV", "$showImagePicker"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "$showIndicator"]
+- ["16PlantsDiseaseApp10CameraViewV", "$uiImage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "APIRequest"]
+- ["16PlantsDiseaseApp10CameraViewV", "ActionSheet"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "ActivityIndicator"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Alert"]
 - ["16PlantsDiseaseApp10CameraViewV", "Body"]
+- ["16PlantsDiseaseApp10CameraViewV", "Bool"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Button"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "CameraViewController"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Color"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "HStack"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Image"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Scan"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Spacer"]
+- ["16PlantsDiseaseApp10CameraViewV", "State"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Text"]
+- ["16PlantsDiseaseApp10CameraViewV", "UIImage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "VStack"]
 - ["16PlantsDiseaseApp10CameraViewV", "View"]
 - ["16PlantsDiseaseApp10CameraViewV", "_Default_Body"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_alertMessage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_alertTitle"]
 - ["16PlantsDiseaseApp10CameraViewV", "_makeView"]
 - ["16PlantsDiseaseApp10CameraViewV", "_makeViewList"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_shouldShowAlert"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_showAction"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_showImagePicker"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_showIndicator"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_uiImage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "alertMessage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "alertTitle"]
 - ["16PlantsDiseaseApp10CameraViewV", "body"]
 - ["16PlantsDiseaseApp10CameraViewV", "deinit"]
+- ["16PlantsDiseaseApp10CameraViewV", "diseaseDetected"]
+- ["16PlantsDiseaseApp10CameraViewV", "dismissImageClicked"]
 - ["16PlantsDiseaseApp10CameraViewV", "init"]
+- ["16PlantsDiseaseApp10CameraViewV", "sheet"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "shouldShowAlert"]
+- ["16PlantsDiseaseApp10CameraViewV", "showAction"]
+- ["16PlantsDiseaseApp10CameraViewV", "showImagePicker"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "showIndicator"]
+- ["16PlantsDiseaseApp10CameraViewV", "uiImage"]
+- ["16PlantsDiseaseApp10CameraViewV", "uploadClicked"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "$image"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "$isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "Binding"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "Body"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "Bool"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "CameraViewController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "Coordinator"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "NSObject"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UIImage"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UIImagePickerController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UIImagePickerControllerDelegate"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UINavigationControllerDelegate"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UIViewControllerRepresentableContext"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "UIViewControllerType"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "_Default_Body"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "_Default_UIViewControllerType"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "_identifiedViewTree"]
+- !private ["16PlantsDiseaseApp20CameraViewControllerV", "_image"]
+- !private ["16PlantsDiseaseApp20CameraViewControllerV", "_isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "_makeView"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "_makeViewList"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "body"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "deinit"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "dismantleUIViewController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "image"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "init"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "makeCoordinator"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "makeUIViewController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV", "updateUIViewController"]
 - !private ["16PlantsDiseaseApp19CameraView_PreviewsV", "CameraView"]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "Previews"]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "View"]
@@ -36,7 +176,230 @@ depends-member:
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "init"]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "platform"]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "previews"]
+- !private ["Sl", "subscript"]
+- !private ["7SwiftUI5ColorV", "black"]
+- !private ["7SwiftUI5ColorV", "frame"]
+- !private ["7SwiftUI5ColorV", "gray"]
+- !private ["7SwiftUI5ColorV", "green"]
+- !private ["7SwiftUI5ColorV", "purple"]
+- !private ["7SwiftUI5ColorV", "white"]
+- !private ["SL", "init"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "$image"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "$isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "Binding"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "Bool"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "UIImage"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "UIImagePickerController"]
+- !private ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "_image"]
+- !private ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "_isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "deinit"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "image"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "imagePickerController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "imagePickerControllerDidCancel"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "init"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "isShown"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "navigationController"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "navigationControllerSupportedInterfaceOrientations"]
+- ["s28CustomDebugStringConvertibleP", "InfoKey"]
+- !private ["s28CustomDebugStringConvertibleP", "UIImagePickerController"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "_image"]
+- !private ["s28CustomDebugStringConvertibleP", "_isShown"]
+- !private ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "bold"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- ["s28CustomDebugStringConvertibleP", "imagePickerController"]
+- ["s28CustomDebugStringConvertibleP", "imagePickerControllerDidCancel"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isShown"]
+- ["s28CustomDebugStringConvertibleP", "navigationController"]
+- ["s28CustomDebugStringConvertibleP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["s28CustomDebugStringConvertibleP", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s17CustomReflectableP", "black"]
+- !private ["s17CustomReflectableP", "bold"]
+- !private ["s17CustomReflectableP", "default"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "title"]
+- ["s23CustomStringConvertibleP", "InfoKey"]
+- !private ["s23CustomStringConvertibleP", "UIImagePickerController"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_image"]
+- !private ["s23CustomStringConvertibleP", "_isShown"]
+- !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "frame"]
+- !private ["s23CustomStringConvertibleP", "gray"]
+- !private ["s23CustomStringConvertibleP", "green"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- ["s23CustomStringConvertibleP", "imagePickerController"]
+- ["s23CustomStringConvertibleP", "imagePickerControllerDidCancel"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isShown"]
+- ["s23CustomStringConvertibleP", "navigationController"]
+- ["s23CustomStringConvertibleP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["s23CustomStringConvertibleP", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["s23CustomStringConvertibleP", "purple"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- !private ["Se", "black"]
+- !private ["Se", "bold"]
+- !private ["Se", "default"]
+- !private ["Se", "init"]
+- !private ["Se", "result"]
+- !private ["Se", "subscript"]
+- !private ["Se", "title"]
+- !private ["SD", "subscript"]
+- ["7SwiftUI15DynamicPropertyP", "init"]
+- ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
+- !private ["7SwiftUI10EdgeInsetsV", "init"]
+- !private ["SE", "black"]
+- !private ["SE", "bold"]
+- !private ["SE", "default"]
+- !private ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SE", "title"]
+- ["SQ", "InfoKey"]
+- !private ["SQ", "UIImagePickerController"]
+- ["SQ", ""]
+- !private ["SQ", "_image"]
+- !private ["SQ", "_isShown"]
+- !private ["SQ", "accentColor"]
+- !private ["SQ", "black"]
+- !private ["SQ", "bold"]
+- !private ["SQ", "decondingProblem"]
+- !private ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "encodingProblem"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "font"]
+- !private ["SQ", "fontWeight"]
+- !private ["SQ", "foregroundColor"]
+- !private ["SQ", "frame"]
+- !private ["SQ", "gray"]
+- !private ["SQ", "green"]
+- !private ["SQ", "image"]
+- ["SQ", "imagePickerController"]
+- ["SQ", "imagePickerControllerDidCancel"]
 - !private ["SQ", "init"]
+- !private ["SQ", "isShown"]
+- ["SQ", "navigationController"]
+- ["SQ", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["SQ", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["SQ", "onTapGesture"]
+- !private ["SQ", "originalImage"]
+- !private ["SQ", "purple"]
+- !private ["SQ", "resizable"]
+- !private ["SQ", "responseProblem"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "success"]
+- !private ["SQ", "title"]
+- !private ["SQ", "white"]
+- !private ["s5ErrorP", "decondingProblem"]
+- !private ["s5ErrorP", "encodingProblem"]
+- !private ["s5ErrorP", "responseProblem"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "black"]
+- !private ["s23ExpressibleByNilLiteralP", "bold"]
+- !private ["s23ExpressibleByNilLiteralP", "default"]
+- !private ["s23ExpressibleByNilLiteralP", "title"]
+- !private ["SF", "init"]
+- !private ["7SwiftUI4FontV", "title"]
+- !private ["7SwiftUI7GestureP", "black"]
+- !private ["7SwiftUI7GestureP", "bold"]
+- !private ["7SwiftUI7GestureP", "default"]
+- !private ["7SwiftUI7GestureP", "title"]
+- !private ["7SwiftUI6HStackV", "init"]
+- !private ["7SwiftUI6HStackV", "padding"]
+- ["SH", "InfoKey"]
+- !private ["SH", "UIImagePickerController"]
+- ["SH", ""]
+- !private ["SH", "_image"]
+- !private ["SH", "_isShown"]
+- !private ["SH", "black"]
+- !private ["SH", "bold"]
+- !private ["SH", "decondingProblem"]
+- !private ["SH", "default"]
+- !private ["SH", "delegate"]
+- !private ["SH", "encodingProblem"]
+- !private ["SH", "failure"]
+- !private ["SH", "frame"]
+- !private ["SH", "gray"]
+- !private ["SH", "green"]
+- !private ["SH", "image"]
+- ["SH", "imagePickerController"]
+- ["SH", "imagePickerControllerDidCancel"]
+- !private ["SH", "init"]
+- !private ["SH", "isShown"]
+- ["SH", "navigationController"]
+- ["SH", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["SH", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["SH", "originalImage"]
+- !private ["SH", "purple"]
+- !private ["SH", "responseProblem"]
+- !private ["SH", "subscript"]
+- !private ["SH", "success"]
+- !private ["SH", "title"]
+- !private ["SH", "white"]
+- !private ["7SwiftUI5ImageV", "accentColor"]
+- !private ["7SwiftUI5ImageV", "font"]
+- !private ["7SwiftUI5ImageV", "init"]
+- !private ["7SwiftUI5ImageV", "onTapGesture"]
+- !private ["7SwiftUI5ImageV", "resizable"]
+- !private ["So30UIImagePickerControllerInfoKeya", "originalImage"]
+- ["So8NSCodingP", "InfoKey"]
+- !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "InfoKey"]
+- !private ["So26NSExtensionRequestHandlingP", "delegate"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So8NSObjectC", "$image"]
+- ["So8NSObjectC", "$isShown"]
+- ["So8NSObjectC", "Binding"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "InfoKey"]
+- ["So8NSObjectC", "UIImage"]
+- ["So8NSObjectC", "UIImagePickerController"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "_image"]
+- ["So8NSObjectC", "_isShown"]
+- !private ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "imagePickerController"]
+- ["So8NSObjectC", "imagePickerControllerDidCancel"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isShown"]
+- ["So8NSObjectC", "navigationController"]
+- ["So8NSObjectC", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["So8NSObjectC", "navigationControllerSupportedInterfaceOrientations"]
+- ["So8NSObjectP", "InfoKey"]
+- !private ["So8NSObjectP", "UIImagePickerController"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "_image"]
+- !private ["So8NSObjectP", "_isShown"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "image"]
+- ["So8NSObjectP", "imagePickerController"]
+- ["So8NSObjectP", "imagePickerControllerDidCancel"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isShown"]
+- ["So8NSObjectP", "navigationController"]
+- ["So8NSObjectP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["So8NSObjectP", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["Sj", "init"]
+- !private ["s9OptionSetP", "init"]
+- !private ["Sq", "black"]
+- !private ["Sq", "bold"]
+- !private ["Sq", "default"]
+- !private ["Sq", "title"]
 - !private ["7SwiftUI15PreviewProviderP", "CameraView"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
 - ["7SwiftUI15PreviewProviderP", ""]
@@ -45,15 +408,222 @@ depends-member:
 - ["7SwiftUI15PreviewProviderP", "_previews"]
 - ["7SwiftUI15PreviewProviderP", "platform"]
 - ["7SwiftUI15PreviewProviderP", "previews"]
+- !private ["SY", "init"]
+- !private ["SY", "originalImage"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["16PlantsDiseaseApp4ScanC", "deinit"]
+- !private ["16PlantsDiseaseApp4ScanC", "init"]
+- !private ["ST", "subscript"]
+- !private ["7SwiftUI4EdgeO3SetV", "init"]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["7SwiftUI10ShapeStyleP", "black"]
+- !private ["7SwiftUI10ShapeStyleP", "frame"]
+- !private ["7SwiftUI10ShapeStyleP", "gray"]
+- !private ["7SwiftUI10ShapeStyleP", "green"]
+- !private ["7SwiftUI10ShapeStyleP", "purple"]
+- !private ["7SwiftUI10ShapeStyleP", "white"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["7SwiftUI6SpacerV", "init"]
+- ["7SwiftUI5StateV", "init"]
+- ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["Sx", "init"]
+- !private ["7SwiftUI4TextV", "fontWeight"]
+- !private ["7SwiftUI4TextV", "foregroundColor"]
 - !private ["7SwiftUI4TextV", "init"]
+- ["So21UIAppearanceContainerP", "InfoKey"]
+- !private ["So21UIAppearanceContainerP", "delegate"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- ["So18UIContentContainerP", "InfoKey"]
+- !private ["So18UIContentContainerP", "delegate"]
+- !private ["So18UIContentContainerP", "init"]
+- ["So18UIFocusEnvironmentP", "InfoKey"]
+- !private ["So18UIFocusEnvironmentP", "delegate"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So23UIImagePickerControllerC", "InfoKey"]
+- !private ["So23UIImagePickerControllerC", "delegate"]
+- !private ["So23UIImagePickerControllerC", "init"]
+- !private ["So31UIImagePickerControllerDelegateP", "UIImagePickerController"]
+- ["So31UIImagePickerControllerDelegateP", ""]
+- !private ["So31UIImagePickerControllerDelegateP", "_image"]
+- !private ["So31UIImagePickerControllerDelegateP", "_isShown"]
+- !private ["So31UIImagePickerControllerDelegateP", "image"]
+- ["So31UIImagePickerControllerDelegateP", "imagePickerController"]
+- ["So31UIImagePickerControllerDelegateP", "imagePickerControllerDidCancel"]
+- !private ["So31UIImagePickerControllerDelegateP", "init"]
+- !private ["So31UIImagePickerControllerDelegateP", "isShown"]
+- ["So31UIImagePickerControllerDelegateP", "navigationController"]
+- ["So31UIImagePickerControllerDelegateP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["So31UIImagePickerControllerDelegateP", "navigationControllerSupportedInterfaceOrientations"]
+- ["So22UINavigationControllerC", "InfoKey"]
+- !private ["So22UINavigationControllerC", "delegate"]
+- !private ["So22UINavigationControllerC", "init"]
+- !private ["So30UINavigationControllerDelegateP", "UIImagePickerController"]
+- ["So30UINavigationControllerDelegateP", ""]
+- !private ["So30UINavigationControllerDelegateP", "_image"]
+- !private ["So30UINavigationControllerDelegateP", "_isShown"]
+- !private ["So30UINavigationControllerDelegateP", "image"]
+- ["So30UINavigationControllerDelegateP", "imagePickerController"]
+- ["So30UINavigationControllerDelegateP", "imagePickerControllerDidCancel"]
+- !private ["So30UINavigationControllerDelegateP", "init"]
+- !private ["So30UINavigationControllerDelegateP", "isShown"]
+- ["So30UINavigationControllerDelegateP", "navigationController"]
+- ["So30UINavigationControllerDelegateP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["So30UINavigationControllerDelegateP", "navigationControllerSupportedInterfaceOrientations"]
+- ["So30UIPasteConfigurationSupportingP", "InfoKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So11UIResponderC", "InfoKey"]
+- !private ["So11UIResponderC", "delegate"]
+- !private ["So11UIResponderC", "init"]
+- ["So30UIResponderStandardEditActionsP", "InfoKey"]
+- !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So16UIStateRestoringP", "InfoKey"]
+- !private ["So16UIStateRestoringP", "delegate"]
+- !private ["So16UIStateRestoringP", "init"]
+- ["So18UITraitEnvironmentP", "InfoKey"]
+- !private ["So18UITraitEnvironmentP", "delegate"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- ["So23UIUserActivityRestoringP", "InfoKey"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- ["So16UIViewControllerC", "InfoKey"]
+- !private ["So16UIViewControllerC", "delegate"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["7SwiftUI29UIViewControllerRepresentableP", "$image"]
+- !private ["7SwiftUI29UIViewControllerRepresentableP", "$isShown"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "Body"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "Coordinator"]
+- !private ["7SwiftUI29UIViewControllerRepresentableP", "UIImagePickerController"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "UIViewControllerType"]
+- ["7SwiftUI29UIViewControllerRepresentableP", ""]
+- ["7SwiftUI29UIViewControllerRepresentableP", "_Default_Body"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "_Default_UIViewControllerType"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "_identifiedViewTree"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "_makeView"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "_makeViewList"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "body"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "dismantleUIViewController"]
+- !private ["7SwiftUI29UIViewControllerRepresentableP", "init"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "makeCoordinator"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "makeUIViewController"]
+- ["7SwiftUI29UIViewControllerRepresentableP", "updateUIViewController"]
+- !private ["7SwiftUI36UIViewControllerRepresentableContextV", "coordinator"]
+- !private ["7SwiftUI19UIViewRepresentableP", "init"]
+- !private ["7SwiftUI6VStackV", "init"]
+- !private ["7SwiftUI6VStackV", "sheet"]
+- !private ["7SwiftUI16VectorArithmeticP", "init"]
+- !private ["7SwiftUI4ViewP", "$image"]
+- !private ["7SwiftUI4ViewP", "$isShown"]
+- !private ["7SwiftUI4ViewP", "$shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "$showAction"]
+- !private ["7SwiftUI4ViewP", "$showImagePicker"]
+- !private ["7SwiftUI4ViewP", "$showIndicator"]
+- !private ["7SwiftUI4ViewP", "$uiImage"]
+- !private ["7SwiftUI4ViewP", "APIRequest"]
+- !private ["7SwiftUI4ViewP", "ActionSheet"]
+- !private ["7SwiftUI4ViewP", "ActivityIndicator"]
+- !private ["7SwiftUI4ViewP", "Alert"]
 - ["7SwiftUI4ViewP", "Body"]
+- !private ["7SwiftUI4ViewP", "Button"]
+- !private ["7SwiftUI4ViewP", "CameraViewController"]
+- !private ["7SwiftUI4ViewP", "Color"]
+- ["7SwiftUI4ViewP", "Coordinator"]
+- !private ["7SwiftUI4ViewP", "HStack"]
+- !private ["7SwiftUI4ViewP", "Image"]
+- !private ["7SwiftUI4ViewP", "Scan"]
+- !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
+- !private ["7SwiftUI4ViewP", "UIImagePickerController"]
+- ["7SwiftUI4ViewP", "UIViewControllerType"]
+- !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
+- ["7SwiftUI4ViewP", "_Default_UIViewControllerType"]
+- ["7SwiftUI4ViewP", "_identifiedViewTree"]
 - ["7SwiftUI4ViewP", "_makeView"]
 - ["7SwiftUI4ViewP", "_makeViewList"]
+- !private ["7SwiftUI4ViewP", "accentColor"]
+- !private ["7SwiftUI4ViewP", "actionSheet"]
+- !private ["7SwiftUI4ViewP", "alert"]
+- !private ["7SwiftUI4ViewP", "alertMessage"]
+- !private ["7SwiftUI4ViewP", "alertTitle"]
+- !private ["7SwiftUI4ViewP", "background"]
+- !private ["7SwiftUI4ViewP", "black"]
 - ["7SwiftUI4ViewP", "body"]
+- !private ["7SwiftUI4ViewP", "bold"]
+- !private ["7SwiftUI4ViewP", "cornerRadius"]
+- !private ["7SwiftUI4ViewP", "default"]
+- !private ["7SwiftUI4ViewP", "diseaseDetected"]
+- ["7SwiftUI4ViewP", "dismantleUIViewController"]
+- !private ["7SwiftUI4ViewP", "dismissImageClicked"]
+- !private ["7SwiftUI4ViewP", "font"]
+- !private ["7SwiftUI4ViewP", "fontWeight"]
+- !private ["7SwiftUI4ViewP", "foregroundColor"]
+- !private ["7SwiftUI4ViewP", "frame"]
+- !private ["7SwiftUI4ViewP", "gray"]
+- !private ["7SwiftUI4ViewP", "green"]
 - !private ["7SwiftUI4ViewP", "init"]
+- ["7SwiftUI4ViewP", "makeCoordinator"]
+- ["7SwiftUI4ViewP", "makeUIViewController"]
+- !private ["7SwiftUI4ViewP", "onTapGesture"]
+- !private ["7SwiftUI4ViewP", "padding"]
+- !private ["7SwiftUI4ViewP", "purple"]
+- !private ["7SwiftUI4ViewP", "resizable"]
+- !private ["7SwiftUI4ViewP", "sheet"]
+- !private ["7SwiftUI4ViewP", "shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "showAction"]
+- !private ["7SwiftUI4ViewP", "showImagePicker"]
+- !private ["7SwiftUI4ViewP", "showIndicator"]
+- !private ["7SwiftUI4ViewP", "title"]
+- !private ["7SwiftUI4ViewP", "uiImage"]
+- ["7SwiftUI4ViewP", "updateUIViewController"]
+- !private ["7SwiftUI4ViewP", "uploadClicked"]
+- !private ["7SwiftUI4ViewP", "white"]
+- !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
+- !private ["7SwiftUI4FontV6WeightV", "bold"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "originalImage"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "InfoKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImagePickerController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_image"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_isShown"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "imagePickerController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "imagePickerControllerDidCancel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isShown"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "navigationControllerSupportedInterfaceOrientations"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "InfoKey"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImagePickerController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_image"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "_isShown"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "imagePickerController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "imagePickerControllerDidCancel"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isShown"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationControllerSupportedInterfaceOrientations"]
+- !private ["s21_ObjectiveCBridgeableP", "black"]
+- !private ["s21_ObjectiveCBridgeableP", "bold"]
+- !private ["s21_ObjectiveCBridgeableP", "default"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "originalImage"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "title"]
 - !private ["7SwiftUI16_PreviewProviderP", "CameraView"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - ["7SwiftUI16_PreviewProviderP", ""]
@@ -62,14 +632,103 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "_previews"]
 - ["7SwiftUI16_PreviewProviderP", "platform"]
 - ["7SwiftUI16_PreviewProviderP", "previews"]
+- !private ["s20_SwiftNewtypeWrapperP", "originalImage"]
+- !private ["7SwiftUI11_VectorMathP", "init"]
 depends-nominal:
+- !private "16PlantsDiseaseApp8APIErrorO"
+- !private "16PlantsDiseaseApp10APIRequestV"
+- !private "16PlantsDiseaseApp9APIResultV"
+- !private "7SwiftUI11ActionSheetV"
+- !private "16PlantsDiseaseApp17ActivityIndicatorV"
+- !private "s18AdditiveArithmeticP"
+- !private "7SwiftUI5AlertV"
+- !private "7SwiftUI10AnimatableP"
+- !private "SB"
+- !private "7SwiftUI5AlertV6ButtonV"
+- !private "7SwiftUI6ButtonV"
+- !private "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
 - "16PlantsDiseaseApp10CameraViewV"
+- "16PlantsDiseaseApp20CameraViewControllerV"
 - "16PlantsDiseaseApp19CameraView_PreviewsV"
-- !private "SQ"
+- !private "Sl"
+- !private "7SwiftUI5ColorV"
+- !private "SL"
+- "16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SD"
+- "7SwiftUI15DynamicPropertyP"
+- !private "7SwiftUI10EdgeInsetsV"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "SF"
+- !private "7SwiftUI4FontV"
+- !private "7SwiftUI7GestureP"
+- !private "7SwiftUI6HStackV"
+- "SH"
+- !private "7SwiftUI5ImageV"
+- !private "So30UIImagePickerControllerInfoKeya"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sj"
+- !private "s9OptionSetP"
+- !private "Sq"
 - "7SwiftUI15PreviewProviderP"
+- !private "SY"
+- !private "s6ResultO"
+- !private "16PlantsDiseaseApp4ScanC"
+- !private "ST"
+- !private "7SwiftUI4EdgeO3SetV"
+- !private "s10SetAlgebraP"
+- !private "7SwiftUI10ShapeStyleP"
+- !private "s13SignedNumericP"
+- !private "7SwiftUI6SpacerV"
+- "7SwiftUI5StateV"
+- !private "Sx"
 - !private "7SwiftUI4TextV"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- "So18UIFocusEnvironmentP"
+- "So23UIImagePickerControllerC"
+- "So31UIImagePickerControllerDelegateP"
+- "So22UINavigationControllerC"
+- "So30UINavigationControllerDelegateP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So16UIViewControllerC"
+- "7SwiftUI29UIViewControllerRepresentableP"
+- !private "7SwiftUI36UIViewControllerRepresentableContextV"
+- !private "7SwiftUI19UIViewRepresentableP"
+- !private "7SwiftUI6VStackV"
+- !private "7SwiftUI16VectorArithmeticP"
 - "7SwiftUI4ViewP"
+- !private "7SwiftUI11ViewBuilderV"
+- !private "7SwiftUI4FontV6WeightV"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "7SwiftUI18_FormatSpecifiableP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "7SwiftUI11_VectorMathP"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
@@ -1359,4 +2018,4 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0a047b33f61db003250ed7b0d31d6a81"
+interface-hash: "a4ab10ae3054407fb2c3dac66278c910"

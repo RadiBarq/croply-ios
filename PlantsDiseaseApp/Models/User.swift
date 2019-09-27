@@ -9,12 +9,27 @@
 import Foundation
 
 final class User: Codable {
+     var id: Int
+     var username: String
+     var email: String
+     var password: String?
     
-    var id: Int
-    var name: String
-    var email: String
-    var password: String
+    init (id: Int, username: String, email: String, password: String?) {
+        self.id = id
+        self.username = username
+        self.email = email
+        self.password = password ?? nil
+    }
     
+}
 
+
+class SessionUser: ObservableObject {
+    @Published  var id: Int = -1
+    @Published var username: String = ""
+    @Published var email: String = ""
+    @Published var signedInClicked = true
+    @Published var signedUpClicked = false
+    
     
 }

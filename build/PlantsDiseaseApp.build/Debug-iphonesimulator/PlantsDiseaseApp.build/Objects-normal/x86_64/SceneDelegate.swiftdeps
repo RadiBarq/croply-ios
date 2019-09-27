@@ -15,9 +15,10 @@ provides-dynamic-lookup:
 - "window"
 depends-top-level:
 - "AssignmentPrecedence"
+- !private "CameraView"
 - "CastingPrecedence"
-- !private "LoginView"
 - "SceneDelegate"
+- "SessionUser"
 - !private "UIHostingController"
 - "UIResponder"
 - "UIScene"
@@ -29,8 +30,9 @@ depends-member:
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
+- !private ["s7CVarArgP", "CameraView"]
 - ["s7CVarArgP", "ConnectionOptions"]
-- !private ["s7CVarArgP", "LoginView"]
+- ["s7CVarArgP", "SessionUser"]
 - !private ["s7CVarArgP", "UIHostingController"]
 - !private ["s7CVarArgP", "UIWindow"]
 - ["s7CVarArgP", ""]
@@ -47,8 +49,11 @@ depends-member:
 - ["s7CVarArgP", "stateRestorationActivityForScene"]
 - ["s7CVarArgP", "window"]
 - ["s7CVarArgP", "windowScene"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "deinit"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CameraView"]
 - ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
-- !private ["s28CustomDebugStringConvertibleP", "LoginView"]
+- ["s28CustomDebugStringConvertibleP", "SessionUser"]
 - !private ["s28CustomDebugStringConvertibleP", "UIHostingController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -65,8 +70,9 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "stateRestorationActivityForScene"]
 - ["s28CustomDebugStringConvertibleP", "window"]
 - ["s28CustomDebugStringConvertibleP", "windowScene"]
+- !private ["s23CustomStringConvertibleP", "CameraView"]
 - ["s23CustomStringConvertibleP", "ConnectionOptions"]
-- !private ["s23CustomStringConvertibleP", "LoginView"]
+- ["s23CustomStringConvertibleP", "SessionUser"]
 - !private ["s23CustomStringConvertibleP", "UIHostingController"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - ["s23CustomStringConvertibleP", ""]
@@ -83,8 +89,9 @@ depends-member:
 - ["s23CustomStringConvertibleP", "stateRestorationActivityForScene"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", "windowScene"]
+- !private ["SQ", "CameraView"]
 - ["SQ", "ConnectionOptions"]
-- !private ["SQ", "LoginView"]
+- ["SQ", "SessionUser"]
 - !private ["SQ", "UIHostingController"]
 - !private ["SQ", "UIWindow"]
 - ["SQ", ""]
@@ -101,8 +108,9 @@ depends-member:
 - ["SQ", "stateRestorationActivityForScene"]
 - ["SQ", "window"]
 - ["SQ", "windowScene"]
+- !private ["SH", "CameraView"]
 - ["SH", "ConnectionOptions"]
-- !private ["SH", "LoginView"]
+- ["SH", "SessionUser"]
 - !private ["SH", "UIHostingController"]
 - !private ["SH", "UIWindow"]
 - ["SH", ""]
@@ -119,14 +127,13 @@ depends-member:
 - ["SH", "stateRestorationActivityForScene"]
 - ["SH", "window"]
 - ["SH", "windowScene"]
-- !private ["16PlantsDiseaseApp9LoginViewV", "deinit"]
-- !private ["16PlantsDiseaseApp9LoginViewV", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "rootViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So8NSObjectC", "CameraView"]
 - ["So8NSObjectC", "ConnectionOptions"]
-- !private ["So8NSObjectC", "LoginView"]
+- ["So8NSObjectC", "SessionUser"]
 - !private ["So8NSObjectC", "UIHostingController"]
 - ["So8NSObjectC", "UIScene"]
 - ["So8NSObjectC", "UISceneSession"]
@@ -143,10 +150,12 @@ depends-member:
 - ["So8NSObjectC", "sceneWillResignActive"]
 - ["So8NSObjectC", "stateRestorationActivity"]
 - ["So8NSObjectC", "stateRestorationActivityForScene"]
+- ["So8NSObjectC", "user"]
 - ["So8NSObjectC", "window"]
 - ["So8NSObjectC", "windowScene"]
+- !private ["So8NSObjectP", "CameraView"]
 - ["So8NSObjectP", "ConnectionOptions"]
-- !private ["So8NSObjectP", "LoginView"]
+- ["So8NSObjectP", "SessionUser"]
 - !private ["So8NSObjectP", "UIHostingController"]
 - !private ["So8NSObjectP", "UIWindow"]
 - ["So8NSObjectP", ""]
@@ -163,7 +172,9 @@ depends-member:
 - ["So8NSObjectP", "stateRestorationActivityForScene"]
 - ["So8NSObjectP", "window"]
 - ["So8NSObjectP", "windowScene"]
-- !private ["16PlantsDiseaseApp13SceneDelegateC", "LoginView"]
+- ["7Combine16ObservableObjectP", "init"]
+- !private ["16PlantsDiseaseApp13SceneDelegateC", "CameraView"]
+- ["16PlantsDiseaseApp13SceneDelegateC", "SessionUser"]
 - !private ["16PlantsDiseaseApp13SceneDelegateC", "UIHostingController"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "UIScene"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "UISceneSession"]
@@ -179,8 +190,10 @@ depends-member:
 - ["16PlantsDiseaseApp13SceneDelegateC", "sceneWillResignActive"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "stateRestorationActivity"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "stateRestorationActivityForScene"]
+- ["16PlantsDiseaseApp13SceneDelegateC", "user"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "window"]
 - ["16PlantsDiseaseApp13SceneDelegateC", "windowScene"]
+- ["16PlantsDiseaseApp11SessionUserC", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
@@ -210,8 +223,9 @@ depends-member:
 - !private ["So24UILargeContentViewerItemP", "init"]
 - !private ["So24UILargeContentViewerItemP", "makeKeyAndVisible"]
 - !private ["So24UILargeContentViewerItemP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "CameraView"]
 - ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
-- !private ["So30UIPasteConfigurationSupportingP", "LoginView"]
+- ["So30UIPasteConfigurationSupportingP", "SessionUser"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIHostingController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -228,8 +242,9 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "stateRestorationActivityForScene"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So30UIPasteConfigurationSupportingP", "windowScene"]
+- !private ["So11UIResponderC", "CameraView"]
 - ["So11UIResponderC", "ConnectionOptions"]
-- !private ["So11UIResponderC", "LoginView"]
+- ["So11UIResponderC", "SessionUser"]
 - !private ["So11UIResponderC", "UIHostingController"]
 - ["So11UIResponderC", "UIScene"]
 - ["So11UIResponderC", "UISceneSession"]
@@ -247,10 +262,12 @@ depends-member:
 - ["So11UIResponderC", "sceneWillResignActive"]
 - ["So11UIResponderC", "stateRestorationActivity"]
 - ["So11UIResponderC", "stateRestorationActivityForScene"]
+- ["So11UIResponderC", "user"]
 - ["So11UIResponderC", "window"]
 - ["So11UIResponderC", "windowScene"]
+- !private ["So30UIResponderStandardEditActionsP", "CameraView"]
 - ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
-- !private ["So30UIResponderStandardEditActionsP", "LoginView"]
+- ["So30UIResponderStandardEditActionsP", "SessionUser"]
 - !private ["So30UIResponderStandardEditActionsP", "UIHostingController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -268,7 +285,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "window"]
 - ["So30UIResponderStandardEditActionsP", "windowScene"]
 - ["So7UISceneC", "ConnectionOptions"]
-- !private ["So15UISceneDelegateP", "LoginView"]
+- !private ["So15UISceneDelegateP", "CameraView"]
+- ["So15UISceneDelegateP", "SessionUser"]
 - !private ["So15UISceneDelegateP", "UIHostingController"]
 - !private ["So15UISceneDelegateP", "UIWindow"]
 - ["So15UISceneDelegateP", ""]
@@ -286,8 +304,9 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "CameraView"]
 - ["So23UIUserActivityRestoringP", "ConnectionOptions"]
-- !private ["So23UIUserActivityRestoringP", "LoginView"]
+- ["So23UIUserActivityRestoringP", "SessionUser"]
 - !private ["So23UIUserActivityRestoringP", "UIHostingController"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -310,7 +329,8 @@ depends-member:
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
-- !private ["So21UIWindowSceneDelegateP", "LoginView"]
+- !private ["So21UIWindowSceneDelegateP", "CameraView"]
+- ["So21UIWindowSceneDelegateP", "SessionUser"]
 - !private ["So21UIWindowSceneDelegateP", "UIHostingController"]
 - !private ["So21UIWindowSceneDelegateP", "UIWindow"]
 - ["So21UIWindowSceneDelegateP", ""]
@@ -325,8 +345,9 @@ depends-member:
 - ["So21UIWindowSceneDelegateP", "window"]
 - ["So21UIWindowSceneDelegateP", "windowScene"]
 - !private ["7SwiftUI4ViewP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CameraView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "LoginView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "SessionUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIHostingController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -343,8 +364,9 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "stateRestorationActivityForScene"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "windowScene"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "CameraView"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "LoginView"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "SessionUser"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIHostingController"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIWindow"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
@@ -368,16 +390,18 @@ depends-member:
 depends-nominal:
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "16PlantsDiseaseApp10CameraViewV"
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - "SQ"
 - "SH"
-- !private "16PlantsDiseaseApp9LoginViewV"
 - !private "So8NSCodingP"
 - !private "So26NSExtensionRequestHandlingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- "7Combine16ObservableObjectP"
 - "16PlantsDiseaseApp13SceneDelegateC"
+- "16PlantsDiseaseApp11SessionUserC"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
@@ -1694,4 +1718,4 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9e025702f27c9fdcd4ce59474fd01164"
+interface-hash: "377b9d1674267427954bbeb7386b5185"

@@ -15,6 +15,7 @@
 		CD1C5AFF2326FC79002F8DC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */; };
 		CD1C5B0A2326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B092326FC7A002F8DC7 /* PlantsDiseaseAppTests.swift */; };
 		CD1C5B152326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */; };
+		CD358B59233569A90075229B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD358B58233569A90075229B /* SessionManager.swift */; };
 		CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C972329509900B5DBD1 /* SignUpView.swift */; };
 		CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */; };
 		CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */; };
@@ -22,8 +23,13 @@
 		CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406C9F2329AF0500B5DBD1 /* HomeView.swift */; };
 		CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */; };
 		CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */; };
+		CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A7C233E1A9300A5BFC3 /* Scan.swift */; };
+		CD679A7F233E1AA800A5BFC3 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A7E233E1AA800A5BFC3 /* Disease.swift */; };
+		CD679A81233E205D00A5BFC3 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A80233E205D00A5BFC3 /* Crop.swift */; };
 		CDB57769232F63C300B19B37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB57768232F63C300B19B37 /* LoginView.swift */; };
 		CDB5776C232FDCA500B19B37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776B232FDCA500B19B37 /* User.swift */; };
+		CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776D232FF6A900B19B37 /* APIRequest.swift */; };
+		CDC51A7323340E3D008416F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51A7223340E3D008416F9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,7 @@
 		CD1C5B102326FC7A002F8DC7 /* PlantsDiseaseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsDiseaseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsDiseaseAppUITests.swift; sourceTree = "<group>"; };
 		CD1C5B162326FC7A002F8DC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD358B58233569A90075229B /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		CD406C972329509900B5DBD1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CD406C992329854800B5DBD1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		CD406C9B2329AE6100B5DBD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -65,8 +72,13 @@
 		CD406C9F2329AF0500B5DBD1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CD406CA32329BCDD00B5DBD1 /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
 		CD406CA5232A370300B5DBD1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		CD679A7C233E1A9300A5BFC3 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		CD679A7E233E1AA800A5BFC3 /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
+		CD679A80233E205D00A5BFC3 /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
 		CDB57768232F63C300B19B37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CDB5776B232FDCA500B19B37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CDB5776D232FF6A900B19B37 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		CDC51A7223340E3D008416F9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 		CD1C5AF12326FC77002F8DC7 /* PlantsDiseaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				CDC51A7123340D94008416F9 /* Extensions */,
 				CD1C5B002326FC79002F8DC7 /* Info.plist */,
 				CDB5776A232FDBFB00B19B37 /* Models */,
 				CDF6F7A7232B053000FAE0A9 /* TapBar */,
@@ -151,8 +164,8 @@
 		CD1C5B132326FC7A002F8DC7 /* PlantsDiseaseAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */,
 				CD1C5B162326FC7A002F8DC7 /* Info.plist */,
+				CD1C5B142326FC7A002F8DC7 /* PlantsDiseaseAppUITests.swift */,
 			);
 			path = PlantsDiseaseAppUITests;
 			sourceTree = "<group>";
@@ -161,8 +174,20 @@
 			isa = PBXGroup;
 			children = (
 				CDB5776B232FDCA500B19B37 /* User.swift */,
+				CDB5776D232FF6A900B19B37 /* APIRequest.swift */,
+				CD679A7C233E1A9300A5BFC3 /* Scan.swift */,
+				CD679A7E233E1AA800A5BFC3 /* Disease.swift */,
+				CD679A80233E205D00A5BFC3 /* Crop.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CDC51A7123340D94008416F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CDC51A7223340E3D008416F9 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CDF6F7A1232B044100FAE0A9 /* Profile */ = {
@@ -181,6 +206,7 @@
 				CD1C5AFD2326FC79002F8DC7 /* LaunchScreen.storyboard */,
 				CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */,
 				CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */,
+				CD358B58233569A90075229B /* SessionManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -352,16 +378,22 @@
 			files = (
 				CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */,
 				CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */,
+				CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */,
 				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
 				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
+				CD679A7F233E1AA800A5BFC3 /* Disease.swift in Sources */,
 				CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */,
 				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,
 				CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */,
+				CD358B59233569A90075229B /* SessionManager.swift in Sources */,
 				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
 				CDB5776C232FDCA500B19B37 /* User.swift in Sources */,
+				CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */,
 				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
 				CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */,
+				CDC51A7323340E3D008416F9 /* Extensions.swift in Sources */,
+				CD679A81233E205D00A5BFC3 /* Crop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

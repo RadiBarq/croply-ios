@@ -9,24 +9,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var selection = 0
+    @State private var shouldPresentSheet = true
+    @State private var selectedItem = "email"
+    @EnvironmentObject var user: SessionUser
     
     init() {
         
-    
     }
     
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "house.fill")
-                            .font(Font.title.weight(.semibold))
-                    }
+            if (!user.signedInClicked && !user.signedUpClicked ) {
+                HomeView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house.fill")
+                                .font(Font.title.weight(.semibold))
+                        }
+                }
+                .tag(0)
             }
-            .tag(0)
+            else if user.signedInClicked  {
+                LoginView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house.fill")
+                                .font(Font.title.weight(.semibold))
+                        }
+                }
+                .tag(0)
+            }
+                
+            else {
+                SignUpView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "house.fill")
+                                .font(Font.title.weight(.semibold))
+                        }
+                }
+                .tag(0)
+            }
             Text("Second View")
                 .font(.title)
                 .tabItem {
@@ -36,25 +64,35 @@ struct ContentView: View {
                     }
             }
             .tag(1)
-            ProfileView()
+            Text("Second View")
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image(systemName: "person.fill")
+                        Image(systemName: "map.fill")
                             .font(Font.largeTitle.weight(.semibold))
-                            .foregroundColor(.red)
                     }
             }
             .tag(2)
-            
+            if (user.id != -1) {
+                ProfileView()
+                    .font(.title)
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "person.fill")
+                                .font(Font.largeTitle.weight(.semibold))
+                                .foregroundColor(.red)
+                        }
+                }
+                .tag(3)
+            }
         }
-         .accentColor(.green)
+        .accentColor(.green)
         .edgesIgnoringSafeArea([.top])
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(SessionUser())
     }
 }

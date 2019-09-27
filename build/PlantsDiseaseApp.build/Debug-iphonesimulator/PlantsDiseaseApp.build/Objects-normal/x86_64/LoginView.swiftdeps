@@ -10,9 +10,19 @@ provides-member:
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!"
+- !private "<"
+- !private "APIRequest"
+- !private "ActivityIndicator"
+- !private "Alert"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
 - !private "Button"
 - !private "Color"
+- !private "DispatchQueue"
 - !private "EmptyView"
+- "Environment"
+- "EnvironmentObject"
 - "FloatLiteralType"
 - !private "Form"
 - !private "HStack"
@@ -23,63 +33,129 @@ depends-top-level:
 - "PreviewProvider"
 - !private "Section"
 - !private "SecureField"
+- "SessionUser"
 - !private "Spacer"
 - "State"
 - "String"
 - "StringLiteralType"
 - !private "Text"
 - !private "TextField"
+- !private "User"
 - !private "VStack"
 - "View"
+- !private "~="
 depends-member:
+- !private ["16PlantsDiseaseApp8APIErrorO", "decondingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "encodingProblem"]
+- !private ["16PlantsDiseaseApp8APIErrorO", "responseProblem"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "authenticate"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "init"]
+- !private ["16PlantsDiseaseApp9APIResultV", "result"]
+- !private ["16PlantsDiseaseApp9APIResultV", "user"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "deinit"]
+- !private ["16PlantsDiseaseApp17ActivityIndicatorV", "init"]
+- !private ["7SwiftUI5AlertV", "init"]
 - !private ["7SwiftUI9AlignmentV", "center"]
+- !private ["SK", "count"]
+- !private ["SK", "isValidEmail"]
+- !private ["7SwiftUI5AlertV6ButtonV", "default"]
 - !private ["7SwiftUI6ButtonV", "frame"]
 - !private ["7SwiftUI6ButtonV", "init"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "isValidEmail"]
+- !private ["s7CVarArgP", "main"]
 - !private ["s12CaseIterableP", "dark"]
 - !private ["s12CaseIterableP", "fill"]
+- !private ["Sl", "count"]
+- !private ["Sl", "isValidEmail"]
 - !private ["7SwiftUI5ColorV", "green"]
 - !private ["7SwiftUI5ColorV", "white"]
 - !private ["7SwiftUI11ColorSchemeO", "dark"]
+- !private ["SL", "count"]
+- !private ["SL", "isValidEmail"]
 - !private ["7SwiftUI11ContentModeO", "fill"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "bold"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "emailAddress"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
 - !private ["s28CustomDebugStringConvertibleP", "headline"]
+- !private ["s28CustomDebugStringConvertibleP", "isValidEmail"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "password"]
 - !private ["s28CustomDebugStringConvertibleP", "subheadline"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s17CustomReflectableP", "bold"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "default"]
 - !private ["s17CustomReflectableP", "emailAddress"]
 - !private ["s17CustomReflectableP", "green"]
 - !private ["s17CustomReflectableP", "headline"]
+- !private ["s17CustomReflectableP", "isValidEmail"]
 - !private ["s17CustomReflectableP", "password"]
 - !private ["s17CustomReflectableP", "subheadline"]
 - !private ["s17CustomReflectableP", "white"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "green"]
+- !private ["s23CustomStringConvertibleP", "isValidEmail"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- ["s23CustomStringConvertibleP", "presentationMode"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["Se", "bold"]
+- !private ["Se", "count"]
+- !private ["Se", "default"]
+- !private ["Se", "email"]
 - !private ["Se", "emailAddress"]
 - !private ["Se", "green"]
 - !private ["Se", "headline"]
+- !private ["Se", "id"]
+- !private ["Se", "init"]
+- !private ["Se", "isValidEmail"]
 - !private ["Se", "password"]
+- !private ["Se", "result"]
 - !private ["Se", "subheadline"]
+- !private ["Se", "user"]
+- !private ["Se", "username"]
 - !private ["Se", "white"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["7SwiftUI9EmptyViewV", "init"]
 - !private ["SE", "bold"]
+- !private ["SE", "count"]
+- !private ["SE", "default"]
+- !private ["SE", "email"]
 - !private ["SE", "emailAddress"]
 - !private ["SE", "green"]
 - !private ["SE", "headline"]
+- !private ["SE", "id"]
+- !private ["SE", "init"]
+- !private ["SE", "isValidEmail"]
 - !private ["SE", "password"]
 - !private ["SE", "subheadline"]
+- !private ["SE", "username"]
 - !private ["SE", "white"]
+- ["7SwiftUI11EnvironmentV", "init"]
+- ["7SwiftUI11EnvironmentV", "wrappedValue"]
+- ["7SwiftUI17EnvironmentObjectV", "init"]
+- ["7SwiftUI17EnvironmentValuesV", "presentationMode"]
 - !private ["SQ", "aspectRatio"]
+- !private ["SQ", "async"]
 - !private ["SQ", "bold"]
-- !private ["SQ", "bottom"]
 - !private ["SQ", "center"]
+- !private ["SQ", "count"]
 - !private ["SQ", "dark"]
+- !private ["SQ", "decondingProblem"]
+- !private ["SQ", "default"]
 - !private ["SQ", "emailAddress"]
+- !private ["SQ", "encodingProblem"]
+- !private ["SQ", "failure"]
 - !private ["SQ", "fill"]
 - !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
@@ -88,26 +164,42 @@ depends-member:
 - !private ["SQ", "green"]
 - !private ["SQ", "headline"]
 - !private ["SQ", "init"]
+- !private ["SQ", "isValidEmail"]
+- !private ["SQ", "main"]
 - !private ["SQ", "padding"]
 - !private ["SQ", "password"]
 - !private ["SQ", "resizable"]
+- !private ["SQ", "responseProblem"]
 - !private ["SQ", "subheadline"]
+- !private ["SQ", "success"]
 - !private ["SQ", "top"]
 - !private ["SQ", "white"]
-- !private ["s25ExpressibleByArrayLiteralP", "bottom"]
+- !private ["s5ErrorP", "decondingProblem"]
+- !private ["s5ErrorP", "encodingProblem"]
+- !private ["s5ErrorP", "responseProblem"]
 - !private ["s25ExpressibleByArrayLiteralP", "top"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isValidEmail"]
 - !private ["s23ExpressibleByNilLiteralP", "bold"]
+- !private ["s23ExpressibleByNilLiteralP", "default"]
 - !private ["s23ExpressibleByNilLiteralP", "emailAddress"]
 - !private ["s23ExpressibleByNilLiteralP", "green"]
 - !private ["s23ExpressibleByNilLiteralP", "headline"]
 - !private ["s23ExpressibleByNilLiteralP", "password"]
 - !private ["s23ExpressibleByNilLiteralP", "subheadline"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
+- !private ["s32ExpressibleByStringInterpolationP", "count"]
+- !private ["s32ExpressibleByStringInterpolationP", "isValidEmail"]
+- !private ["s26ExpressibleByStringLiteralP", "count"]
+- !private ["s26ExpressibleByStringLiteralP", "isValidEmail"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "count"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isValidEmail"]
 - !private ["7SwiftUI4FontV", "headline"]
 - !private ["7SwiftUI4FontV", "subheadline"]
 - !private ["7SwiftUI4FormV", "colorScheme"]
 - !private ["7SwiftUI4FormV", "init"]
 - !private ["7SwiftUI7GestureP", "bold"]
+- !private ["7SwiftUI7GestureP", "default"]
 - !private ["7SwiftUI7GestureP", "emailAddress"]
 - !private ["7SwiftUI7GestureP", "green"]
 - !private ["7SwiftUI7GestureP", "headline"]
@@ -116,51 +208,88 @@ depends-member:
 - !private ["7SwiftUI7GestureP", "white"]
 - !private ["7SwiftUI6HStackV", "font"]
 - !private ["7SwiftUI6HStackV", "init"]
+- !private ["SH", "async"]
 - !private ["SH", "bold"]
+- !private ["SH", "count"]
 - !private ["SH", "dark"]
+- !private ["SH", "decondingProblem"]
+- !private ["SH", "default"]
 - !private ["SH", "emailAddress"]
+- !private ["SH", "encodingProblem"]
+- !private ["SH", "failure"]
 - !private ["SH", "fill"]
 - !private ["SH", "green"]
 - !private ["SH", "headline"]
+- !private ["SH", "isValidEmail"]
+- !private ["SH", "main"]
 - !private ["SH", "password"]
+- !private ["SH", "responseProblem"]
 - !private ["SH", "subheadline"]
+- !private ["SH", "success"]
 - !private ["SH", "white"]
 - !private ["7SwiftUI5ImageV", "aspectRatio"]
 - !private ["7SwiftUI5ImageV", "frame"]
 - !private ["7SwiftUI5ImageV", "init"]
 - !private ["7SwiftUI5ImageV", "resizable"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "$alertMessage"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "$alertTitle"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "$email"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "$password"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "$shouldShowAlert"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "$showIndicator"]
+- ["16PlantsDiseaseApp9LoginViewV", "$user"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "APIRequest"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "ActivityIndicator"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "Alert"]
 - ["16PlantsDiseaseApp9LoginViewV", "Body"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Button"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Color"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "DispatchQueue"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "EmptyView"]
+- ["16PlantsDiseaseApp9LoginViewV", "Environment"]
+- ["16PlantsDiseaseApp9LoginViewV", "EnvironmentObject"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Form"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "HStack"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Image"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Section"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "SecureField"]
+- ["16PlantsDiseaseApp9LoginViewV", "SessionUser"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Spacer"]
 - ["16PlantsDiseaseApp9LoginViewV", "State"]
 - ["16PlantsDiseaseApp9LoginViewV", "String"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Text"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "TextField"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "User"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "VStack"]
 - ["16PlantsDiseaseApp9LoginViewV", "View"]
 - ["16PlantsDiseaseApp9LoginViewV", "_Default_Body"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_alertMessage"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_alertTitle"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "_email"]
 - ["16PlantsDiseaseApp9LoginViewV", "_makeView"]
 - ["16PlantsDiseaseApp9LoginViewV", "_makeViewList"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "_password"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_presentation"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_shouldShowAlert"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_showIndicator"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "_user"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "alertMessage"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "alertTitle"]
 - ["16PlantsDiseaseApp9LoginViewV", "body"]
 - ["16PlantsDiseaseApp9LoginViewV", "deinit"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "email"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "environmentObject"]
 - ["16PlantsDiseaseApp9LoginViewV", "init"]
 - ["16PlantsDiseaseApp9LoginViewV", "loginClicked"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "password"]
+- ["16PlantsDiseaseApp9LoginViewV", "presentation"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "shouldShowAlert"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "showIndicator"]
 - ["16PlantsDiseaseApp9LoginViewV", "signupClicked"]
+- ["16PlantsDiseaseApp9LoginViewV", "user"]
 - !private ["16PlantsDiseaseApp18LoginView_PreviewsV", "LoginView"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "Previews"]
+- !private ["16PlantsDiseaseApp18LoginView_PreviewsV", "SessionUser"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "View"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "_Default_Previews"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "_platform"]
@@ -169,9 +298,43 @@ depends-member:
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "init"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "platform"]
 - ["16PlantsDiseaseApp18LoginView_PreviewsV", "previews"]
-- !private ["s9OptionSetP", "bottom"]
+- !private ["s25LosslessStringConvertibleP", "count"]
+- !private ["s25LosslessStringConvertibleP", "isValidEmail"]
+- !private ["s10MirrorPathP", "count"]
+- !private ["s10MirrorPathP", "isValidEmail"]
+- !private ["So8NSCodingP", "count"]
+- !private ["So8NSCodingP", "isValidEmail"]
+- !private ["So9NSCopyingP", "count"]
+- !private ["So9NSCopyingP", "isValidEmail"]
+- !private ["So21NSItemProviderReadingP", "count"]
+- !private ["So21NSItemProviderReadingP", "isValidEmail"]
+- !private ["So21NSItemProviderWritingP", "count"]
+- !private ["So21NSItemProviderWritingP", "isValidEmail"]
+- !private ["So16NSMutableCopyingP", "count"]
+- !private ["So16NSMutableCopyingP", "isValidEmail"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "count"]
+- !private ["So8NSObjectC", "isValidEmail"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "count"]
+- !private ["So8NSObjectP", "isValidEmail"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So14NSSecureCodingP", "count"]
+- !private ["So14NSSecureCodingP", "isValidEmail"]
+- !private ["So8NSStringC", "count"]
+- !private ["So8NSStringC", "isValidEmail"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["7Combine16ObservableObjectP", "email"]
+- !private ["7Combine16ObservableObjectP", "id"]
+- !private ["7Combine16ObservableObjectP", "init"]
+- !private ["7Combine16ObservableObjectP", "signedInClicked"]
+- !private ["7Combine16ObservableObjectP", "signedUpClicked"]
+- !private ["7Combine16ObservableObjectP", "username"]
 - !private ["s9OptionSetP", "top"]
 - !private ["Sq", "bold"]
+- !private ["Sq", "default"]
 - !private ["Sq", "emailAddress"]
 - !private ["Sq", "green"]
 - !private ["Sq", "headline"]
@@ -180,30 +343,47 @@ depends-member:
 - !private ["Sq", "white"]
 - !private ["7SwiftUI15PreviewProviderP", "LoginView"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
+- !private ["7SwiftUI15PreviewProviderP", "SessionUser"]
 - ["7SwiftUI15PreviewProviderP", ""]
 - ["7SwiftUI15PreviewProviderP", "_Default_Previews"]
 - ["7SwiftUI15PreviewProviderP", "_platform"]
 - ["7SwiftUI15PreviewProviderP", "_previews"]
 - ["7SwiftUI15PreviewProviderP", "platform"]
 - ["7SwiftUI15PreviewProviderP", "previews"]
-- !private ["SY", "bottom"]
+- !private ["Sm", "count"]
+- !private ["Sm", "isValidEmail"]
 - !private ["SY", "emailAddress"]
 - !private ["SY", "password"]
 - !private ["SY", "top"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
 - !private ["7SwiftUI7SectionV", "cornerRadius"]
 - !private ["7SwiftUI7SectionV", "font"]
 - !private ["7SwiftUI7SectionV", "init"]
 - !private ["7SwiftUI11SecureFieldV", "init"]
 - !private ["7SwiftUI11SecureFieldV", "padding"]
-- !private ["7SwiftUI4EdgeO3SetV", "bottom"]
+- !private ["ST", "count"]
+- !private ["ST", "isValidEmail"]
+- ["16PlantsDiseaseApp11SessionUserC", "deinit"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "email"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "id"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "init"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "signedInClicked"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "signedUpClicked"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "username"]
 - !private ["7SwiftUI4EdgeO3SetV", "top"]
-- !private ["s10SetAlgebraP", "bottom"]
 - !private ["s10SetAlgebraP", "top"]
 - !private ["7SwiftUI10ShapeStyleP", "green"]
 - !private ["7SwiftUI10ShapeStyleP", "white"]
 - !private ["7SwiftUI6SpacerV", "init"]
 - ["7SwiftUI5StateV", "init"]
 - ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["SS", "count"]
+- !private ["SS", "isValidEmail"]
+- !private ["Sy", "count"]
+- !private ["Sy", "isValidEmail"]
 - !private ["7SwiftUI4TextV", "font"]
 - !private ["7SwiftUI4TextV", "fontWeight"]
 - !private ["7SwiftUI4TextV", "foregroundColor"]
@@ -211,16 +391,32 @@ depends-member:
 - !private ["7SwiftUI4TextV", "padding"]
 - !private ["7SwiftUI9TextFieldV", "init"]
 - !private ["7SwiftUI9TextFieldV", "padding"]
+- !private ["s16TextOutputStreamP", "count"]
+- !private ["s16TextOutputStreamP", "isValidEmail"]
+- !private ["s20TextOutputStreamableP", "count"]
+- !private ["s20TextOutputStreamableP", "isValidEmail"]
 - !private ["So17UITextContentTypea", "emailAddress"]
 - !private ["So17UITextContentTypea", "password"]
+- !private ["7SwiftUI19UIViewRepresentableP", "init"]
+- !private ["16PlantsDiseaseApp4UserC", "deinit"]
+- !private ["16PlantsDiseaseApp4UserC", "email"]
+- !private ["16PlantsDiseaseApp4UserC", "id"]
+- !private ["16PlantsDiseaseApp4UserC", "init"]
+- !private ["16PlantsDiseaseApp4UserC", "username"]
 - !private ["7SwiftUI6VStackV", "background"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI17VerticalAlignmentV", "center"]
 - !private ["7SwiftUI4ViewP", "$email"]
 - !private ["7SwiftUI4ViewP", "$password"]
+- !private ["7SwiftUI4ViewP", "$shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "$showIndicator"]
+- !private ["7SwiftUI4ViewP", "APIRequest"]
+- !private ["7SwiftUI4ViewP", "ActivityIndicator"]
+- !private ["7SwiftUI4ViewP", "Alert"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "Button"]
 - !private ["7SwiftUI4ViewP", "Color"]
+- !private ["7SwiftUI4ViewP", "DispatchQueue"]
 - !private ["7SwiftUI4ViewP", "EmptyView"]
 - !private ["7SwiftUI4ViewP", "Form"]
 - !private ["7SwiftUI4ViewP", "HStack"]
@@ -230,19 +426,26 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "TextField"]
+- !private ["7SwiftUI4ViewP", "User"]
 - !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
 - ["7SwiftUI4ViewP", "_makeView"]
 - ["7SwiftUI4ViewP", "_makeViewList"]
+- !private ["7SwiftUI4ViewP", "alert"]
+- !private ["7SwiftUI4ViewP", "alertMessage"]
+- !private ["7SwiftUI4ViewP", "alertTitle"]
 - !private ["7SwiftUI4ViewP", "aspectRatio"]
 - !private ["7SwiftUI4ViewP", "background"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "bold"]
 - !private ["7SwiftUI4ViewP", "colorScheme"]
 - !private ["7SwiftUI4ViewP", "cornerRadius"]
+- !private ["7SwiftUI4ViewP", "default"]
 - !private ["7SwiftUI4ViewP", "edgesIgnoringSafeArea"]
+- !private ["7SwiftUI4ViewP", "email"]
 - !private ["7SwiftUI4ViewP", "emailAddress"]
+- !private ["7SwiftUI4ViewP", "environmentObject"]
 - !private ["7SwiftUI4ViewP", "font"]
 - !private ["7SwiftUI4ViewP", "fontWeight"]
 - !private ["7SwiftUI4ViewP", "foregroundColor"]
@@ -254,23 +457,51 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "padding"]
 - !private ["7SwiftUI4ViewP", "password"]
 - !private ["7SwiftUI4ViewP", "resizable"]
+- !private ["7SwiftUI4ViewP", "shouldShowAlert"]
+- !private ["7SwiftUI4ViewP", "showIndicator"]
 - !private ["7SwiftUI4ViewP", "signupClicked"]
 - !private ["7SwiftUI4ViewP", "subheadline"]
 - !private ["7SwiftUI4ViewP", "textContentType"]
+- !private ["7SwiftUI4ViewP", "user"]
 - !private ["7SwiftUI4ViewP", "white"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI4FontV6WeightV", "bold"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "count"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "isValidEmail"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "count"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isValidEmail"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "count"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isValidEmail"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "count"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isValidEmail"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "isValidEmail"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "emailAddress"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isValidEmail"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "password"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "count"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isValidEmail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "count"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isValidEmail"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
 - !private ["s21_ObjectiveCBridgeableP", "bold"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "default"]
 - !private ["s21_ObjectiveCBridgeableP", "emailAddress"]
 - !private ["s21_ObjectiveCBridgeableP", "green"]
 - !private ["s21_ObjectiveCBridgeableP", "headline"]
+- !private ["s21_ObjectiveCBridgeableP", "isValidEmail"]
 - !private ["s21_ObjectiveCBridgeableP", "password"]
 - !private ["s21_ObjectiveCBridgeableP", "subheadline"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["7SwiftUI16_PreviewProviderP", "LoginView"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
+- !private ["7SwiftUI16_PreviewProviderP", "SessionUser"]
 - ["7SwiftUI16_PreviewProviderP", ""]
 - ["7SwiftUI16_PreviewProviderP", "_Default_Previews"]
 - ["7SwiftUI16_PreviewProviderP", "_platform"]
@@ -280,22 +511,42 @@ depends-member:
 - !private ["s20_SwiftNewtypeWrapperP", "emailAddress"]
 - !private ["s20_SwiftNewtypeWrapperP", "password"]
 depends-nominal:
+- !private "16PlantsDiseaseApp8APIErrorO"
+- !private "16PlantsDiseaseApp10APIRequestV"
+- !private "16PlantsDiseaseApp9APIResultV"
+- !private "16PlantsDiseaseApp17ActivityIndicatorV"
+- !private "7SwiftUI5AlertV"
 - !private "7SwiftUI9AlignmentV"
+- !private "SK"
+- !private "7SwiftUI5AlertV6ButtonV"
 - !private "7SwiftUI6ButtonV"
+- !private "s7CVarArgP"
 - !private "s12CaseIterableP"
+- !private "Sl"
 - !private "7SwiftUI5ColorV"
 - !private "7SwiftUI11ColorSchemeO"
+- !private "SL"
 - !private "7SwiftUI11ContentModeO"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
-- !private "s23CustomStringConvertibleP"
+- "s23CustomStringConvertibleP"
 - !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
 - "7SwiftUI15DynamicPropertyP"
 - !private "7SwiftUI9EmptyViewV"
 - !private "SE"
+- "7SwiftUI11EnvironmentV"
+- "7SwiftUI17EnvironmentObjectV"
+- "7SwiftUI17EnvironmentValuesV"
 - !private "SQ"
+- !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "7SwiftUI4FontV"
 - !private "7SwiftUI4FormV"
 - !private "7SwiftUI7GestureP"
@@ -304,26 +555,57 @@ depends-nominal:
 - !private "7SwiftUI5ImageV"
 - "16PlantsDiseaseApp9LoginViewV"
 - "16PlantsDiseaseApp18LoginView_PreviewsV"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "So9OS_objectC"
+- !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
+- !private "Sm"
 - !private "SY"
+- !private "s6ResultO"
+- !private "7Combine9SchedulerP"
 - !private "7SwiftUI7SectionV"
 - !private "7SwiftUI11SecureFieldV"
+- !private "ST"
+- "16PlantsDiseaseApp11SessionUserC"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
 - !private "7SwiftUI6SpacerV"
 - "7SwiftUI5StateV"
+- !private "SS"
+- !private "Sy"
 - !private "7SwiftUI4TextV"
 - !private "7SwiftUI9TextFieldV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So17UITextContentTypea"
+- !private "7SwiftUI19UIViewRepresentableP"
+- !private "16PlantsDiseaseApp4UserC"
 - !private "7SwiftUI6VStackV"
 - !private "7SwiftUI17VerticalAlignmentV"
 - "7SwiftUI4ViewP"
 - !private "7SwiftUI11ViewBuilderV"
 - !private "7SwiftUI4FontV6WeightV"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
 - !private "s20_SwiftNewtypeWrapperP"
@@ -1616,4 +1898,4 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4c948b5a1146be1f856692233eb37d48"
+interface-hash: "93f0bfd6bdb0d18f041d66619f5f160a"

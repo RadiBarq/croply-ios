@@ -24,7 +24,6 @@ struct ProfileView: View {
                 .frame(height: 300)
                 .cornerRadius(25)
             ZStack {
-                
                 VStack {
                     Text(userName)
                         .foregroundColor(.black)
@@ -65,7 +64,6 @@ struct ProfileView: View {
                             Spacer()
                         }
                         .padding(.bottom, 0)
-                        
                     }
                 }
                 .padding(.bottom, 15)
@@ -79,7 +77,6 @@ struct ProfileView: View {
             .shadow(radius: 25)
             Spacer()
         }
-            
         .edgesIgnoringSafeArea([.top])
         .sheet(isPresented: self.$shouldPresentSheet) {
             if self.selectedItem == "History" {
