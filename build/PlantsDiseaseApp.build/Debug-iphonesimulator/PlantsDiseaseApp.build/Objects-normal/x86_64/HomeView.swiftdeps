@@ -10,77 +10,189 @@ provides-member:
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "=="
+- "Array"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
 - !private "Button"
+- "Disease"
+- !private "DiseaseView"
+- !private "EmptyView"
 - "FloatLiteralType"
 - !private "ForEach"
+- !private "HStack"
 - "HomeView"
 - "HomeView_Previews"
-- !private "IntegerLiteralType"
+- "Image"
+- "Int"
+- "IntegerLiteralType"
 - !private "NavigationView"
 - "PreviewProvider"
 - !private "ScrollView"
+- !private "Spacer"
+- "State"
 - "String"
 - "StringLiteralType"
 - !private "Text"
+- !private "VStack"
 - "View"
 depends-member:
+- !private ["Sa", "indices"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "indices"]
+- !private ["SK", "subscript"]
+- !private ["7SwiftUI6ButtonV", "foregroundColor"]
 - !private ["7SwiftUI6ButtonV", "init"]
+- !private ["s7CVarArgP", "indices"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s12CaseIterableP", "dark"]
+- !private ["Sl", "indices"]
+- ["Sl", "init"]
+- !private ["Sl", "map"]
+- !private ["Sl", "subscript"]
 - !private ["7SwiftUI5ColorV", "green"]
+- !private ["7SwiftUI5ColorV", "white"]
 - !private ["7SwiftUI11ColorSchemeO", "dark"]
+- !private ["10Foundation15ContiguousBytesP", "indices"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "bold"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
-- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "indices"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "original"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s17CustomReflectableP", "bold"]
 - !private ["s17CustomReflectableP", "green"]
-- !private ["s17CustomReflectableP", "title"]
+- !private ["s17CustomReflectableP", "indices"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "original"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "white"]
 - !private ["s23CustomStringConvertibleP", "green"]
+- !private ["s23CustomStringConvertibleP", "indices"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- !private ["10Foundation12DataProtocolP", "indices"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
 - !private ["Se", "bold"]
 - !private ["Se", "green"]
-- !private ["Se", "title"]
+- !private ["Se", "indices"]
+- ["Se", "init"]
+- !private ["Se", "map"]
+- !private ["Se", "original"]
+- !private ["Se", "subscript"]
+- !private ["Se", "white"]
+- ["SD", "init"]
+- !private ["SD", "map"]
+- !private ["SD", "subscript"]
+- ["16PlantsDiseaseApp0B0C", "deinit"]
+- ["16PlantsDiseaseApp0B0C", "init"]
+- !private ["16PlantsDiseaseApp0B4ViewV", "deinit"]
+- !private ["16PlantsDiseaseApp0B4ViewV", "init"]
+- ["7SwiftUI15DynamicPropertyP", "init"]
+- ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["7SwiftUI18DynamicViewContentP", "init"]
+- !private ["7SwiftUI9EmptyViewV", "init"]
 - !private ["SE", "bold"]
 - !private ["SE", "green"]
-- !private ["SE", "title"]
+- !private ["SE", "indices"]
+- ["SE", "init"]
+- !private ["SE", "map"]
+- !private ["SE", "original"]
+- !private ["SE", "subscript"]
+- !private ["SE", "white"]
 - !private ["SQ", "bold"]
-- !private ["SQ", "bottom"]
 - !private ["SQ", "dark"]
-- !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
 - !private ["SQ", "foregroundColor"]
+- !private ["SQ", "frame"]
 - !private ["SQ", "green"]
-- !private ["SQ", "init"]
+- !private ["SQ", "horizontal"]
+- !private ["SQ", "indices"]
+- ["SQ", "init"]
+- !private ["SQ", "leading"]
+- !private ["SQ", "map"]
+- !private ["SQ", "original"]
 - !private ["SQ", "padding"]
-- !private ["SQ", "title"]
-- !private ["s25ExpressibleByArrayLiteralP", "bottom"]
+- !private ["SQ", "renderingMode"]
+- !private ["SQ", "resizable"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "vertical"]
+- !private ["SQ", "white"]
+- !private ["s25ExpressibleByArrayLiteralP", "horizontal"]
+- !private ["s25ExpressibleByArrayLiteralP", "indices"]
+- !private ["s25ExpressibleByArrayLiteralP", "leading"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "vertical"]
+- ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "map"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s23ExpressibleByNilLiteralP", "bold"]
 - !private ["s23ExpressibleByNilLiteralP", "green"]
-- !private ["s23ExpressibleByNilLiteralP", "title"]
-- !private ["7SwiftUI4FontV", "title"]
+- !private ["s23ExpressibleByNilLiteralP", "original"]
+- !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["7SwiftUI7ForEachV", "init"]
 - !private ["7SwiftUI7GestureP", "bold"]
 - !private ["7SwiftUI7GestureP", "green"]
-- !private ["7SwiftUI7GestureP", "title"]
+- !private ["7SwiftUI7GestureP", "original"]
+- !private ["7SwiftUI7GestureP", "white"]
+- !private ["7SwiftUI6HStackV", "init"]
 - !private ["SH", "bold"]
 - !private ["SH", "dark"]
 - !private ["SH", "green"]
-- !private ["SH", "title"]
+- !private ["SH", "indices"]
+- ["SH", "init"]
+- !private ["SH", "map"]
+- !private ["SH", "original"]
+- !private ["SH", "subscript"]
+- !private ["SH", "white"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "$headerClicked"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "$itemIdClicked"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "$shouldPresentSheet"]
+- ["16PlantsDiseaseApp8HomeViewV", "Array"]
 - ["16PlantsDiseaseApp8HomeViewV", "Body"]
 - !private ["16PlantsDiseaseApp8HomeViewV", "Button"]
+- ["16PlantsDiseaseApp8HomeViewV", "Disease"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "DiseaseView"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "EmptyView"]
 - !private ["16PlantsDiseaseApp8HomeViewV", "ForEach"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "HStack"]
+- ["16PlantsDiseaseApp8HomeViewV", "Image"]
+- ["16PlantsDiseaseApp8HomeViewV", "Int"]
 - !private ["16PlantsDiseaseApp8HomeViewV", "NavigationView"]
 - !private ["16PlantsDiseaseApp8HomeViewV", "ScrollView"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "Spacer"]
+- ["16PlantsDiseaseApp8HomeViewV", "State"]
 - ["16PlantsDiseaseApp8HomeViewV", "String"]
 - !private ["16PlantsDiseaseApp8HomeViewV", "Text"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "VStack"]
 - ["16PlantsDiseaseApp8HomeViewV", "View"]
 - ["16PlantsDiseaseApp8HomeViewV", "_Default_Body"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "_headerClicked"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "_itemIdClicked"]
 - ["16PlantsDiseaseApp8HomeViewV", "_makeView"]
 - ["16PlantsDiseaseApp8HomeViewV", "_makeViewList"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "_shouldPresentSheet"]
 - ["16PlantsDiseaseApp8HomeViewV", "body"]
+- ["16PlantsDiseaseApp8HomeViewV", "commonDisease"]
+- ["16PlantsDiseaseApp8HomeViewV", "commonDiseaseDic"]
+- ["16PlantsDiseaseApp8HomeViewV", "cropType"]
 - ["16PlantsDiseaseApp8HomeViewV", "deinit"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "headerClicked"]
+- ["16PlantsDiseaseApp8HomeViewV", "headlinesDic"]
+- ["16PlantsDiseaseApp8HomeViewV", "history"]
+- ["16PlantsDiseaseApp8HomeViewV", "historyImageDic"]
 - ["16PlantsDiseaseApp8HomeViewV", "init"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "itemIdClicked"]
 - ["16PlantsDiseaseApp8HomeViewV", "optionClicked"]
-- ["16PlantsDiseaseApp8HomeViewV", "options"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "shouldPresentSheet"]
 - !private ["16PlantsDiseaseApp17HomeView_PreviewsV", "HomeView"]
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", "Previews"]
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", "View"]
@@ -91,12 +203,24 @@ depends-member:
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", "init"]
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", "platform"]
 - ["16PlantsDiseaseApp17HomeView_PreviewsV", "previews"]
-- !private ["7SwiftUI14NavigationViewV", "colorScheme"]
+- ["s12IdentifiableP", "init"]
+- !private ["7SwiftUI5ImageV", "frame"]
+- ["7SwiftUI5ImageV", "init"]
+- !private ["7SwiftUI5ImageV", "renderingMode"]
+- !private ["7SwiftUI5ImageV", "resizable"]
+- !private ["SM", "indices"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "indices"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["7SwiftUI14NavigationViewV", "init"]
-- !private ["s9OptionSetP", "bottom"]
+- !private ["7SwiftUI14NavigationViewV", "sheet"]
+- !private ["s9OptionSetP", "horizontal"]
+- !private ["s9OptionSetP", "leading"]
+- !private ["s9OptionSetP", "vertical"]
 - !private ["Sq", "bold"]
 - !private ["Sq", "green"]
-- !private ["Sq", "title"]
+- !private ["Sq", "original"]
+- !private ["Sq", "white"]
 - !private ["7SwiftUI15PreviewProviderP", "HomeView"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
 - ["7SwiftUI15PreviewProviderP", ""]
@@ -105,23 +229,53 @@ depends-member:
 - ["7SwiftUI15PreviewProviderP", "_previews"]
 - ["7SwiftUI15PreviewProviderP", "platform"]
 - ["7SwiftUI15PreviewProviderP", "previews"]
-- !private ["SY", "bottom"]
+- !private ["Sk", "indices"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "indices"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "horizontal"]
+- !private ["SY", "leading"]
+- !private ["SY", "vertical"]
 - !private ["7SwiftUI10ScrollViewV", "init"]
 - !private ["7SwiftUI10ScrollViewV", "padding"]
-- !private ["7SwiftUI4EdgeO3SetV", "bottom"]
-- !private ["s10SetAlgebraP", "bottom"]
+- !private ["ST", "indices"]
+- ["ST", "init"]
+- !private ["ST", "map"]
+- !private ["ST", "subscript"]
+- !private ["7SwiftUI4AxisO3SetV", "horizontal"]
+- !private ["7SwiftUI4EdgeO3SetV", "leading"]
+- !private ["7SwiftUI4AxisO3SetV", "vertical"]
+- !private ["s10SetAlgebraP", "horizontal"]
+- !private ["s10SetAlgebraP", "leading"]
+- !private ["s10SetAlgebraP", "vertical"]
 - !private ["7SwiftUI10ShapeStyleP", "green"]
-- !private ["7SwiftUI4TextV", "font"]
+- !private ["7SwiftUI10ShapeStyleP", "white"]
+- !private ["7SwiftUI6SpacerV", "init"]
+- ["7SwiftUI5StateV", "init"]
+- ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["7SwiftUI5ImageV21TemplateRenderingModeO", "original"]
 - !private ["7SwiftUI4TextV", "fontWeight"]
 - !private ["7SwiftUI4TextV", "foregroundColor"]
 - !private ["7SwiftUI4TextV", "init"]
 - !private ["7SwiftUI4TextV", "padding"]
+- !private ["7SwiftUI6VStackV", "init"]
+- !private ["7SwiftUI6VStackV", "padding"]
+- !private ["7SwiftUI4ViewP", "$shouldPresentSheet"]
+- ["7SwiftUI4ViewP", "Array"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "Button"]
+- ["7SwiftUI4ViewP", "Disease"]
+- !private ["7SwiftUI4ViewP", "DiseaseView"]
+- !private ["7SwiftUI4ViewP", "EmptyView"]
 - !private ["7SwiftUI4ViewP", "ForEach"]
+- !private ["7SwiftUI4ViewP", "HStack"]
+- ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "NavigationView"]
 - !private ["7SwiftUI4ViewP", "ScrollView"]
+- !private ["7SwiftUI4ViewP", "Spacer"]
+- ["7SwiftUI4ViewP", "String"]
 - !private ["7SwiftUI4ViewP", "Text"]
+- !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
 - ["7SwiftUI4ViewP", "_makeView"]
@@ -129,20 +283,48 @@ depends-member:
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "bold"]
 - !private ["7SwiftUI4ViewP", "colorScheme"]
-- !private ["7SwiftUI4ViewP", "font"]
+- !private ["7SwiftUI4ViewP", "commonDisease"]
+- !private ["7SwiftUI4ViewP", "commonDiseaseDic"]
+- !private ["7SwiftUI4ViewP", "cropType"]
 - !private ["7SwiftUI4ViewP", "fontWeight"]
 - !private ["7SwiftUI4ViewP", "foregroundColor"]
+- !private ["7SwiftUI4ViewP", "frame"]
 - !private ["7SwiftUI4ViewP", "green"]
-- !private ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "headerClicked"]
+- !private ["7SwiftUI4ViewP", "headlinesDic"]
+- !private ["7SwiftUI4ViewP", "history"]
+- ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "itemIdClicked"]
 - !private ["7SwiftUI4ViewP", "navigationBarTitle"]
 - !private ["7SwiftUI4ViewP", "optionClicked"]
-- !private ["7SwiftUI4ViewP", "options"]
+- !private ["7SwiftUI4ViewP", "original"]
 - !private ["7SwiftUI4ViewP", "padding"]
-- !private ["7SwiftUI4ViewP", "title"]
+- !private ["7SwiftUI4ViewP", "renderingMode"]
+- !private ["7SwiftUI4ViewP", "resizable"]
+- !private ["7SwiftUI4ViewP", "sheet"]
+- !private ["7SwiftUI4ViewP", "shouldPresentSheet"]
+- !private ["7SwiftUI4ViewP", "white"]
+- !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI4FontV6WeightV", "bold"]
+- !private ["s14_ArrayProtocolP", "indices"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "indices"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "indices"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "indices"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "map"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "bold"]
 - !private ["s21_ObjectiveCBridgeableP", "green"]
-- !private ["s21_ObjectiveCBridgeableP", "title"]
+- !private ["s21_ObjectiveCBridgeableP", "indices"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "original"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["7SwiftUI16_PreviewProviderP", "HomeView"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - ["7SwiftUI16_PreviewProviderP", ""]
@@ -152,38 +334,68 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "platform"]
 - ["7SwiftUI16_PreviewProviderP", "previews"]
 depends-nominal:
+- !private "Sa"
+- !private "SK"
 - !private "7SwiftUI6ButtonV"
+- "s7CVarArgP"
 - !private "s12CaseIterableP"
+- "Sl"
 - !private "7SwiftUI5ColorV"
 - !private "7SwiftUI11ColorSchemeO"
-- !private "s28CustomDebugStringConvertibleP"
-- !private "s17CustomReflectableP"
-- !private "s23CustomStringConvertibleP"
-- !private "Se"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- "Se"
+- "SD"
+- "16PlantsDiseaseApp0B0C"
+- !private "16PlantsDiseaseApp0B4ViewV"
+- "7SwiftUI15DynamicPropertyP"
 - !private "7SwiftUI18DynamicViewContentP"
-- !private "SE"
-- !private "SQ"
+- !private "7SwiftUI9EmptyViewV"
+- "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
+- "s30ExpressibleByDictionaryLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "7SwiftUI4FontV"
 - !private "7SwiftUI7ForEachV"
 - !private "7SwiftUI7GestureP"
-- !private "SH"
+- !private "7SwiftUI6HStackV"
+- "SH"
 - "16PlantsDiseaseApp8HomeViewV"
 - "16PlantsDiseaseApp17HomeView_PreviewsV"
+- "s12IdentifiableP"
+- "7SwiftUI5ImageV"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - !private "7SwiftUI14NavigationViewV"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
+- !private "Sk"
+- !private "Sm"
 - !private "SY"
 - !private "7SwiftUI10ScrollViewV"
+- "ST"
+- !private "7SwiftUI4AxisO3SetV"
 - !private "7SwiftUI4EdgeO3SetV"
+- !private "7SwiftUI4AxisO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
+- !private "7SwiftUI6SpacerV"
+- "7SwiftUI5StateV"
+- !private "7SwiftUI5ImageV21TemplateRenderingModeO"
 - !private "7SwiftUI4TextV"
+- !private "7SwiftUI6VStackV"
 - "7SwiftUI4ViewP"
+- !private "7SwiftUI11ViewBuilderV"
 - !private "7SwiftUI4FontV6WeightV"
-- !private "s21_ObjectiveCBridgeableP"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
 depends-dynamic-lookup:
 depends-external:
@@ -1472,6 +1684,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "9b12ee466b31451451dca10d23709a81"
+interface-hash: "384be5751fcb0404b0cf8fb26ce37034"

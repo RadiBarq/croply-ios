@@ -71,70 +71,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F776578F-073F-44C7-AC5E-50F1334F4602"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "add(user:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F776578F-073F-44C7-AC5E-50F1334F4602 - d0d8364dced5a9d3"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PlantsDiseaseApp.APIRequest.add(user: PlantsDiseaseApp.User, completion: (Swift.Result&lt;PlantsDiseaseApp.User, PlantsDiseaseApp.APIError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PlantsDiseaseApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Models/APIRequest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "786">
-               </Location>
-               <Location
-                  uuid = "F776578F-073F-44C7-AC5E-50F1334F4602 - d0b49d723825ec74"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PlantsDiseaseApp.APIRequest.add(user: PlantsDiseaseApp.User, completion: (Swift.Result&lt;PlantsDiseaseApp.User, PlantsDiseaseApp.APIError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PlantsDiseaseApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Models/APIRequest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "184">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EABB23EA-9C1C-43F3-A888-CB743608C49A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "authenticate(user:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5C77A82B-C76F-42B7-9631-57FFD7B0F8A5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -142,8 +78,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +94,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,14 +104,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9445C765-F087-4ADF-BC8F-90C8E4DB06E1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +126,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
             <Locations>
@@ -226,22 +162,6 @@
                   offsetFromSymbolStart = "184">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4083FB2C-E588-4FDF-A7B7-48FF5E002E1D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "add(user:completion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -423,7 +343,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E3CEACED-4167-4B3A-ABB5-560BB8BF1404"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Login_SignUp_ForgotPassword/LoginView.swift"
@@ -588,8 +508,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "forgotPassword(of:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -604,8 +524,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "forgotPassword(of:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -620,8 +540,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "forgotPassword(of:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -636,8 +556,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "forgotPassword(of:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -652,8 +572,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "forgotPassword(of:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -668,8 +588,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
             <Locations>
@@ -716,8 +636,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -732,8 +652,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -748,8 +668,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -764,8 +684,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -780,8 +700,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "add(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -790,14 +710,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1F2418F8-A61B-43A4-B4AD-292A76F01E4A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -812,8 +732,8 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
             <Locations>
@@ -854,14 +774,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DC95E15C-5EB7-4479-9BEC-38C9D8399E67"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -934,14 +854,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "62885300-059B-443D-A066-25C6CEA40A9B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -950,14 +870,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D3454B62-B736-42D8-A4A2-3D12D84F42EB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -966,14 +886,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7C9CC473-6C26-451C-BC6C-BE221E3EB415"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "authenticate(user:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1046,15 +966,223 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C7B0ED81-A65C-4972-9B68-509A6C16FDA2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Login_SignUp_ForgotPassword/LoginView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "loginClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63CA2B57-3A81-4F5C-9EA2-701C8D975E21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Camera/CameraView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "uploadClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E9F44A6-7B51-4C8E-B4B6-F0EED43226F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getScansHistory(for:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E9F44A6-7B51-4C8E-B4B6-F0EED43226F8 - f893317932660b86"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PlantsDiseaseApp.NetworkManager.getScansHistory(for: PlantsDiseaseApp.User, completion: (Swift.Result&lt;PlantsDiseaseApp.ScanHistoryRequest, PlantsDiseaseApp.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1853">
+               </Location>
+               <Location
+                  uuid = "2E9F44A6-7B51-4C8E-B4B6-F0EED43226F8 - f893317932660b86"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PlantsDiseaseApp.NetworkManager.getScansHistory(for: PlantsDiseaseApp.User, completion: (Swift.Result&lt;PlantsDiseaseApp.ScanHistoryRequest, PlantsDiseaseApp.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "2122">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F04C9CA-ECEE-4B93-A919-FCAC77C3007A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getScansHistory(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0DD0B90-A5A0-4F26-AFA2-F35E869503B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getScansHistory(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2ECE6C4-479D-48EC-B641-21CB1D058AFC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Home/ScansHistoryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "test()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2ECE6C4-479D-48EC-B641-21CB1D058AFC - 6ad1f8a97445c993"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PlantsDiseaseApp.ScansHistoryView.body.getter : some"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Home/ScansHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "B2ECE6C4-479D-48EC-B641-21CB1D058AFC - 3e96ac9829ef43ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in PlantsDiseaseApp.ScansHistoryView.body.getter : some"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Home/ScansHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "78">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD1234F9-AC3A-47A3-93AC-DB22A625ABA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Home/ScansHistoryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "test()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD1234F9-AC3A-47A3-93AC-DB22A625ABA7 - b31dbf7f896eea9e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PlantsDiseaseApp.Scan) -&gt; SwiftUI.NavigationLink&lt;PlantsDiseaseApp.(HistoryCell in _4800E870D1BE972A981366E498C74FE1), SwiftUI.EmptyView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in PlantsDiseaseApp.ScansHistoryView.body.getter : some"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Home/ScansHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "BD1234F9-AC3A-47A3-93AC-DB22A625ABA7 - 3968873c2b4cd428"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; PlantsDiseaseApp.(HistoryCell in _4800E870D1BE972A981366E498C74FE1) in closure #1 (PlantsDiseaseApp.Scan) -&gt; SwiftUI.NavigationLink&lt;PlantsDiseaseApp.(HistoryCell in _4800E870D1BE972A981366E498C74FE1), SwiftUI.EmptyView&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in PlantsDiseaseApp.ScansHistoryView.body.getter : some"
+                  moduleName = "PlantsDiseaseApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/radibarq/PlantsDiseaseApp/PlantsDiseaseApp/Home/ScansHistoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C5C9053-B3F2-4DDF-895F-934FF8B6E4F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Home/ScansHistoryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "test()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -26,6 +26,10 @@
 		CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A7C233E1A9300A5BFC3 /* Scan.swift */; };
 		CD679A7F233E1AA800A5BFC3 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A7E233E1AA800A5BFC3 /* Disease.swift */; };
 		CD679A81233E205D00A5BFC3 /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A80233E205D00A5BFC3 /* Crop.swift */; };
+		CD679A87233E46ED00A5BFC3 /* DiseaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A86233E46ED00A5BFC3 /* DiseaseView.swift */; };
+		CD679A89233FA4DC00A5BFC3 /* ScansHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A88233FA4DC00A5BFC3 /* ScansHistoryView.swift */; };
+		CD679A8B233FCC2000A5BFC3 /* DiseaseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A8A233FCC2000A5BFC3 /* DiseaseListView.swift */; };
+		CD679A8D23413C4D00A5BFC3 /* ScanHistoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD679A8C23413C4D00A5BFC3 /* ScanHistoryRequest.swift */; };
 		CDB57769232F63C300B19B37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB57768232F63C300B19B37 /* LoginView.swift */; };
 		CDB5776C232FDCA500B19B37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776B232FDCA500B19B37 /* User.swift */; };
 		CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776D232FF6A900B19B37 /* APIRequest.swift */; };
@@ -75,6 +79,10 @@
 		CD679A7C233E1A9300A5BFC3 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		CD679A7E233E1AA800A5BFC3 /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
 		CD679A80233E205D00A5BFC3 /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		CD679A86233E46ED00A5BFC3 /* DiseaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseView.swift; sourceTree = "<group>"; };
+		CD679A88233FA4DC00A5BFC3 /* ScansHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansHistoryView.swift; sourceTree = "<group>"; };
+		CD679A8A233FCC2000A5BFC3 /* DiseaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseListView.swift; sourceTree = "<group>"; };
+		CD679A8C23413C4D00A5BFC3 /* ScanHistoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistoryRequest.swift; sourceTree = "<group>"; };
 		CDB57768232F63C300B19B37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CDB5776B232FDCA500B19B37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CDB5776D232FF6A900B19B37 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 				CD679A7C233E1A9300A5BFC3 /* Scan.swift */,
 				CD679A7E233E1AA800A5BFC3 /* Disease.swift */,
 				CD679A80233E205D00A5BFC3 /* Crop.swift */,
+				CD679A8C23413C4D00A5BFC3 /* ScanHistoryRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,7 +241,10 @@
 		CDF6F7A6232B051800FAE0A9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CD679A88233FA4DC00A5BFC3 /* ScansHistoryView.swift */,
 				CD406C9F2329AF0500B5DBD1 /* HomeView.swift */,
+				CD679A86233E46ED00A5BFC3 /* DiseaseView.swift */,
+				CD679A8A233FCC2000A5BFC3 /* DiseaseListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -378,9 +390,13 @@
 			files = (
 				CD406CA02329AF0500B5DBD1 /* HomeView.swift in Sources */,
 				CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */,
+				CD679A87233E46ED00A5BFC3 /* DiseaseView.swift in Sources */,
 				CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */,
 				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
+				CD679A8D23413C4D00A5BFC3 /* ScanHistoryRequest.swift in Sources */,
+				CD679A8B233FCC2000A5BFC3 /* DiseaseListView.swift in Sources */,
 				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
+				CD679A89233FA4DC00A5BFC3 /* ScansHistoryView.swift in Sources */,
 				CD679A7F233E1AA800A5BFC3 /* Disease.swift in Sources */,
 				CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */,
 				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,

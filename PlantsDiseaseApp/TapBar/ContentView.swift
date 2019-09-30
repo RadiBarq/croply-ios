@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             if (!user.signedInClicked && !user.signedUpClicked ) {
-                HomeView()
+                    ScansHistoryView()
                     .font(.title)
                     .tabItem {
                         VStack {
@@ -55,7 +55,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             }
-            Text("Second View")
+                CameraView()
                 .font(.title)
                 .tabItem {
                     VStack {

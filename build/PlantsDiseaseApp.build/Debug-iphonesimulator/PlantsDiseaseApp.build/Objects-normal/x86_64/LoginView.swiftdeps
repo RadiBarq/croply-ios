@@ -33,6 +33,7 @@ depends-top-level:
 - "PreviewProvider"
 - !private "Section"
 - !private "SecureField"
+- !private "SessionManager"
 - "SessionUser"
 - !private "Spacer"
 - "State"
@@ -253,6 +254,7 @@ depends-member:
 - !private ["16PlantsDiseaseApp9LoginViewV", "Image"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Section"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "SecureField"]
+- !private ["16PlantsDiseaseApp9LoginViewV", "SessionManager"]
 - ["16PlantsDiseaseApp9LoginViewV", "SessionUser"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "Spacer"]
 - ["16PlantsDiseaseApp9LoginViewV", "State"]
@@ -366,6 +368,7 @@ depends-member:
 - !private ["7SwiftUI11SecureFieldV", "padding"]
 - !private ["ST", "count"]
 - !private ["ST", "isValidEmail"]
+- !private ["16PlantsDiseaseApp14SessionManagerV", "user"]
 - ["16PlantsDiseaseApp11SessionUserC", "deinit"]
 - !private ["16PlantsDiseaseApp11SessionUserC", "email"]
 - !private ["16PlantsDiseaseApp11SessionUserC", "id"]
@@ -423,6 +426,7 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "Section"]
 - !private ["7SwiftUI4ViewP", "SecureField"]
+- !private ["7SwiftUI4ViewP", "SessionManager"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "TextField"]
@@ -578,6 +582,7 @@ depends-nominal:
 - !private "7SwiftUI7SectionV"
 - !private "7SwiftUI11SecureFieldV"
 - !private "ST"
+- !private "16PlantsDiseaseApp14SessionManagerV"
 - "16PlantsDiseaseApp11SessionUserC"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
@@ -1896,6 +1901,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
 interface-hash: "93f0bfd6bdb0d18f041d66619f5f160a"

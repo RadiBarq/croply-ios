@@ -17,7 +17,6 @@ provides-dynamic-lookup:
 - "imagePickerController"
 depends-top-level:
 - !private "!"
-- !private "=="
 - !private "APIRequest"
 - "ActionSheet"
 - !private "ActivityIndicator"
@@ -32,13 +31,18 @@ depends-top-level:
 - "CameraView_Previews"
 - "CastingPrecedence"
 - !private "Color"
+- "Disease"
+- !private "DiseaseView"
+- "EnvironmentObject"
 - "FloatLiteralType"
+- !private "Font"
 - !private "HStack"
 - !private "Image"
 - !private "IntegerLiteralType"
 - "NSObject"
 - "PreviewProvider"
 - !private "Scan"
+- "SessionUser"
 - !private "Spacer"
 - "State"
 - "StringLiteralType"
@@ -51,14 +55,13 @@ depends-top-level:
 - "UIViewControllerRepresentableContext"
 - !private "VStack"
 - "View"
-- !private "~="
 depends-member:
 - !private ["16PlantsDiseaseApp8APIErrorO", "decondingProblem"]
 - !private ["16PlantsDiseaseApp8APIErrorO", "encodingProblem"]
 - !private ["16PlantsDiseaseApp8APIErrorO", "responseProblem"]
+- !private ["16PlantsDiseaseApp10APIRequestV", "UploadRequest"]
 - !private ["16PlantsDiseaseApp10APIRequestV", "init"]
 - !private ["16PlantsDiseaseApp10APIRequestV", "scanDisease"]
-- !private ["16PlantsDiseaseApp9APIResultV", "result"]
 - !private ["7SwiftUI11ActionSheetV", "init"]
 - !private ["16PlantsDiseaseApp17ActivityIndicatorV", "deinit"]
 - !private ["16PlantsDiseaseApp17ActivityIndicatorV", "init"]
@@ -69,8 +72,8 @@ depends-member:
 - !private ["7SwiftUI5AlertV6ButtonV", "cancel"]
 - !private ["7SwiftUI5AlertV6ButtonV", "default"]
 - !private ["7SwiftUI5AlertV6ButtonV", "destructive"]
+- !private ["7SwiftUI6ButtonV", "frame"]
 - !private ["7SwiftUI6ButtonV", "init"]
-- !private ["7SwiftUI6ButtonV", "padding"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
 - ["s7CVarArgP", "InfoKey"]
 - !private ["s7CVarArgP", "UIImagePickerController"]
@@ -81,7 +84,7 @@ depends-member:
 - !private ["s7CVarArgP", "image"]
 - ["s7CVarArgP", "imagePickerController"]
 - ["s7CVarArgP", "imagePickerControllerDidCancel"]
-- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isShown"]
 - ["s7CVarArgP", "navigationController"]
 - ["s7CVarArgP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -89,11 +92,14 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "$alertMessage"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "$alertTitle"]
+- ["16PlantsDiseaseApp10CameraViewV", "$detectedDisease"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "$detectionFinished"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "$shouldShowAlert"]
 - ["16PlantsDiseaseApp10CameraViewV", "$showAction"]
 - ["16PlantsDiseaseApp10CameraViewV", "$showImagePicker"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "$showIndicator"]
 - ["16PlantsDiseaseApp10CameraViewV", "$uiImage"]
+- ["16PlantsDiseaseApp10CameraViewV", "$user"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "APIRequest"]
 - ["16PlantsDiseaseApp10CameraViewV", "ActionSheet"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "ActivityIndicator"]
@@ -101,11 +107,15 @@ depends-member:
 - ["16PlantsDiseaseApp10CameraViewV", "Body"]
 - ["16PlantsDiseaseApp10CameraViewV", "Bool"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Button"]
-- !private ["16PlantsDiseaseApp10CameraViewV", "CameraViewController"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Color"]
+- ["16PlantsDiseaseApp10CameraViewV", "Disease"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "DiseaseView"]
+- ["16PlantsDiseaseApp10CameraViewV", "EnvironmentObject"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "Font"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "HStack"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Image"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Scan"]
+- ["16PlantsDiseaseApp10CameraViewV", "SessionUser"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Spacer"]
 - ["16PlantsDiseaseApp10CameraViewV", "State"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "Text"]
@@ -115,6 +125,8 @@ depends-member:
 - ["16PlantsDiseaseApp10CameraViewV", "_Default_Body"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "_alertMessage"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "_alertTitle"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_detectedDisease"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_detectionFinished"]
 - ["16PlantsDiseaseApp10CameraViewV", "_makeView"]
 - ["16PlantsDiseaseApp10CameraViewV", "_makeViewList"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "_shouldShowAlert"]
@@ -122,10 +134,13 @@ depends-member:
 - !private ["16PlantsDiseaseApp10CameraViewV", "_showImagePicker"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "_showIndicator"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "_uiImage"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "_user"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "alertMessage"]
 - !private ["16PlantsDiseaseApp10CameraViewV", "alertTitle"]
 - ["16PlantsDiseaseApp10CameraViewV", "body"]
 - ["16PlantsDiseaseApp10CameraViewV", "deinit"]
+- ["16PlantsDiseaseApp10CameraViewV", "detectedDisease"]
+- !private ["16PlantsDiseaseApp10CameraViewV", "detectionFinished"]
 - ["16PlantsDiseaseApp10CameraViewV", "diseaseDetected"]
 - ["16PlantsDiseaseApp10CameraViewV", "dismissImageClicked"]
 - ["16PlantsDiseaseApp10CameraViewV", "init"]
@@ -136,6 +151,7 @@ depends-member:
 - !private ["16PlantsDiseaseApp10CameraViewV", "showIndicator"]
 - ["16PlantsDiseaseApp10CameraViewV", "uiImage"]
 - ["16PlantsDiseaseApp10CameraViewV", "uploadClicked"]
+- ["16PlantsDiseaseApp10CameraViewV", "user"]
 - ["16PlantsDiseaseApp20CameraViewControllerV", "$image"]
 - ["16PlantsDiseaseApp20CameraViewControllerV", "$isShown"]
 - ["16PlantsDiseaseApp20CameraViewControllerV", "Binding"]
@@ -177,11 +193,7 @@ depends-member:
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "platform"]
 - ["16PlantsDiseaseApp19CameraView_PreviewsV", "previews"]
 - !private ["Sl", "subscript"]
-- !private ["7SwiftUI5ColorV", "black"]
-- !private ["7SwiftUI5ColorV", "frame"]
-- !private ["7SwiftUI5ColorV", "gray"]
 - !private ["7SwiftUI5ColorV", "green"]
-- !private ["7SwiftUI5ColorV", "purple"]
 - !private ["7SwiftUI5ColorV", "white"]
 - !private ["SL", "init"]
 - ["16PlantsDiseaseApp20CameraViewControllerV11CoordinatorC", "$image"]
@@ -206,21 +218,19 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "_image"]
 - !private ["s28CustomDebugStringConvertibleP", "_isShown"]
-- !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "bold"]
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "image"]
 - ["s28CustomDebugStringConvertibleP", "imagePickerController"]
 - ["s28CustomDebugStringConvertibleP", "imagePickerControllerDidCancel"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isShown"]
 - ["s28CustomDebugStringConvertibleP", "navigationController"]
 - ["s28CustomDebugStringConvertibleP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["s28CustomDebugStringConvertibleP", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
-- !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "bold"]
 - !private ["s17CustomReflectableP", "default"]
 - !private ["s17CustomReflectableP", "init"]
@@ -231,46 +241,40 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_image"]
 - !private ["s23CustomStringConvertibleP", "_isShown"]
-- !private ["s23CustomStringConvertibleP", "black"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
-- !private ["s23CustomStringConvertibleP", "frame"]
-- !private ["s23CustomStringConvertibleP", "gray"]
 - !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "image"]
 - ["s23CustomStringConvertibleP", "imagePickerController"]
 - ["s23CustomStringConvertibleP", "imagePickerControllerDidCancel"]
-- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isShown"]
 - ["s23CustomStringConvertibleP", "navigationController"]
 - ["s23CustomStringConvertibleP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["s23CustomStringConvertibleP", "navigationControllerSupportedInterfaceOrientations"]
-- !private ["s23CustomStringConvertibleP", "purple"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- !private ["Se", "black"]
 - !private ["Se", "bold"]
 - !private ["Se", "default"]
 - !private ["Se", "init"]
-- !private ["Se", "result"]
 - !private ["Se", "subscript"]
 - !private ["Se", "title"]
 - !private ["SD", "subscript"]
+- !private ["16PlantsDiseaseApp0B4ViewV", "deinit"]
+- !private ["16PlantsDiseaseApp0B4ViewV", "init"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
 - !private ["7SwiftUI10EdgeInsetsV", "init"]
-- !private ["SE", "black"]
 - !private ["SE", "bold"]
 - !private ["SE", "default"]
 - !private ["SE", "init"]
 - !private ["SE", "subscript"]
 - !private ["SE", "title"]
+- ["7SwiftUI17EnvironmentObjectV", "init"]
 - ["SQ", "InfoKey"]
 - !private ["SQ", "UIImagePickerController"]
 - ["SQ", ""]
 - !private ["SQ", "_image"]
 - !private ["SQ", "_isShown"]
-- !private ["SQ", "accentColor"]
-- !private ["SQ", "black"]
 - !private ["SQ", "bold"]
 - !private ["SQ", "decondingProblem"]
 - !private ["SQ", "default"]
@@ -280,24 +284,22 @@ depends-member:
 - !private ["SQ", "font"]
 - !private ["SQ", "fontWeight"]
 - !private ["SQ", "foregroundColor"]
-- !private ["SQ", "frame"]
-- !private ["SQ", "gray"]
 - !private ["SQ", "green"]
 - !private ["SQ", "image"]
 - ["SQ", "imagePickerController"]
 - ["SQ", "imagePickerControllerDidCancel"]
-- !private ["SQ", "init"]
+- ["SQ", "init"]
 - !private ["SQ", "isShown"]
 - ["SQ", "navigationController"]
 - ["SQ", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["SQ", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["SQ", "onTapGesture"]
 - !private ["SQ", "originalImage"]
-- !private ["SQ", "purple"]
 - !private ["SQ", "resizable"]
 - !private ["SQ", "responseProblem"]
 - !private ["SQ", "subscript"]
 - !private ["SQ", "success"]
+- !private ["SQ", "system"]
 - !private ["SQ", "title"]
 - !private ["SQ", "white"]
 - !private ["s5ErrorP", "decondingProblem"]
@@ -307,13 +309,12 @@ depends-member:
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
-- !private ["s23ExpressibleByNilLiteralP", "black"]
 - !private ["s23ExpressibleByNilLiteralP", "bold"]
 - !private ["s23ExpressibleByNilLiteralP", "default"]
 - !private ["s23ExpressibleByNilLiteralP", "title"]
 - !private ["SF", "init"]
+- !private ["7SwiftUI4FontV", "system"]
 - !private ["7SwiftUI4FontV", "title"]
-- !private ["7SwiftUI7GestureP", "black"]
 - !private ["7SwiftUI7GestureP", "bold"]
 - !private ["7SwiftUI7GestureP", "default"]
 - !private ["7SwiftUI7GestureP", "title"]
@@ -324,32 +325,29 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "_image"]
 - !private ["SH", "_isShown"]
-- !private ["SH", "black"]
 - !private ["SH", "bold"]
 - !private ["SH", "decondingProblem"]
 - !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "encodingProblem"]
 - !private ["SH", "failure"]
-- !private ["SH", "frame"]
-- !private ["SH", "gray"]
 - !private ["SH", "green"]
 - !private ["SH", "image"]
 - ["SH", "imagePickerController"]
 - ["SH", "imagePickerControllerDidCancel"]
-- !private ["SH", "init"]
+- ["SH", "init"]
 - !private ["SH", "isShown"]
 - ["SH", "navigationController"]
 - ["SH", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["SH", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["SH", "originalImage"]
-- !private ["SH", "purple"]
 - !private ["SH", "responseProblem"]
 - !private ["SH", "subscript"]
 - !private ["SH", "success"]
+- !private ["SH", "system"]
 - !private ["SH", "title"]
 - !private ["SH", "white"]
-- !private ["7SwiftUI5ImageV", "accentColor"]
+- !private ["s12IdentifiableP", "init"]
 - !private ["7SwiftUI5ImageV", "font"]
 - !private ["7SwiftUI5ImageV", "init"]
 - !private ["7SwiftUI5ImageV", "onTapGesture"]
@@ -357,10 +355,12 @@ depends-member:
 - !private ["So30UIImagePickerControllerInfoKeya", "originalImage"]
 - ["So8NSCodingP", "InfoKey"]
 - !private ["So8NSCodingP", "delegate"]
-- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "init"]
 - ["So26NSExtensionRequestHandlingP", "InfoKey"]
 - !private ["So26NSExtensionRequestHandlingP", "delegate"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
 - ["So8NSObjectC", "$image"]
 - ["So8NSObjectC", "$isShown"]
 - ["So8NSObjectC", "Binding"]
@@ -389,14 +389,15 @@ depends-member:
 - !private ["So8NSObjectP", "image"]
 - ["So8NSObjectP", "imagePickerController"]
 - ["So8NSObjectP", "imagePickerControllerDidCancel"]
-- !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isShown"]
 - ["So8NSObjectP", "navigationController"]
 - ["So8NSObjectP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["So8NSObjectP", "navigationControllerSupportedInterfaceOrientations"]
+- ["So14NSSecureCodingP", "init"]
 - !private ["Sj", "init"]
+- !private ["7Combine16ObservableObjectP", "id"]
 - !private ["s9OptionSetP", "init"]
-- !private ["Sq", "black"]
 - !private ["Sq", "bold"]
 - !private ["Sq", "default"]
 - !private ["Sq", "title"]
@@ -415,22 +416,22 @@ depends-member:
 - !private ["16PlantsDiseaseApp4ScanC", "deinit"]
 - !private ["16PlantsDiseaseApp4ScanC", "init"]
 - !private ["ST", "subscript"]
+- ["16PlantsDiseaseApp11SessionUserC", "deinit"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "id"]
 - !private ["7SwiftUI4EdgeO3SetV", "init"]
 - !private ["s10SetAlgebraP", "init"]
-- !private ["7SwiftUI10ShapeStyleP", "black"]
-- !private ["7SwiftUI10ShapeStyleP", "frame"]
-- !private ["7SwiftUI10ShapeStyleP", "gray"]
 - !private ["7SwiftUI10ShapeStyleP", "green"]
-- !private ["7SwiftUI10ShapeStyleP", "purple"]
 - !private ["7SwiftUI10ShapeStyleP", "white"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["7SwiftUI6SpacerV", "init"]
 - ["7SwiftUI5StateV", "init"]
 - ["7SwiftUI5StateV", "wrappedValue"]
 - !private ["Sx", "init"]
+- !private ["7SwiftUI4TextV", "font"]
 - !private ["7SwiftUI4TextV", "fontWeight"]
 - !private ["7SwiftUI4TextV", "foregroundColor"]
 - !private ["7SwiftUI4TextV", "init"]
+- ["So29UIAccessibilityIdentificationP", "init"]
 - ["So21UIAppearanceContainerP", "InfoKey"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "init"]
@@ -440,6 +441,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "InfoKey"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- ["So7UIImageC", "init"]
 - ["So23UIImagePickerControllerC", "InfoKey"]
 - !private ["So23UIImagePickerControllerC", "delegate"]
 - !private ["So23UIImagePickerControllerC", "init"]
@@ -455,6 +457,7 @@ depends-member:
 - ["So31UIImagePickerControllerDelegateP", "navigationController"]
 - ["So31UIImagePickerControllerDelegateP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["So31UIImagePickerControllerDelegateP", "navigationControllerSupportedInterfaceOrientations"]
+- ["So39UIItemProviderPresentationSizeProvidingP", "init"]
 - ["So22UINavigationControllerC", "InfoKey"]
 - !private ["So22UINavigationControllerC", "delegate"]
 - !private ["So22UINavigationControllerC", "init"]
@@ -505,36 +508,36 @@ depends-member:
 - ["7SwiftUI29UIViewControllerRepresentableP", "_makeViewList"]
 - ["7SwiftUI29UIViewControllerRepresentableP", "body"]
 - ["7SwiftUI29UIViewControllerRepresentableP", "dismantleUIViewController"]
-- !private ["7SwiftUI29UIViewControllerRepresentableP", "init"]
 - ["7SwiftUI29UIViewControllerRepresentableP", "makeCoordinator"]
 - ["7SwiftUI29UIViewControllerRepresentableP", "makeUIViewController"]
 - ["7SwiftUI29UIViewControllerRepresentableP", "updateUIViewController"]
 - !private ["7SwiftUI36UIViewControllerRepresentableContextV", "coordinator"]
 - !private ["7SwiftUI19UIViewRepresentableP", "init"]
+- !private ["7SwiftUI6VStackV", "alert"]
 - !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI6VStackV", "sheet"]
 - !private ["7SwiftUI16VectorArithmeticP", "init"]
+- !private ["7SwiftUI4ViewP", "$detectionFinished"]
 - !private ["7SwiftUI4ViewP", "$image"]
 - !private ["7SwiftUI4ViewP", "$isShown"]
 - !private ["7SwiftUI4ViewP", "$shouldShowAlert"]
-- !private ["7SwiftUI4ViewP", "$showAction"]
-- !private ["7SwiftUI4ViewP", "$showImagePicker"]
 - !private ["7SwiftUI4ViewP", "$showIndicator"]
-- !private ["7SwiftUI4ViewP", "$uiImage"]
 - !private ["7SwiftUI4ViewP", "APIRequest"]
 - !private ["7SwiftUI4ViewP", "ActionSheet"]
 - !private ["7SwiftUI4ViewP", "ActivityIndicator"]
 - !private ["7SwiftUI4ViewP", "Alert"]
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "Button"]
-- !private ["7SwiftUI4ViewP", "CameraViewController"]
 - !private ["7SwiftUI4ViewP", "Color"]
 - ["7SwiftUI4ViewP", "Coordinator"]
+- !private ["7SwiftUI4ViewP", "DiseaseView"]
+- !private ["7SwiftUI4ViewP", "Font"]
 - !private ["7SwiftUI4ViewP", "HStack"]
 - !private ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "Scan"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
+- ["7SwiftUI4ViewP", "UIImage"]
 - !private ["7SwiftUI4ViewP", "UIImagePickerController"]
 - ["7SwiftUI4ViewP", "UIViewControllerType"]
 - !private ["7SwiftUI4ViewP", "VStack"]
@@ -544,17 +547,16 @@ depends-member:
 - ["7SwiftUI4ViewP", "_identifiedViewTree"]
 - ["7SwiftUI4ViewP", "_makeView"]
 - ["7SwiftUI4ViewP", "_makeViewList"]
-- !private ["7SwiftUI4ViewP", "accentColor"]
-- !private ["7SwiftUI4ViewP", "actionSheet"]
 - !private ["7SwiftUI4ViewP", "alert"]
 - !private ["7SwiftUI4ViewP", "alertMessage"]
 - !private ["7SwiftUI4ViewP", "alertTitle"]
 - !private ["7SwiftUI4ViewP", "background"]
-- !private ["7SwiftUI4ViewP", "black"]
 - ["7SwiftUI4ViewP", "body"]
 - !private ["7SwiftUI4ViewP", "bold"]
 - !private ["7SwiftUI4ViewP", "cornerRadius"]
 - !private ["7SwiftUI4ViewP", "default"]
+- !private ["7SwiftUI4ViewP", "detectedDisease"]
+- !private ["7SwiftUI4ViewP", "detectionFinished"]
 - !private ["7SwiftUI4ViewP", "diseaseDetected"]
 - ["7SwiftUI4ViewP", "dismantleUIViewController"]
 - !private ["7SwiftUI4ViewP", "dismissImageClicked"]
@@ -562,14 +564,12 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "fontWeight"]
 - !private ["7SwiftUI4ViewP", "foregroundColor"]
 - !private ["7SwiftUI4ViewP", "frame"]
-- !private ["7SwiftUI4ViewP", "gray"]
 - !private ["7SwiftUI4ViewP", "green"]
 - !private ["7SwiftUI4ViewP", "init"]
 - ["7SwiftUI4ViewP", "makeCoordinator"]
 - ["7SwiftUI4ViewP", "makeUIViewController"]
 - !private ["7SwiftUI4ViewP", "onTapGesture"]
 - !private ["7SwiftUI4ViewP", "padding"]
-- !private ["7SwiftUI4ViewP", "purple"]
 - !private ["7SwiftUI4ViewP", "resizable"]
 - !private ["7SwiftUI4ViewP", "sheet"]
 - !private ["7SwiftUI4ViewP", "shouldShowAlert"]
@@ -580,12 +580,14 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "uiImage"]
 - ["7SwiftUI4ViewP", "updateUIViewController"]
 - !private ["7SwiftUI4ViewP", "uploadClicked"]
+- !private ["7SwiftUI4ViewP", "user"]
 - !private ["7SwiftUI4ViewP", "white"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI4FontV6WeightV", "bold"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["7SwiftUI18_FormatSpecifiableP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "originalImage"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -598,7 +600,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "imagePickerController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "imagePickerControllerDidCancel"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isShown"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -612,12 +614,11 @@ depends-member:
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "imagePickerController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "imagePickerControllerDidCancel"]
-- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
 - !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "isShown"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationController"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationControllerPreferredInterfaceOrientationForPresentation"]
 - ["10Foundation37_KeyValueCodingAndObservingPublishingP", "navigationControllerSupportedInterfaceOrientations"]
-- !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "bold"]
 - !private ["s21_ObjectiveCBridgeableP", "default"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
@@ -637,7 +638,6 @@ depends-member:
 depends-nominal:
 - !private "16PlantsDiseaseApp8APIErrorO"
 - !private "16PlantsDiseaseApp10APIRequestV"
-- !private "16PlantsDiseaseApp9APIResultV"
 - !private "7SwiftUI11ActionSheetV"
 - !private "16PlantsDiseaseApp17ActivityIndicatorV"
 - !private "s18AdditiveArithmeticP"
@@ -660,9 +660,11 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "Se"
 - !private "SD"
+- !private "16PlantsDiseaseApp0B4ViewV"
 - "7SwiftUI15DynamicPropertyP"
 - !private "7SwiftUI10EdgeInsetsV"
 - !private "SE"
+- "7SwiftUI17EnvironmentObjectV"
 - "SQ"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
@@ -675,13 +677,18 @@ depends-nominal:
 - !private "7SwiftUI7GestureP"
 - !private "7SwiftUI6HStackV"
 - "SH"
+- !private "s12IdentifiableP"
 - !private "7SwiftUI5ImageV"
 - !private "So30UIImagePickerControllerInfoKeya"
 - "So8NSCodingP"
 - "So26NSExtensionRequestHandlingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- "So14NSSecureCodingP"
 - !private "Sj"
+- !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
@@ -689,6 +696,7 @@ depends-nominal:
 - !private "s6ResultO"
 - !private "16PlantsDiseaseApp4ScanC"
 - !private "ST"
+- "16PlantsDiseaseApp11SessionUserC"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
@@ -697,11 +705,14 @@ depends-nominal:
 - "7SwiftUI5StateV"
 - !private "Sx"
 - !private "7SwiftUI4TextV"
+- "So29UIAccessibilityIdentificationP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
 - "So18UIFocusEnvironmentP"
+- "So7UIImageC"
 - "So23UIImagePickerControllerC"
 - "So31UIImagePickerControllerDelegateP"
+- "So39UIItemProviderPresentationSizeProvidingP"
 - "So22UINavigationControllerC"
 - "So30UINavigationControllerDelegateP"
 - "So30UIPasteConfigurationSupportingP"
@@ -721,6 +732,7 @@ depends-nominal:
 - !private "7SwiftUI4FontV6WeightV"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
+- "s26_ExpressibleByImageLiteralP"
 - !private "7SwiftUI18_FormatSpecifiableP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -2016,6 +2028,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a4ab10ae3054407fb2c3dac66278c910"
+interface-hash: "988ddab594892c6cc577f2a92a2d8e40"

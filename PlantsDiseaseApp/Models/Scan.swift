@@ -8,27 +8,30 @@
 
 import Foundation
 
-final class Scan: Codable {
-    
+final class Scan: Codable, Identifiable {
     let id: Int?
     let userId: Int
     let diseaseId: Int?
-    let cropsId: Int?
+    let diseaseName: String?
+    let cropName: String?
+    let cropId: Int?
     let image: String?
     let thumbnail: String?
-    let createdAt: Double?
+    let createdAt: String?
     let lat: Double
-    let long: Double
+    let lng: Double
     
-    init(id: Int = 0, userId: Int, diseaseId: Int = 0, cropsId: Int = 0, image: String = "", thumbnail: String = "", createdAt: Double = 0, lat: Double, long: Double) {
+    init(id: Int = 0, userId: Int, diseaseId: Int = 0, diseaseName: String = "", cropName: String = "", cropId: Int = 0, image: String = "", thumbnail: String = "", createdAt: String = " ", lat: Double, lng: Double) {
           self.id = id
           self.userId = userId
           self.diseaseId = diseaseId
-          self.cropsId = cropsId
+          self.cropId = cropId
           self.image = image
           self.thumbnail = thumbnail
           self.createdAt = createdAt
           self.lat = lat
-          self.long = long
+          self.lng = lng
+          self.diseaseName = diseaseName
+          self.cropName = cropName
       }
 }

@@ -159,6 +159,8 @@ struct LoginView: View {
                 case "success":
                     DispatchQueue.main.async {
                         guard let user = response.user else { return }
+                        
+                        SessionManager.user = user
                         self.user.email = user.email
                         self.user.username = user.username
                         self.user.id = user.id

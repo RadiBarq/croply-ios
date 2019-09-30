@@ -17,7 +17,7 @@ struct SignUpView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showIndicator = false
-
+    
     @EnvironmentObject var user: SessionUser
     @State private var myFormatter = LengthFormatter()
     

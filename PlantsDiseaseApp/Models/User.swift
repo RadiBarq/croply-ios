@@ -20,9 +20,7 @@ final class User: Codable {
         self.email = email
         self.password = password ?? nil
     }
-    
 }
-
 
 class SessionUser: ObservableObject {
     @Published  var id: Int = -1
@@ -30,6 +28,4 @@ class SessionUser: ObservableObject {
     @Published var email: String = ""
     @Published var signedInClicked = true
     @Published var signedUpClicked = false
-    
-    
 }
