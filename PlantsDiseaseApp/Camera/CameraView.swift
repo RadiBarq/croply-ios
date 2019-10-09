@@ -11,8 +11,10 @@ import SwiftUI
 struct CameraView: View {
     
     @State var showImagePicker = false
-    @State var showAction: Bool = false
-    @State var uiImage: UIImage? = UIImage(named: "apple_scab_test")
+    @State var showCamera = false
+    @State var showChangeImageAction: Bool = false
+    @State  var showPickImageAction: Bool = false
+    @State var uiImage: UIImage?
     @State private var showIndicator = false
     @State private var alertTitle = ""
     @State private var alertMessage = ""
@@ -21,104 +23,125 @@ struct CameraView: View {
     @State var detectedDisease: Disease?
     @EnvironmentObject var user: SessionUser
     
-    var sheet: ActionSheet {
+    var changeImageSheet: ActionSheet {
         ActionSheet(
-            title: Text("Leaf Image"),
+            title: Text("Scan Image"),
             buttons: [
                 .default(Text("Change"), action: {
-                    self.showAction = false
-                    self.showImagePicker = true
+                    self.showChangeImageAction = false
+                    self.showChangeImageAction = true
                 }),
                 .cancel(Text("Close"), action: {
-                    self.showAction = false
+                    self.showChangeImageAction = false
+                    
+                    
                 }),
                 .destructive(Text("Remove"), action: {
-                    self.showAction = false
+                    self.showChangeImageAction = false
                     self.uiImage = nil
                 })
         ])
     }
-     var body: some View {
+    
+    var pickImageSheet: ActionSheet {
+        ActionSheet(
+            title: Text("Pick Image"),
+            buttons: [
+                .default(Text("Camera"), action: {
+                    self.showPickImageAction = false
+                    self.showCamera = true
+                    self.showImagePicker = true
+                }),
+                .default(Text("Library"), action: {
+                    self.showPickImageAction = false
+                    self.showCamera = false
+                    self.showImagePicker = true
+                    //self.showImagePicker = true
+                }),
+                .cancel(Text("Close"), action: {
+                    self.showPickImageAction = false
+                })
+        ])
+    }
+    var body: some View {
         VStack {
-//            if (uiImage == nil) {
-//                Image(systemName: "camera.on.rectangle")
-//                    .accentColor(Color.purple)
-//                    .background(
-//                        Color.gray
-//                            .frame(width: 100, height: 100)
-//                            .cornerRadius(6))
-//                    .onTapGesture {
-//                        self.showImagePicker = true
-//                }
-//            } else {
-                VStack {
-                    HStack {
-                        Button(action: {
-                            self.dismissImageClicked()
-                        }) {
+            VStack {
+                HStack {
+                    Button(action: {
+                        self.dismissImageClicked()
+                    }) {
+                        if self.uiImage != nil {
                             Image(systemName: "xmark")
                                 .font(.title)
+                        } else {
+                            EmptyView()
                         }
-                        Spacer()
-                    }
-                    .padding()
-                    Spacer()
-                    Image(uiImage: uiImage!)
-                        .resizable()
-                        .onTapGesture {
-                            self.showAction = true
                     }
                     Spacer()
-                    HStack {
-                        Button(action: {
+                }
+                .padding()
+                Spacer()
+                Image(uiImage: uiImage ?? UIImage())
+                    .resizable()
+                    .onTapGesture {
+                        self.showChangeImageAction = true
+                }
+                Spacer()
+                HStack {
+                    Button(action: {
+                        if self.uiImage != nil {
                             self.uploadClicked()
-                        }) {
-                            VStack {
-                                if !showIndicator {
-                                    HStack {
-                                        Spacer()
-                                        Text("Detect disease")
-                                            .foregroundColor(Color.white)
-                                            .fontWeight(.bold)
-                                            .font(Font.system(size: 18))
-                                        
-                                        Spacer()
-                                    }
-                                } else {
+                        } else {self.pickImageClicked()}
+                    }) {
+                        VStack {
+                            if !showIndicator {
+                                HStack {
+                                    Spacer()
+                                    Text(self.uiImage == nil ? "Pick an image" : "Detect disease")
+                                        .foregroundColor(Color.white)
+                                        .fontWeight(.bold)
+                                        .font(Font.system(size: 18))
                                     
-                                    HStack {
-                                        Spacer()
-                                        ActivityIndicator(isAnimating: $showIndicator)
-                                        Spacer()
-                                        
-                                    }
+                                    Spacer()
+                                }
+                            } else {
+                                HStack {
+                                    Spacer()
+                                    ActivityIndicator(isAnimating: $showIndicator)
+                                    Spacer()
+                                    
                                 }
                             }
                         }
-                        .frame(height: 25)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10)
                     }
+                    .frame(height: 25)
                     .padding()
-                    .padding(.init(top: 0, leading: 80, bottom: 25, trailing: 80))
+                    .background(Color.green)
+                    .cornerRadius(10)
                 }
-                .sheet(isPresented: $detectionFinished) {
-                      DiseaseView(disease: self.detectedDisease!)
-                  }
+                .padding()
+                .padding(.init(top: 0, leading: 80, bottom: 25, trailing: 80))
+            }
+            .sheet(isPresented: $detectionFinished) {
+                DiseaseView(disease: self.detectedDisease!)
+            }
         }
-//        .sheet(isPresented: $showImagePicker, onDismiss: {
-//            self.showImagePicker = false
-//        }, content: {
-//            CameraViewController(isShown: self.$showImagePicker, image: self.$uiImage)
-//        })
-//            .actionSheet(isPresented: $showAction) {
-//                sheet
+        .sheet(isPresented: $showImagePicker, onDismiss: {
+            self.showImagePicker = false
+        }, content: {
+            CameraViewController(isShown: self.$showImagePicker, image: self.$uiImage, showCamera: self.$showCamera)
+        })
+        .actionSheet(isPresented: $showChangeImageAction) {
+                changeImageSheet
+        }
+        .actionSheet(isPresented: $showPickImageAction) {
+            pickImageSheet
+        }
         .alert(isPresented: $shouldShowAlert) {
-                       Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
         }
     }
-    
+
     func uploadClicked() {
         showIndicator = true
         let scanRequest = Scan(userId: user.id, diseaseName: "Apple Scab", cropName: "Apple", lat: 32.234562, lng: 35.251255)
@@ -146,12 +169,16 @@ struct CameraView: View {
         }
     }
     func dismissImageClicked() {
-        showAction = true
+        self.uiImage = nil
     }
     
-     func diseaseDetected(disease: Disease) {
+    func diseaseDetected(disease: Disease) {
         self.detectedDisease = disease
         self.detectionFinished = true
+    }
+    
+    func pickImageClicked() {
+        showPickImageAction = true
     }
 }
 
@@ -165,16 +192,18 @@ struct CameraViewController: UIViewControllerRepresentable{
     
     @Binding var isShown: Bool
     @Binding var image: UIImage?
+    @Binding var showCamera: Bool
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         @Binding var isShown: Bool
         @Binding var image: UIImage?
-        
-        init(isShown: Binding<Bool>, image: Binding<UIImage?>) {
+        @Binding var showCamera: Bool
+        init(isShown: Binding<Bool>, image: Binding<UIImage?>, showCamera: Binding<Bool>) {
             _isShown = isShown
             _image = image
+            _showCamera = showCamera
         }
-    
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let imagePicked = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             image = imagePicked
@@ -183,15 +212,16 @@ struct CameraViewController: UIViewControllerRepresentable{
     }
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(isShown: $isShown, image: $image)
+        return Coordinator(isShown: $isShown, image: $image, showCamera: $showCamera)
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CameraViewController>) -> UIImagePickerController {
         let vc = UIImagePickerController()
+        if self.showCamera {vc.sourceType = .camera}
         vc.delegate = context.coordinator
         return vc
     }
-
+    
     func updateUIViewController(_ uiViewController: UIImagePickerController,
                                 context: UIViewControllerRepresentableContext<CameraViewController>) {
         

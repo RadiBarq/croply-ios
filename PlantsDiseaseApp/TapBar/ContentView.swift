@@ -14,15 +14,15 @@ struct ContentView: View {
     @State private var shouldPresentSheet = true
     @State private var selectedItem = "email"
     @EnvironmentObject var user: SessionUser
-    
+    @EnvironmentObject var location: LocationManager
     init() {
-        
+     //   location = LocationManager()
     }
     
     var body: some View {
         TabView(selection: $selection){
             if (!user.signedInClicked && !user.signedUpClicked ) {
-                    ScansHistoryView()
+                  HomeView()
                     .font(.title)
                     .tabItem {
                         VStack {
@@ -64,7 +64,8 @@ struct ContentView: View {
                     }
             }
             .tag(1)
-            Text("Second View")
+               // MapView()
+            Text(self.location.latString)
                 .font(.title)
                 .tabItem {
                     VStack {

@@ -17,21 +17,59 @@ enum APIError: Error {
 }
 
 class NetworkManager: ObservableObject {
-
-    var didChangeHScansistory = PassthroughSubject<NetworkManager, Never>()
-     
+    
+    var commonDiseases = [Disease]()
     @Published var scansHistory = [Scan]()
+    @Published var recentScansHistory = [String]()
+    @Published var dashboardHeadlinesDic = [String: Array<String>]()
+    var rootURLString = "https://plantsdiseaseweb.azurewebsites.net/"
+    var recentScansURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_recent_scans_mobile")
+    var commonCropsURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_crops_mobile")
+    var commonDiseasesURL: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_diseases_mobile")
+    var scansHistoryURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_all_scans_mobile")
     
-    let resourceURL: URL
-    init(endpoint: String, user: User) {
-           let reourceString = "https://plantsdiseaseweb.azurewebsites.net/\(endpoint)"
-           guard let resourceURL = URL(string: reourceString) else{fatalError()}
-           self.resourceURL = resourceURL
-       }
-    
+    func dataIsReady() -> Bool {
+        return dashboardHeadlinesDic.count == 3
+    }
     func getScansHistory(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
-          do {
-               var urlRequest = URLRequest(url: resourceURL)
+        do {
+            guard let url = scansHistoryURL else { return }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                    
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print(JSONString)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.scansHistory = response.scans
+                        completion(.success(response))
+                    }
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
+    func getDiseaseByCropKind(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
+           do {
+               guard let url = scansHistoryURL else { return }
+               var urlRequest = URLRequest(url: url)
                urlRequest.httpMethod = "POST"
                urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
                urlRequest.httpBody = try JSONEncoder().encode(user)
@@ -41,19 +79,18 @@ class NetworkManager: ObservableObject {
                        return
                    }
                    do {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                       let decoder = JSONDecoder()
+                       decoder.keyDecodingStrategy = .convertFromSnakeCase
                        let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
                        
                        if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                            print(JSONString)
                        }
-                    
-                        DispatchQueue.main.async {
-                            self.scansHistory = response.scans
-                        }
-                      // completion(.success(response))
-                    
+                       
+                       DispatchQueue.main.async {
+                           self.scansHistory = response.scans
+                           completion(.success(response))
+                       }
                    } catch {
                        completion(.failure(.decondingProblem))
                    }
@@ -63,9 +100,115 @@ class NetworkManager: ObservableObject {
                completion(.failure(.encodingProblem))
            }
        }
+    
+    func getRecentScans(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
+        do {
+            guard let url = recentScansURL else { return }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                    
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print(JSONString)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.dashboardHeadlinesDic["Recent scans"]  =  response.scans.map { scan in
+                            return scan.diseaseName!
+                        }
+                        completion(.success(response))
+                    }
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
+    func getCommonCrops(for user: User, completion: @escaping(Result<CommonCropsRequest, APIError>) -> Void) {
+        do {
+            guard let url = commonCropsURL else { return }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(CommonCropsRequest.self, from: jsonData)
+                    
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print(JSONString)
+                    }
+                    DispatchQueue.main.async {
+                        self.dashboardHeadlinesDic["Diseases by crop kind"] = response.crops
+                        completion(.success(response))
+                    }
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
+    func getCommonDiseases(for user: User, completion: @escaping(Result<CommonDiseasesRequest, APIError>) -> Void) {
+        do {
+            guard let url = commonDiseasesURL else { return }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(CommonDiseasesRequest.self, from: jsonData)
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print(JSONString)
+                    }
+                    DispatchQueue.main.async {
+                        
+                        self.commonDiseases = response.diseases
+                        
+                        self.dashboardHeadlinesDic["Common diseases"] = response.diseases.map{ disease in
+                            disease.name
+                        }
+                        completion(.success(response))
+                    }
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
 }
-
-
 struct APIRequest {
     
     let resourceURL: URL

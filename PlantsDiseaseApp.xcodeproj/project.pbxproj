@@ -34,6 +34,11 @@
 		CDB5776C232FDCA500B19B37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776B232FDCA500B19B37 /* User.swift */; };
 		CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB5776D232FF6A900B19B37 /* APIRequest.swift */; };
 		CDC51A7323340E3D008416F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51A7223340E3D008416F9 /* Extensions.swift */; };
+		CDC626BE2343D0D800284D0B /* CommonCropsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626BD2343D0D800284D0B /* CommonCropsRequest.swift */; };
+		CDC626C023452F0E00284D0B /* CommonDiseasesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626BF23452F0E00284D0B /* CommonDiseasesRequest.swift */; };
+		CDC626C3234B2F7C00284D0B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C2234B2F7B00284D0B /* MapView.swift */; };
+		CDC626C5234B30F800284D0B /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C4234B30F800284D0B /* Landmark.swift */; };
+		CDC626C7234B3BC200284D0B /* LoctionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C6234B3BC200284D0B /* LoctionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,11 @@
 		CDB5776B232FDCA500B19B37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CDB5776D232FF6A900B19B37 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		CDC51A7223340E3D008416F9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CDC626BD2343D0D800284D0B /* CommonCropsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCropsRequest.swift; sourceTree = "<group>"; };
+		CDC626BF23452F0E00284D0B /* CommonDiseasesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDiseasesRequest.swift; sourceTree = "<group>"; };
+		CDC626C2234B2F7B00284D0B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CDC626C4234B30F800284D0B /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		CDC626C6234B3BC200284D0B /* LoctionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoctionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +157,7 @@
 				CDF6F7A3232B047D00FAE0A9 /* Utility */,
 				CDF6F7A1232B044100FAE0A9 /* Profile */,
 				CD1C5AF82326FC79002F8DC7 /* Assets.xcassets */,
+				CDC626C1234B2F3800284D0B /* Map */,
 				CD1C5AFA2326FC79002F8DC7 /* Preview Content */,
 			);
 			path = PlantsDiseaseApp;
@@ -187,6 +198,10 @@
 				CD679A7E233E1AA800A5BFC3 /* Disease.swift */,
 				CD679A80233E205D00A5BFC3 /* Crop.swift */,
 				CD679A8C23413C4D00A5BFC3 /* ScanHistoryRequest.swift */,
+				CDC626BD2343D0D800284D0B /* CommonCropsRequest.swift */,
+				CDC626BF23452F0E00284D0B /* CommonDiseasesRequest.swift */,
+				CDC626C4234B30F800284D0B /* Landmark.swift */,
+				CDC626C6234B3BC200284D0B /* LoctionManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +212,14 @@
 				CDC51A7223340E3D008416F9 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CDC626C1234B2F3800284D0B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CDC626C2234B2F7B00284D0B /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		CDF6F7A1232B044100FAE0A9 /* Profile */ = {
@@ -392,18 +415,23 @@
 				CD406CA6232A370300B5DBD1 /* ChangePasswordView.swift in Sources */,
 				CD679A87233E46ED00A5BFC3 /* DiseaseView.swift in Sources */,
 				CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */,
+				CDC626BE2343D0D800284D0B /* CommonCropsRequest.swift in Sources */,
 				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
 				CD679A8D23413C4D00A5BFC3 /* ScanHistoryRequest.swift in Sources */,
 				CD679A8B233FCC2000A5BFC3 /* DiseaseListView.swift in Sources */,
 				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
+				CDC626C023452F0E00284D0B /* CommonDiseasesRequest.swift in Sources */,
 				CD679A89233FA4DC00A5BFC3 /* ScansHistoryView.swift in Sources */,
 				CD679A7F233E1AA800A5BFC3 /* Disease.swift in Sources */,
+				CDC626C3234B2F7C00284D0B /* MapView.swift in Sources */,
+				CDC626C5234B30F800284D0B /* Landmark.swift in Sources */,
 				CD406C982329509900B5DBD1 /* SignUpView.swift in Sources */,
 				CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */,
 				CD406C9A2329854800B5DBD1 /* ForgotPasswordView.swift in Sources */,
 				CD358B59233569A90075229B /* SessionManager.swift in Sources */,
 				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
 				CDB5776C232FDCA500B19B37 /* User.swift in Sources */,
+				CDC626C7234B3BC200284D0B /* LoctionManager.swift in Sources */,
 				CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */,
 				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
@@ -576,7 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantsDiseaseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				DEVELOPMENT_TEAM = 5S7V735958;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PlantsDiseaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,7 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PlantsDiseaseApp/Preview Content\"";
-				DEVELOPMENT_TEAM = PSFCZBNLMD;
+				DEVELOPMENT_TEAM = 5S7V735958;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PlantsDiseaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

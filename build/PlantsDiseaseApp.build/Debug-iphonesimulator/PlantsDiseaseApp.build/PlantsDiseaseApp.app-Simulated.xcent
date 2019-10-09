@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>PSFCZBNLMD.RadiBaraq.PlantsDiseaseApp</string>
+	<string>5S7V735958.RadiBaraq.PlantsDiseaseApp</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>PSFCZBNLMD.RadiBaraq.PlantsDiseaseApp</string>
+		<string>5S7V735958.RadiBaraq.PlantsDiseaseApp</string>
 	</array>
 </dict>
 </plist>

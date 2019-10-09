@@ -213,7 +213,6 @@ struct ActivityIndicator: UIViewRepresentable {
     func makeUIView(context: Context) -> UIActivityIndicatorView {
         let v = UIActivityIndicatorView()
         let transfrom = CGAffineTransform.init(scaleX: 1.5, y: 1.5)
-        v.color = .white
         // v.transform = transfrom
         return v
     }

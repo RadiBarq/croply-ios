@@ -20,7 +20,7 @@ final class Scan: Codable, Identifiable {
     let createdAt: String?
     let lat: Double
     let lng: Double
-    
+
     init(id: Int = 0, userId: Int, diseaseId: Int = 0, diseaseName: String = "", cropName: String = "", cropId: Int = 0, image: String = "", thumbnail: String = "", createdAt: String = " ", lat: Double, lng: Double) {
           self.id = id
           self.userId = userId

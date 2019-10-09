@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class ScanHistoryRequest: Decodable {
      var scans = [Scan]()
 }

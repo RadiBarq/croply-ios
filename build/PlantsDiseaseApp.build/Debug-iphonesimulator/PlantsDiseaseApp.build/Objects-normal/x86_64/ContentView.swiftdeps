@@ -20,12 +20,12 @@ depends-top-level:
 - "EnvironmentObject"
 - "FloatLiteralType"
 - !private "Font"
+- !private "HomeView"
 - !private "Image"
 - "IntegerLiteralType"
 - !private "LoginView"
 - "PreviewProvider"
 - !private "ProfileView"
-- !private "ScansHistoryView"
 - "SessionUser"
 - !private "SignUpView"
 - "State"
@@ -48,10 +48,10 @@ depends-member:
 - !private ["16PlantsDiseaseApp11ContentViewV", "CameraView"]
 - ["16PlantsDiseaseApp11ContentViewV", "EnvironmentObject"]
 - !private ["16PlantsDiseaseApp11ContentViewV", "Font"]
+- !private ["16PlantsDiseaseApp11ContentViewV", "HomeView"]
 - !private ["16PlantsDiseaseApp11ContentViewV", "Image"]
 - !private ["16PlantsDiseaseApp11ContentViewV", "LoginView"]
 - !private ["16PlantsDiseaseApp11ContentViewV", "ProfileView"]
-- !private ["16PlantsDiseaseApp11ContentViewV", "ScansHistoryView"]
 - ["16PlantsDiseaseApp11ContentViewV", "SessionUser"]
 - !private ["16PlantsDiseaseApp11ContentViewV", "SignUpView"]
 - ["16PlantsDiseaseApp11ContentViewV", "State"]
@@ -144,6 +144,9 @@ depends-member:
 - !private ["SH", "some"]
 - !private ["SH", "title"]
 - !private ["SH", "weight"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "deinit"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "font"]
+- !private ["16PlantsDiseaseApp8HomeViewV", "init"]
 - !private ["7SwiftUI5ImageV", "font"]
 - !private ["7SwiftUI5ImageV", "init"]
 - !private ["16PlantsDiseaseApp9LoginViewV", "deinit"]
@@ -172,9 +175,6 @@ depends-member:
 - !private ["16PlantsDiseaseApp11ProfileViewV", "font"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "init"]
 - !private ["SY", "top"]
-- !private ["16PlantsDiseaseApp16ScansHistoryViewV", "deinit"]
-- !private ["16PlantsDiseaseApp16ScansHistoryViewV", "font"]
-- !private ["16PlantsDiseaseApp16ScansHistoryViewV", "init"]
 - ["16PlantsDiseaseApp11SessionUserC", "deinit"]
 - !private ["16PlantsDiseaseApp11SessionUserC", "id"]
 - !private ["16PlantsDiseaseApp11SessionUserC", "init"]
@@ -199,10 +199,10 @@ depends-member:
 - ["7SwiftUI4ViewP", "Body"]
 - !private ["7SwiftUI4ViewP", "CameraView"]
 - !private ["7SwiftUI4ViewP", "Font"]
+- !private ["7SwiftUI4ViewP", "HomeView"]
 - !private ["7SwiftUI4ViewP", "Image"]
 - !private ["7SwiftUI4ViewP", "LoginView"]
 - !private ["7SwiftUI4ViewP", "ProfileView"]
-- !private ["7SwiftUI4ViewP", "ScansHistoryView"]
 - !private ["7SwiftUI4ViewP", "SignUpView"]
 - !private ["7SwiftUI4ViewP", "TabView"]
 - !private ["7SwiftUI4ViewP", "Text"]
@@ -262,6 +262,7 @@ depends-nominal:
 - !private "7SwiftUI4FontV"
 - !private "7SwiftUI7GestureP"
 - !private "SH"
+- !private "16PlantsDiseaseApp8HomeViewV"
 - !private "7SwiftUI5ImageV"
 - !private "16PlantsDiseaseApp9LoginViewV"
 - !private "7Combine16ObservableObjectP"
@@ -270,7 +271,6 @@ depends-nominal:
 - "7SwiftUI15PreviewProviderP"
 - !private "16PlantsDiseaseApp11ProfileViewV"
 - !private "SY"
-- !private "16PlantsDiseaseApp16ScansHistoryViewV"
 - "16PlantsDiseaseApp11SessionUserC"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"

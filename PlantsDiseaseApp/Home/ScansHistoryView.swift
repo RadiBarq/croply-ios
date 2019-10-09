@@ -12,7 +12,9 @@ struct ScansHistoryView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var shouldShowAlert = false
-    @ObservedObject var networkingManager =  NetworkManager(endpoint: "plant/get_all_scans_mobile", user: SessionManager.user!)
+    @ObservedObject var networkingManager =  NetworkManager()
+    @State var shouldShowIndicator = true
+    
     //    @State var scans = [
     //        Scan(id: 0 , userId: 0, diseaseName: "Apple Scab", cropName: "Apple", thumbnail: "apple_scab_test", createdAt: "September 28, 2019", lat: 32.234562, lng: 35.251255),
     //        Scan(id: 1, userId: 1, diseaseName: "Apple Scab", cropName: "Apple", thumbnail: "apple_scab_test", createdAt: "September 28, 2019", lat: 32.234562, lng: 35.251255),
@@ -20,27 +22,26 @@ struct ScansHistoryView: View {
     //        Scan(id: 3, userId: 3, diseaseName: "Apple Scab", cropName: "Apple", thumbnail: "apple_scab_test", createdAt: "September 28, 2019", lat: 32.234562, lng: 35.251255),
     //        Scan(id: 4, userId: 4, diseaseName: "Apple Scab", cropName: "Apple", thumbnail: "apple_scab_test", createdAt: "September 28, 2019" , lat: 32.234562, lng: 35.251255)
     //    ]
-     
-    func test() {
-        
-        
-    }
     
     var body: some View {
-        networkingManager.getScansHistory(for: SessionManager.user!) { result in
-        }
-        return NavigationView {
+        NavigationView {
+            if shouldShowIndicator { ActivityIndicator(isAnimating: $shouldShowIndicator) }
             List(networkingManager.scansHistory) { scan in
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: DiseaseView(diseaseName: scan.diseaseName!)) {
                     HistoryCell(imageURL: "apple_scab_test", diseaseName: scan.diseaseName, cropName: scan.cropName, createdAt: scan.createdAt)
                 }
-            }
-            .navigationBarTitle("History")
         }
-        .colorScheme(.dark)
+        .navigationBarTitle("History")
+        }
         .alert(isPresented: $shouldShowAlert) {
             Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
        }
+        //.edgesIgnoringSafeArea([.top])
+        .onAppear() {
+            self.networkingManager.getScansHistory(for: SessionManager.user!) { result in
+                self.shouldShowIndicator = false
+        }
+      }
     }
 }
 

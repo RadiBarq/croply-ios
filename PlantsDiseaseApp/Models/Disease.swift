@@ -13,8 +13,8 @@ final public class Disease: Codable, Identifiable {
     let thumbnail: String?
     let image: String?
     let name: String
-    let description: String
-    let controlDescription: String
+    let description: String?
+    let controlDescription: String?
     let scanId: Int?
     
     init(id: Int, thumbnail: String, image: String, name: String, description: String, controlDescription: String, scanId: Int? = nil) {

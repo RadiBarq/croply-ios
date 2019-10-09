@@ -80,7 +80,7 @@ struct ProfileView: View {
         .edgesIgnoringSafeArea([.top])
         .sheet(isPresented: self.$shouldPresentSheet) {
             if self.selectedItem == "History" {
-                ChangeEmailView()
+                ScansHistoryView()
             } else if self.selectedItem == "Email" {
                 ChangeEmailView()
             } else if self.selectedItem == "Password" {
