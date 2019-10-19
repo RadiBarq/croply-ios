@@ -18,6 +18,7 @@ depends-top-level:
 - !private "ChangeEmailView"
 - !private "ChangePasswordView"
 - !private "Color"
+- "EnvironmentObject"
 - "FloatLiteralType"
 - !private "ForEach"
 - !private "HStack"
@@ -26,16 +27,21 @@ depends-top-level:
 - "PreviewProvider"
 - "ProfileView"
 - "ProfileView_Previews"
+- !private "ScansHistoryView"
+- "SessionUser"
 - !private "Spacer"
 - "State"
 - "StringLiteralType"
 - !private "Text"
+- !private "UserDefaults"
 - !private "VStack"
 - "View"
 - !private "ZStack"
 - "optionClicked"
 depends-member:
 - !private ["7SwiftUI6ButtonV", "init"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "standard"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "deinit"]
 - !private ["16PlantsDiseaseApp15ChangeEmailViewV", "init"]
 - !private ["16PlantsDiseaseApp18ChangePasswordViewV", "deinit"]
@@ -45,12 +51,16 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "black"]
 - !private ["s28CustomDebugStringConvertibleP", "largeTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "semibold"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "largeTitle"]
 - !private ["s17CustomReflectableP", "semibold"]
 - !private ["s17CustomReflectableP", "title"]
 - !private ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "standard"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["Se", "black"]
 - !private ["Se", "largeTitle"]
@@ -64,6 +74,8 @@ depends-member:
 - !private ["SE", "largeTitle"]
 - !private ["SE", "semibold"]
 - !private ["SE", "title"]
+- ["7SwiftUI17EnvironmentObjectV", "init"]
+- ["7SwiftUI17EnvironmentObjectV", "wrappedValue"]
 - !private ["SQ", "black"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "font"]
@@ -75,6 +87,8 @@ depends-member:
 - !private ["SQ", "padding"]
 - !private ["SQ", "resizable"]
 - !private ["SQ", "semibold"]
+- !private ["SQ", "set"]
+- !private ["SQ", "standard"]
 - !private ["SQ", "title"]
 - !private ["SQ", "top"]
 - !private ["SQ", "white"]
@@ -97,11 +111,22 @@ depends-member:
 - !private ["SH", "black"]
 - !private ["SH", "largeTitle"]
 - !private ["SH", "semibold"]
+- !private ["SH", "set"]
+- !private ["SH", "standard"]
 - !private ["SH", "title"]
 - !private ["SH", "white"]
 - !private ["7SwiftUI5ImageV", "frame"]
 - !private ["7SwiftUI5ImageV", "init"]
 - !private ["7SwiftUI5ImageV", "resizable"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "standard"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "standard"]
+- !private ["7Combine16ObservableObjectP", "email"]
+- !private ["7Combine16ObservableObjectP", "id"]
+- !private ["7Combine16ObservableObjectP", "signedInClicked"]
+- !private ["7Combine16ObservableObjectP", "signedUpClicked"]
+- !private ["7Combine16ObservableObjectP", "username"]
 - !private ["s9OptionSetP", "bottom"]
 - !private ["s9OptionSetP", "top"]
 - !private ["Sq", "black"]
@@ -119,18 +144,23 @@ depends-member:
 - !private ["16PlantsDiseaseApp11ProfileViewV", "$city"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "$selectedItem"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "$shouldPresentSheet"]
+- ["16PlantsDiseaseApp11ProfileViewV", "$user"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "$userName"]
 - ["16PlantsDiseaseApp11ProfileViewV", "Body"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Button"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ChangeEmailView"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ChangePasswordView"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Color"]
+- ["16PlantsDiseaseApp11ProfileViewV", "EnvironmentObject"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ForEach"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "HStack"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Image"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "ScansHistoryView"]
+- ["16PlantsDiseaseApp11ProfileViewV", "SessionUser"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Spacer"]
 - ["16PlantsDiseaseApp11ProfileViewV", "State"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "Text"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "UserDefaults"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "VStack"]
 - ["16PlantsDiseaseApp11ProfileViewV", "View"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "ZStack"]
@@ -140,6 +170,7 @@ depends-member:
 - ["16PlantsDiseaseApp11ProfileViewV", "_makeViewList"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "_selectedItem"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "_shouldPresentSheet"]
+- !private ["16PlantsDiseaseApp11ProfileViewV", "_user"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "_userName"]
 - ["16PlantsDiseaseApp11ProfileViewV", "body"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "city"]
@@ -148,6 +179,7 @@ depends-member:
 - ["16PlantsDiseaseApp11ProfileViewV", "optionsTitle"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "selectedItem"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "shouldPresentSheet"]
+- ["16PlantsDiseaseApp11ProfileViewV", "user"]
 - !private ["16PlantsDiseaseApp11ProfileViewV", "userName"]
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "Previews"]
 - !private ["16PlantsDiseaseApp20ProfileView_PreviewsV", "ProfileView"]
@@ -161,6 +193,14 @@ depends-member:
 - ["16PlantsDiseaseApp20ProfileView_PreviewsV", "previews"]
 - !private ["SY", "bottom"]
 - !private ["SY", "top"]
+- !private ["16PlantsDiseaseApp16ScansHistoryViewV", "deinit"]
+- !private ["16PlantsDiseaseApp16ScansHistoryViewV", "init"]
+- ["16PlantsDiseaseApp11SessionUserC", "deinit"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "email"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "id"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "signedInClicked"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "signedUpClicked"]
+- !private ["16PlantsDiseaseApp11SessionUserC", "username"]
 - !private ["7SwiftUI4EdgeO3SetV", "bottom"]
 - !private ["7SwiftUI4EdgeO3SetV", "top"]
 - !private ["s10SetAlgebraP", "bottom"]
@@ -175,6 +215,8 @@ depends-member:
 - !private ["7SwiftUI4TextV", "foregroundColor"]
 - !private ["7SwiftUI4TextV", "init"]
 - !private ["7SwiftUI4TextV", "padding"]
+- !private ["So14NSUserDefaultsC", "set"]
+- !private ["So14NSUserDefaultsC", "standard"]
 - !private ["7SwiftUI6VStackV", "background"]
 - !private ["7SwiftUI6VStackV", "edgesIgnoringSafeArea"]
 - !private ["7SwiftUI6VStackV", "init"]
@@ -187,8 +229,10 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "ForEach"]
 - !private ["7SwiftUI4ViewP", "HStack"]
 - !private ["7SwiftUI4ViewP", "Image"]
+- !private ["7SwiftUI4ViewP", "ScansHistoryView"]
 - !private ["7SwiftUI4ViewP", "Spacer"]
 - !private ["7SwiftUI4ViewP", "Text"]
+- !private ["7SwiftUI4ViewP", "UserDefaults"]
 - !private ["7SwiftUI4ViewP", "VStack"]
 - !private ["7SwiftUI4ViewP", "ZStack"]
 - ["7SwiftUI4ViewP", ""]
@@ -217,13 +261,17 @@ depends-member:
 - !private ["7SwiftUI4ViewP", "sheet"]
 - !private ["7SwiftUI4ViewP", "shouldPresentSheet"]
 - !private ["7SwiftUI4ViewP", "title"]
-- !private ["7SwiftUI4ViewP", "userName"]
+- !private ["7SwiftUI4ViewP", "user"]
 - !private ["7SwiftUI4ViewP", "white"]
 - !private ["7SwiftUI4ViewP", "zIndex"]
 - !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
 - !private ["7SwiftUI11ViewBuilderV", "buildEither"]
 - !private ["7SwiftUI4FontV6WeightV", "semibold"]
 - !private ["7SwiftUI6ZStackV", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "set"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "standard"]
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "largeTitle"]
 - !private ["s21_ObjectiveCBridgeableP", "semibold"]
@@ -238,6 +286,7 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "previews"]
 depends-nominal:
 - !private "7SwiftUI6ButtonV"
+- !private "s7CVarArgP"
 - !private "16PlantsDiseaseApp15ChangeEmailViewV"
 - !private "16PlantsDiseaseApp18ChangePasswordViewV"
 - !private "7SwiftUI5ColorV"
@@ -248,6 +297,7 @@ depends-nominal:
 - "7SwiftUI15DynamicPropertyP"
 - !private "7SwiftUI18DynamicViewContentP"
 - !private "SE"
+- "7SwiftUI17EnvironmentObjectV"
 - !private "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
@@ -257,23 +307,31 @@ depends-nominal:
 - !private "7SwiftUI6HStackV"
 - !private "SH"
 - !private "7SwiftUI5ImageV"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "7Combine16ObservableObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
 - "7SwiftUI15PreviewProviderP"
 - "16PlantsDiseaseApp11ProfileViewV"
 - "16PlantsDiseaseApp20ProfileView_PreviewsV"
 - !private "SY"
+- !private "16PlantsDiseaseApp16ScansHistoryViewV"
+- "16PlantsDiseaseApp11SessionUserC"
 - !private "7SwiftUI4EdgeO3SetV"
 - !private "s10SetAlgebraP"
 - !private "7SwiftUI10ShapeStyleP"
 - !private "7SwiftUI6SpacerV"
 - "7SwiftUI5StateV"
 - !private "7SwiftUI4TextV"
+- !private "So14NSUserDefaultsC"
 - !private "7SwiftUI6VStackV"
 - "7SwiftUI4ViewP"
 - !private "7SwiftUI11ViewBuilderV"
 - !private "7SwiftUI4FontV6WeightV"
 - !private "7SwiftUI6ZStackV"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
 - !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
 depends-dynamic-lookup:
@@ -285,12 +343,14 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/CoreLocation.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/os.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/MapKit.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftinterface"
@@ -301,12 +361,14 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/os.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/MapKit.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
@@ -326,6 +388,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPlugInCOM.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/ImageIO.framework/Headers/ImageIO.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/alloca.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapCamera.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFData.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSData.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h"
@@ -428,6 +491,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/objc/message.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/message.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapCameraZoomRange.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSOrderedCollectionChange.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryChange.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLAuthenticationChallenge.h"
@@ -449,6 +513,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_posix_vdisable.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGLDrawable.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLDrawable.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKCircle.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileHandle.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBundle.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSBundle.h"
@@ -477,9 +542,13 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLComputePipeline.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRenderPipeline.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_os_inline.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolyline.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKGeodesicPolyline.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMultiPolyline.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSZone.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFTimeZone.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSTimeZone.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKShape.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterShape.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLCaptureScope.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/ctype.h"
@@ -518,7 +587,9 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/os/trace_base.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/readpassphrase.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLResponse.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKLocalSearchResponse.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationResponse.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKDirectionsResponse.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLRasterizationRate.h"
@@ -528,6 +599,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/SecCertificate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextPasteDelegate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManagerDelegate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSCoreDataCoreSpotlightDelegate.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/i386/thread_state.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/machine/thread_state.h"
@@ -551,6 +623,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBag.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/i386/fp_reg.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/mig.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLHeading.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActivityItemsConfigurationReading.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibLoading.h"
@@ -594,6 +667,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach_debug/mach_debug.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/mach.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach-o/arch.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKLocalSearch.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/search.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/fnmatch.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/dispatch/dispatch.h"
@@ -617,6 +691,8 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/dispatch/block.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/clock.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CADisplayLink.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPlacemark.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLPlacemark.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/task.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/vm_task.h"
@@ -689,6 +765,9 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSExtensionItem.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationItem.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIBarButtonItem.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKUserTrackingBarButtonItem.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/NSUserActivity+MKMapItem.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapItem.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIBarItem.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITabBarItem.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderItem.h"
@@ -720,8 +799,14 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentHistoryToken.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/netinet/in.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLErrorDomain.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILexicon.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolygon.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMultiPolygon.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIRegion.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLRegion.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconRegion.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLCircularRegion.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/vm_region.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationServiceExtension.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderExtension.h"
@@ -740,8 +825,12 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUserNotification.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPAuthentication.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKUserLocation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSInvocation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKFoundation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILocalizedIndexedCollation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CAAnimation.h"
@@ -759,8 +848,12 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActivityItemsConfiguration.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISwipeActionsConfiguration.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIContextMenuConfiguration.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKAnnotation.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKClusterAnnotation.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPointAnnotation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRubyAnnotation.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSJSONSerialization.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKGeoJSONSerialization.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAction.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIContextualAction.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccessibilityCustomAction.h"
@@ -803,6 +896,8 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIBarCommon.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/secure/_common.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIButton.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKUserTrackingButton.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKCompassButton.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPattern.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVReturn.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/i386/kern_return.h"
@@ -896,6 +991,8 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLIndirectCommandEncoder.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLBlitCommandEncoder.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLArgumentEncoder.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLGeocoder.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKReverseGeocoder.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSByteOrder.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/libkern/i386/OSByteOrder.h"
@@ -911,6 +1008,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBuffer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLCaptureManager.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSMigrationManager.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUndoManager.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStatusBarManager.h"
@@ -970,18 +1068,29 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGraphicsPDFRenderer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIPrintPageRenderer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGraphicsImageRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKCircleRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolylineRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMultiPolylineRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlayPathRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolygonRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMultiPolygonRenderer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGraphicsRenderer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextDragPreviewRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlayRenderer.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKTileOverlayRenderer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFXMLParser.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSXMLParser.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKLocalSearchCompleter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAccelerometer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIRAWFilter.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPointOfInterestFilter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFNotificationCenter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNUserNotificationCenter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFilePresenter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIPrinter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFormatter.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKDistanceFormatter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRelativeDateTimeFormatter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSISO8601DateFormatter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDateFormatter.h"
@@ -1000,6 +1109,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSEnergyFormatter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFramesetter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTTypesetter.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapSnapshotter.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSKeyedArchiver.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UILargeContentViewer.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CALayer.h"
@@ -1040,6 +1150,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIColor.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFError.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGError.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLError.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLError.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNError.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h"
@@ -1099,11 +1210,13 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImageDefines.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDefines.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKitDefines.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/MTLTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/MacTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurfaceTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolTypes.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKDirectionsTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/SFNTLayoutTypes.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/i386/types.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/machine/types.h"
@@ -1174,10 +1287,12 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/shims/NSDictionaryShims.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach-o/ldsyms.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CIFilterBuiltins.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager+CLVisitExtensions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/NSString+UserNotifications.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINibDeclarations.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderActions.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKDirections.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGuidedAccessRestrictions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSPointerFunctions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UNNotificationResponse+UIKitAdditions.h"
@@ -1189,6 +1304,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UISceneOptions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolOptions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentCloudKitContainerOptions.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapSnapshotOptions.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/termios.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/termios.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/pthread/qos.h"
@@ -1351,12 +1467,14 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageAsset.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_fd_isset.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/wait.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/bsm/audit.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/ulimit.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSUnit.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/mach_init.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/vm_inherit.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLVisit.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreResult.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSTextCheckingResult.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_s_ifmt.h"
@@ -1380,13 +1498,16 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFocusMovementHint.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_u_int.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/NSLayoutConstraint.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLBeaconIdentityConstraint.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/shims/SwiftStdint.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/stdint.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMultiPoint.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGFont.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIFont.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFont.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/shims/RefCount.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/mount.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapSnapshot.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/host_reboot.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/vm_prot.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/getopt.h"
@@ -1408,10 +1529,12 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSPersistentStoreRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSBatchUpdateRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSBatchDeleteRequest.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKLocalSearchRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSFetchRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSSaveChangesRequest.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKDirectionsRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreData.framework/Headers/NSBatchInsertRequest.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFPropertyList.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSPropertyList.h"
@@ -1454,10 +1577,19 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWebView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIPopoverBackgroundView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImageView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKScaleView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKCircleView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolylineView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlayPathView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStackView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIScrollView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPolygonView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKAnnotationView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPinAnnotationView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMarkerAnnotationView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UICollectionView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIPickerView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewHeaderFooterView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIActivityIndicatorView.h"
@@ -1466,6 +1598,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIAlertView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIInputView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITextView.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlayView.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITargetedPreview.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDragPreview.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITargetedDragPreview.h"
@@ -1478,6 +1611,8 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/complex.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/utmpx.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/lctx.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKOverlay.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKTileOverlay.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFArray.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h"
@@ -1495,6 +1630,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSOrthography.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/mach/clock_reply.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_types/_fd_copy.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKMapCameraBoundary.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFDictionary.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFDictionary.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h"
@@ -1504,10 +1640,13 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderSearchQuery.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIContentSizeCategory.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UNNotificationCategory.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKPointOfInterestCategory.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGeometry.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MKGeometry.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/Availability.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLAvailability.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLESAvailability.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/os/availability.h"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/sys/_posix_availability.h"
@@ -1540,6 +1679,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/QuartzCore.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CFNetwork.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Modules/module.modulemap"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreVideo.framework/Modules/module.modulemap"
@@ -1547,6 +1687,7 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Modules/module.modulemap"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/lib/swift/shims/module.modulemap"
@@ -1558,12 +1699,14 @@ depends-external:
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/os.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/radibarq/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "567320cc19f70f50f6b700485a99d3dd"
+interface-hash: "fca793eba85469873398af1995727ed5"

@@ -13,6 +13,7 @@ struct ChangePasswordView: View {
     @State private var newPassword = ""
     @State private var alertTitle = ""
     @State private var shouldShowAlert = false
+    @EnvironmentObject var user: SessionUser
     @State private var alertMessage = ""
     @State private var showIndicator = false
     @Environment(\.presentationMode) var presentation
@@ -117,8 +118,6 @@ struct ChangePasswordView: View {
                     self.alertTitle = "Your password has been changed"
                     self.alertMessage = ""
                     self.shouldShowAlert = true
-                    SessionManager.user
-                        = response.user
                 case "email_error":
                     self.alertTitle = "Old password is invalid"
                     self.alertMessage = "Please try again with different password."

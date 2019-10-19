@@ -14,6 +14,8 @@ final class Scan: Codable, Identifiable {
     let diseaseId: Int?
     let diseaseName: String?
     let cropName: String?
+    let disease: Disease?
+    let crop: Crop?
     let cropId: Int?
     let image: String?
     let thumbnail: String?
@@ -21,7 +23,7 @@ final class Scan: Codable, Identifiable {
     let lat: Double
     let lng: Double
 
-    init(id: Int = 0, userId: Int, diseaseId: Int = 0, diseaseName: String = "", cropName: String = "", cropId: Int = 0, image: String = "", thumbnail: String = "", createdAt: String = " ", lat: Double, lng: Double) {
+    init(id: Int = 0, userId: Int, diseaseId: Int = 0, diseaseName: String = "", cropName: String = "", cropId: Int = 0, image: String = "", thumbnail: String = "", createdAt: String = " ", lat: Double, lng: Double, disease: Disease? = nil, crop: Crop? = nil) {
           self.id = id
           self.userId = userId
           self.diseaseId = diseaseId
@@ -33,5 +35,7 @@ final class Scan: Codable, Identifiable {
           self.lng = lng
           self.diseaseName = diseaseName
           self.cropName = cropName
+          self.disease = disease
+          self.crop = crop
       }
 }

@@ -28,4 +28,18 @@ class SessionUser: ObservableObject {
     @Published var email: String = ""
     @Published var signedInClicked = true
     @Published var signedUpClicked = false
+    
+    init() {
+        
+        
+    }
+    
+    init (id: Int, username: String, email: String, signedInClicked: Bool, signedUpClicked: Bool) {
+        self.id = id
+        self.username = username
+        self.email = email
+        self.signedUpClicked = signedUpClicked
+        self.signedInClicked = signedInClicked
+    }
+
 }

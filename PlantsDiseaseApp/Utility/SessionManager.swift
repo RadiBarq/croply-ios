@@ -9,7 +9,5 @@
 import Foundation
 
 struct SessionManager {
-    
     public static var user: User?
-    
 }

@@ -15,18 +15,19 @@ struct HomeView: View {
     @State private var itemIdClicked = 0
     @State var networkManager: NetworkManager = NetworkManager()
     @State var headlinesDic = [String: Array<String>]()
-    
     var cropType = ["Apple", "Corn", "Grape", "Potato", "Tomato"]
-    
     var commonDisease = ["Apple Scab", "Tomato leaf mold", "Corn gray leaf spot", "Grape black rot", "Potato early blight", "Strawberry leaf scorch", "Peach bacterial spot", "Tomato mosaic virus", "Squash powdery mildew"]
-    
     @State var shouldShowIndicator = true
-    
     @State var test = true
     
     init() {
         print("radi")
     }
+//    func test() {
+//
+//        var test1 =  self.networkManager.dashboardHeadlinesDic[headline]![item] as! Crop).name
+//
+//    }
     
     var commonDiseaseDic = [
         "Apple Scab": Disease(id: 0, thumbnail: "https://miro.medium.com/max/3200/1*IbJF_6mRTMsG9gL0j8uz5Q.jpeg", image: "https://miro.medium.com/max/3200/1*IbJF_6mRTMsG9gL0j8uz5Q.jpeg", name: "Grape Leaf Blight", description: "radi", controlDescription:"proper spacing of plants to allow adequate air circulation is important+Yellowish in color it eventually turn the entire leaf yellow+Avoid overhead watering to keep the leave as dry as possible+This diseases also attacks watermelons and cantaloupes. Choose resistant varieties"),
@@ -51,11 +52,9 @@ struct HomeView: View {
     var body: some View {
         let keys = self.networkManager.dashboardHeadlinesDic.map{$0.key}
         let values = self.networkManager.dashboardHeadlinesDic.map {$0.value}
-        
         return NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(keys, id: \.self) { headline in
-                    
                     VStack {
                         HStack{
                             Text(headline)
@@ -64,19 +63,18 @@ struct HomeView: View {
                                 .padding(.leading, 15)
                             Spacer()
                         }
-                        
                         if headline != "Diseases by crop kind" {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach((self.networkManager.dashboardHeadlinesDic[headline])!.indices, id: \.self){
                                         item in
                                         NavigationLink(destination:
-                                            DiseaseView(diseaseName: self.networkManager.dashboardHeadlinesDic[headline]?[item] ?? "Apple Scab")
+                                            DiseaseView(disease: self.networkManager.dashboardDiseasesDic[headline]![item])
                                         ) {
                                             VStack {
-                                                Image("apple")
-                                                    .renderingMode(.original)
-                                                    .resizable()
+                                                ImageContainer(imageURL: "https://image.shutterstock.com/image-photo/cherry-leaf-isolated-on-white-260nw-1145339282.jpg")
+                                                   // .renderingMode(.original)
+                                                   // .resizable()
                                                     .frame(width: 275, height: 150)
                                                 HStack {
                                                     Text((self.networkManager.dashboardHeadlinesDic[headline])![item])
@@ -86,25 +84,23 @@ struct HomeView: View {
                                             }
                                             .padding(10)
                                         }
-                                        
-                                        
                                     }
                                 }
                             }
                         }
-                        
+                            
                         else {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach((self.networkManager.dashboardHeadlinesDic[headline])!.indices, id: \.self){
                                         item in
                                         NavigationLink(destination:
-                                         DiseaseListView()
-                                        ) {
+                                            DiseaseListView(cropId: self.networkManager.cropsId[item], cropName: self.networkManager.dashboardHeadlinesDic[headline]![item]))
+                                         {
                                             VStack {
-                                                Image("apple")
-                                                    .renderingMode(.original)
-                                                    .resizable()
+                                                    ImageContainer(imageURL: "https://image.shutterstock.com/image-photo/cherry-leaf-isolated-on-white-260nw-1145339282.jpg")
+                                                    //.renderingMode(.original)
+                                                    //.resizable()
                                                     .frame(width: 275, height: 150)
                                                 HStack {
                                                     Text((self.networkManager.dashboardHeadlinesDic[headline])![item])
@@ -114,8 +110,6 @@ struct HomeView: View {
                                             }
                                             .padding(10)
                                         }
-                                        
-                                        
                                     }
                                 }
                             }
@@ -139,14 +133,14 @@ struct HomeView: View {
                 if self.networkManager.dataIsReady() { self.shouldShowIndicator = false }
             }
         }
-            //        .sheet(isPresented: self.$shouldPresentSheet) {
-            ////            if self.headerClicked == "Recent scans" || self.headerClicked == "Common diseases" {
-            ////                DiseaseView(diseaseName: self.networkManager.dashboardHeadlinesDic[self.headerClicked]![self.itemIdClicked])
-            ////            } else {
-            ////                EmptyView()
-            ////            }
-            //        }
-            .colorScheme(.dark)
+        //        .sheet(isPresented: self.$shouldPresentSheet) {
+        ////            if self.headerClicked == "Recent scans" || self.headerClicked == "Common diseases" {
+        ////                DiseaseView(diseaseName: self.networkManager.dashboardHeadlinesDic[self.headerClicked]![self.itemIdClicked])
+        ////            } else {
+        ////                EmptyView()
+        ////            }
+        //        }
+        //.colorScheme(.dark)
     }
     
     func optionClicked(headline: String, id: Int) {

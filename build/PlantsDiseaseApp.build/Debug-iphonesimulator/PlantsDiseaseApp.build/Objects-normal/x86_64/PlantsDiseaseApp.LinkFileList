@@ -3,6 +3,7 @@
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/DiseaseView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/APIRequest.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/CommonCropsRequest.o
+/Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/RemoteImageURL.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ChangeEmailView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ScanHistoryRequest.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/DiseaseListView.o
@@ -10,12 +11,16 @@
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/CommonDiseasesRequest.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ScansHistoryView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/Disease.o
+/Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/MapView.o
+/Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/Landmark.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/SignUpView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/SceneDelegate.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ForgotPasswordView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/SessionManager.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ProfileView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/User.o
+/Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/LoctionManager.o
+/Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ImageContainer.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/Scan.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/LoginView.o
 /Users/radibarq/PlantsDiseaseApp/build/PlantsDiseaseApp.build/Debug-iphonesimulator/PlantsDiseaseApp.build/Objects-normal/x86_64/ContentView.o

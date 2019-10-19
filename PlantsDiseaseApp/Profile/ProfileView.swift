@@ -16,6 +16,7 @@ struct ProfileView: View {
     @State private var selectedItem = ""
     @State private var userName = "Radi Barq"
     @State private var city = "nablus"
+    @EnvironmentObject() var user: SessionUser
     
     var body: some View {
         VStack {
@@ -25,7 +26,7 @@ struct ProfileView: View {
                 .cornerRadius(25)
             ZStack {
                 VStack {
-                    Text(userName)
+                    Text(user.username)
                         .foregroundColor(.black)
                         .font(.largeTitle)
                         .fontWeight(.semibold)
@@ -37,7 +38,6 @@ struct ProfileView: View {
                         .foregroundColor(.black)
                         .font(.title)
                         .fontWeight(.semibold)
-                        
                         .padding()
                         .padding(.top, -30)
                     
@@ -52,8 +52,17 @@ struct ProfileView: View {
                 Spacer()
                 ForEach(optionsTitle, id: \.self) { title in
                     Button(action: {
-                        self.selectedItem = title
-                        self.shouldPresentSheet = true
+                        if title == "Logout" {
+                            self.user.signedInClicked = true
+                            self.user.signedUpClicked = false
+                            self.user.id = -1
+                            self.user.username = ""
+                            self.user.email = ""
+                            UserDefaults.standard.set(false , forKey: "signed_in")
+                            
+                        } else {
+                              self.selectedItem = title
+                            self.shouldPresentSheet = true }
                     }) {
                         HStack {
                             Spacer()
@@ -88,8 +97,6 @@ struct ProfileView: View {
             } else if self.selectedItem == "About us" {
                 ChangePasswordView()
             } else if self.selectedItem == "Contact us" {
-                ChangePasswordView()
-            } else if self.selectedItem == "Logout" {
                 ChangePasswordView()
             } else {
                 ChangePasswordView()

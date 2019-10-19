@@ -12,7 +12,7 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var user = SessionUser()
+  
     var location = LocationManager()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,6 +20,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         // Create the SwiftUI view that provides the window contents.
+        var user: SessionUser
+        let isSignedIn  = UserDefaults.standard.bool(forKey: "signed_in")
+        if isSignedIn {
+            let id  = UserDefaults.standard.integer(forKey: "id")
+            let username = UserDefaults.standard.string(forKey: "username")
+            let email = UserDefaults.standard.string(forKey: "email")
+            let sessionManagerUser = User(id: id, username: username!, email: email!, password: nil)
+            SessionManager.user = sessionManagerUser
+            user = SessionUser(id: id, username: username!, email: email!, signedInClicked: false, signedUpClicked: false)
+        } else {
+            user = SessionUser()
+        }
         
         let contentView = ContentView().environmentObject(user).environmentObject(location)
         

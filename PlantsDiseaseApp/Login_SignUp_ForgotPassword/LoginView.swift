@@ -159,13 +159,17 @@ struct LoginView: View {
                 case "success":
                     DispatchQueue.main.async {
                         guard let user = response.user else { return }
-                        
                         SessionManager.user = user
                         self.user.email = user.email
                         self.user.username = user.username
                         self.user.id = user.id
                         self.user.signedUpClicked = false
                         self.user.signedInClicked = false
+                       // UserDefaults.standard.set(user, forKey: "user")
+                        UserDefaults.standard.set(self.user.email , forKey: "email")
+                        UserDefaults.standard.set(self.user.id , forKey: "id")
+                        UserDefaults.standard.set(self.user.username , forKey: "username")
+                        UserDefaults.standard.set(true , forKey: "signed_in")
                     }
                 case "email_error":
                     self.alertTitle = "email or password invalid"

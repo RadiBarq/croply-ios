@@ -17,18 +17,29 @@ enum APIError: Error {
 }
 
 class NetworkManager: ObservableObject {
-    
-    var commonDiseases = [Disease]()
+ //   var commonDiseases = [Disease]()
+  //  var recentScansDiseases = [Disease]()
+    @Published var cropsDiseases = [Disease]()
     @Published var scansHistory = [Scan]()
     @Published var recentScansHistory = [String]()
     @Published var dashboardHeadlinesDic = [String: Array<String>]()
+    @Published var diseasesLocoation = [Landmark]()
+   
+    @Published var loadingScansHistory = true
+    
+    public var cropsId = [Int]()
+    @Published var dashboardDiseasesDic = [String: Array<Disease>]()
     var rootURLString = "https://plantsdiseaseweb.azurewebsites.net/"
     var recentScansURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_recent_scans_mobile")
     var commonCropsURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_crops_mobile")
     var commonDiseasesURL: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_diseases_mobile")
     var scansHistoryURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_all_scans_mobile")
+    var diseaseByCropKind: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_crop_diseases_mobile")
+    var diseasesLocationURL: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_map_scans_mobile")
+    
     
     func dataIsReady() -> Bool {
+    
         return dashboardHeadlinesDic.count == 3
     }
     func getScansHistory(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
@@ -54,6 +65,7 @@ class NetworkManager: ObservableObject {
                     
                     DispatchQueue.main.async {
                         self.scansHistory = response.scans
+                        self.loadingScansHistory = false
                         completion(.success(response))
                     }
                 } catch {
@@ -66,9 +78,40 @@ class NetworkManager: ObservableObject {
         }
     }
     
-    func getDiseaseByCropKind(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
+    func getDiseasesLocation(completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
+
+            guard let url = diseasesLocationURL else { return }
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print(JSONString)
+                    }
+                    DispatchQueue.main.async {
+                        self.diseasesLocoation = response.scans.map {scan in
+                            Landmark(name: scan.disease?.name ?? "Apple Scab", location: .init(latitude: scan.lat, longitude: scan.lng))
+                        }
+                        completion(.success(response))
+                    }
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        }
+    
+    func getDiseaseByCropKind(for user: User, completion: @escaping(Result<CommonDiseasesRequest, APIError>) -> Void) {
            do {
-               guard let url = scansHistoryURL else { return }
+               guard let url = diseaseByCropKind else { return }
                var urlRequest = URLRequest(url: url)
                urlRequest.httpMethod = "POST"
                urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
@@ -81,14 +124,12 @@ class NetworkManager: ObservableObject {
                    do {
                        let decoder = JSONDecoder()
                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                       let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
-                       
+                       let response = try decoder.decode(CommonDiseasesRequest.self, from: jsonData)
                        if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                            print(JSONString)
                        }
-                       
                        DispatchQueue.main.async {
-                           self.scansHistory = response.scans
+                            self.cropsDiseases = response.diseases
                            completion(.success(response))
                        }
                    } catch {
@@ -121,10 +162,12 @@ class NetworkManager: ObservableObject {
                     if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                         print(JSONString)
                     }
-                    
                     DispatchQueue.main.async {
-                        self.dashboardHeadlinesDic["Recent scans"]  =  response.scans.map { scan in
-                            return scan.diseaseName!
+                        self.dashboardDiseasesDic["Recent scans"] = response.scans.map { scan in
+                            scan.disease!
+                        }
+                        self.dashboardHeadlinesDic["Recent scans"]  = response.scans.map { scan in
+                            return scan.disease!.name
                         }
                         completion(.success(response))
                     }
@@ -159,7 +202,9 @@ class NetworkManager: ObservableObject {
                         print(JSONString)
                     }
                     DispatchQueue.main.async {
-                        self.dashboardHeadlinesDic["Diseases by crop kind"] = response.crops
+                        
+                        self.cropsId = response.crops.map {$0.id}
+                        self.dashboardHeadlinesDic["Diseases by crop kind"] = response.crops.map {$0.name}
                         completion(.success(response))
                     }
                 } catch {
@@ -186,14 +231,13 @@ class NetworkManager: ObservableObject {
                 }
                 do {
                     let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let response = try decoder.decode(CommonDiseasesRequest.self, from: jsonData)
                     if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                         print(JSONString)
                     }
                     DispatchQueue.main.async {
-                        
-                        self.commonDiseases = response.diseases
-                        
+                        self.dashboardDiseasesDic["Common diseases"] = response.diseases
                         self.dashboardHeadlinesDic["Common diseases"] = response.diseases.map{ disease in
                             disease.name
                         }

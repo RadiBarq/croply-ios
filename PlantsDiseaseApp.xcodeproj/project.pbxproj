@@ -39,6 +39,8 @@
 		CDC626C3234B2F7C00284D0B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C2234B2F7B00284D0B /* MapView.swift */; };
 		CDC626C5234B30F800284D0B /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C4234B30F800284D0B /* Landmark.swift */; };
 		CDC626C7234B3BC200284D0B /* LoctionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC626C6234B3BC200284D0B /* LoctionManager.swift */; };
+		CDC961692350F2BA007C669B /* RemoteImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC961682350F2BA007C669B /* RemoteImageURL.swift */; };
+		CDC9616C2350F452007C669B /* ImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9616B2350F452007C669B /* ImageContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		CDC626C2234B2F7B00284D0B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CDC626C4234B30F800284D0B /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		CDC626C6234B3BC200284D0B /* LoctionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoctionManager.swift; sourceTree = "<group>"; };
+		CDC961682350F2BA007C669B /* RemoteImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageURL.swift; sourceTree = "<group>"; };
+		CDC9616B2350F452007C669B /* ImageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		CD1C5AF12326FC77002F8DC7 /* PlantsDiseaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9616A2350F43B007C669B /* Views */,
 				CDC51A7123340D94008416F9 /* Extensions */,
 				CD1C5B002326FC79002F8DC7 /* Info.plist */,
 				CDB5776A232FDBFB00B19B37 /* Models */,
@@ -202,6 +207,7 @@
 				CDC626BF23452F0E00284D0B /* CommonDiseasesRequest.swift */,
 				CDC626C4234B30F800284D0B /* Landmark.swift */,
 				CDC626C6234B3BC200284D0B /* LoctionManager.swift */,
+				CDC961682350F2BA007C669B /* RemoteImageURL.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +226,14 @@
 				CDC626C2234B2F7B00284D0B /* MapView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		CDC9616A2350F43B007C669B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9616B2350F452007C669B /* ImageContainer.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CDF6F7A1232B044100FAE0A9 /* Profile */ = {
@@ -416,6 +430,7 @@
 				CD679A87233E46ED00A5BFC3 /* DiseaseView.swift in Sources */,
 				CDB5776E232FF6A900B19B37 /* APIRequest.swift in Sources */,
 				CDC626BE2343D0D800284D0B /* CommonCropsRequest.swift in Sources */,
+				CDC961692350F2BA007C669B /* RemoteImageURL.swift in Sources */,
 				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
 				CD679A8D23413C4D00A5BFC3 /* ScanHistoryRequest.swift in Sources */,
 				CD679A8B233FCC2000A5BFC3 /* DiseaseListView.swift in Sources */,
@@ -432,6 +447,7 @@
 				CD406C9C2329AE6100B5DBD1 /* ProfileView.swift in Sources */,
 				CDB5776C232FDCA500B19B37 /* User.swift in Sources */,
 				CDC626C7234B3BC200284D0B /* LoctionManager.swift in Sources */,
+				CDC9616C2350F452007C669B /* ImageContainer.swift in Sources */,
 				CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */,
 				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,

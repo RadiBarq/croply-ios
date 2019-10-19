@@ -64,8 +64,8 @@ struct ContentView: View {
                     }
             }
             .tag(1)
-               // MapView()
-            Text(self.location.latString)
+                MapView()
+          //  Text(self.location.latString)
                 .font(.title)
                 .tabItem {
                     VStack {

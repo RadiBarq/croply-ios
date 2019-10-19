@@ -12,14 +12,12 @@ final class Crop: Codable {
     
     var id: Int
     var name: String
-    var thumbnail: String
-    var image: String
+    var image: String?
     var supportedDisease: Array<Disease>?
     
-    init(id: Int, name: String, thumbnail: String, image: String) {
+    init(id: Int, name: String, thumbnail: String, image: String? = nil) {
         self.id = id
         self.name = name
-        self.thumbnail = thumbnail
         self.image = image
     }
 

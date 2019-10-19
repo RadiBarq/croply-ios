@@ -9,5 +9,5 @@
 import Foundation
 
 class CommonCropsRequest: Decodable {
-     var crops = [String]()
+     var crops = [Crop]()
 }

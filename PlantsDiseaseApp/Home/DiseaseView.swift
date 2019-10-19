@@ -11,9 +11,9 @@ import WebKit
 
 struct DiseaseView: View {
     
-    @State var disease: Disease?
-    @State var controlDiseaseList = [String]()
-    @State var shouldShowIndicator = true
+     var disease: Disease?
+     var controlDiseaseList = [String]()
+    @State var shouldShowIndicator = false
     @State private var shouldShowAlert = false
     @State private var alertTitle = ""
     @State private var alertMessage = ""
@@ -43,8 +43,8 @@ struct DiseaseView: View {
                 }
             }
             else {
-                Image("profile_background")
-                    .resizable()
+                    ImageContainer(imageURL: "https://image.shutterstock.com/image-photo/cherry-leaf-isolated-on-white-260nw-1145339282.jpg")
+                    //.resizable()
                     .frame(height: 400)
                 HStack {
                     Text(disease?.name ?? " ")
@@ -98,36 +98,36 @@ struct DiseaseView: View {
         }
         .edgesIgnoringSafeArea([.top])
         .onAppear() {
-            self.getDisease()
+           // self.getDisease()
         }
     }
     
-    func getDisease() {
-        if self.disease == nil {
-            let scanRequest = Scan(userId: self.user.id, diseaseName: self.diseaseName, cropName: "Apple", lat: 32.234562, lng: 35.251255)
-            let postRequest = APIRequest(endpoint: "plant/add_scan_mobile")
-            postRequest.scanDisease(with: scanRequest) { result in
-                self.shouldShowIndicator = false
-                switch result {
-                case .success(let disease):
-                    self.disease = disease
-                    self.controlDiseaseList =  self.disease?.controlDescription?.components(separatedBy: "+") ?? []
-                case .failure(let type):
-                    break
-                    switch type {
-                    case .responseProblem:
-                        self.alertTitle = "Connection problem happened!"
-                        self.alertMessage = "Please try again later."
-                        self.shouldShowAlert = true
-                    case .decondingProblem, .encodingProblem:
-                        self.alertTitle = "Unexpected problem happened!"
-                        self.alertMessage = "We are working on the issue."
-                        self.shouldShowAlert = true
-                    }
-                }
-            }
-        }
-    }
+//    func getDisease() {
+//        if self.disease == nil {
+//            let scanRequest = Scan(userId: self.user.id, diseaseName: self.diseaseName, cropName: "Apple", lat: 32.234562, lng: 35.251255)
+//            let postRequest = APIRequest(endpoint: "plant/add_scan_mobile")
+//            postRequest.scanDisease(with: scanRequest) { result in
+//                self.shouldShowIndicator = false
+//                switch result {
+//                case .success(let disease):
+//                    self.disease = disease
+//                    self.controlDiseaseList =  self.disease?.controlDescription?.components(separatedBy: "+") ?? []
+//                case .failure(let type):
+//                    break
+//                    switch type {
+//                    case .responseProblem:
+//                        self.alertTitle = "Connection problem happened!"
+//                        self.alertMessage = "Please try again later."
+//                        self.shouldShowAlert = true
+//                    case .decondingProblem, .encodingProblem:
+//                        self.alertTitle = "Unexpected problem happened!"
+//                        self.alertMessage = "We are working on the issue."
+//                        self.shouldShowAlert = true
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 struct DiseaseView_Previews: PreviewProvider {

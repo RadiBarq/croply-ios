@@ -11,6 +11,7 @@ import SwiftUI
 struct ChangeEmailView: View {
     
     @State private var email: String = "radibarq@gmail.com"
+    @EnvironmentObject var user: SessionUser
     @Environment(\.presentationMode) var presentation
     @State private var alertTitle = ""
     @State private var shouldShowAlert = false
@@ -25,7 +26,7 @@ struct ChangeEmailView: View {
                         Text("Email")
                             .fontWeight(.bold)
                             .foregroundColor(.green)
-                        TextField(email, text: $email)
+                        TextField(user.email, text: $email)
                             .padding()
                             .background(Color.white)
                             .cornerRadius(5)
@@ -92,8 +93,8 @@ struct ChangeEmailView: View {
                     self.alertTitle = "Email has been changed"
                     self.alertMessage = ""
                     self.shouldShowAlert = true
-                    SessionManager.user
-                        = response.user
+                    self.user.email = response.user!.email
+
                 case "email_error":
                     self.alertTitle = "Email entered is not available right now"
                     self.alertMessage = "Please try again with different different email."
