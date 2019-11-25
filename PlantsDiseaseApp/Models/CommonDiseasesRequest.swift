@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class CommonDiseasesRequest: Decodable {
        var diseases = [Disease]()
 }

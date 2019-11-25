@@ -15,14 +15,11 @@ struct ContentView: View {
     @State private var selectedItem = "email"
     @EnvironmentObject var user: SessionUser
     @EnvironmentObject var location: LocationManager
-    init() {
-     //   location = LocationManager()
-    }
     
     var body: some View {
         TabView(selection: $selection){
             if (!user.signedInClicked && !user.signedUpClicked ) {
-                  HomeView()
+                HomeView()
                     .font(.title)
                     .tabItem {
                         VStack {
@@ -55,7 +52,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             }
-                CameraView()
+            CameraView()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -64,8 +61,8 @@ struct ContentView: View {
                     }
             }
             .tag(1)
-                MapView()
-          //  Text(self.location.latString)
+            MapView()
+                //  Text(self.location.latString)
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -75,7 +72,7 @@ struct ContentView: View {
             }
             .tag(2)
             if (user.id != -1) {
-                ProfileView()
+                ProfileView().environmentObject(user)
                     .font(.title)
                     .tabItem {
                         VStack {
@@ -86,14 +83,34 @@ struct ContentView: View {
                 }
                 .tag(3)
             }
+        }       .onAppear() {
+                 let isSignedIn  = UserDefaults.standard.bool(forKey: "signed_in")
+                 if isSignedIn {
+                     let id  = UserDefaults.standard.integer(forKey: "id")
+                     let username = UserDefaults.standard.string(forKey: "username")
+                     let email = UserDefaults.standard.string(forKey: "email")
+                     let sessionManagerUser = User(id: id, username: username!, email: email!, password: nil)
+                     SessionManager.user = sessionManagerUser
+                     self.user.signedInClicked = false
+                     self.user.signedUpClicked = false
+                     self.user.id = id
+                     self.user.username = username!
+                     self.user.email = email!
+                 } else {
+                     self.user.signedInClicked = true
+                     self.user.signedUpClicked = false
+                     self.user.id = -1
+                     self.user.username = ""
+                     self.user.email = ""
+                 }
+            }
+                .accentColor(.green)
+                .edgesIgnoringSafeArea([.top])
         }
-        .accentColor(.green)
-        .edgesIgnoringSafeArea([.top])
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environmentObject(SessionUser())
-    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView().environmentObject(SessionUser())
+        }
 }

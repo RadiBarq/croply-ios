@@ -22,7 +22,7 @@ struct SignUpView: View {
     @State private var myFormatter = LengthFormatter()
     
     var body: some View {
-    
+        ScrollView {
         VStack {
             Spacer()
             HStack(alignment: .center) {
@@ -117,7 +117,6 @@ struct SignUpView: View {
                         }) {
                             Text("Sign in here")
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
                         }
                         Spacer()
                     }
@@ -126,13 +125,13 @@ struct SignUpView: View {
                 }
                 .font(.subheadline)
             }
-            .colorScheme(.dark)
             .cornerRadius(15)
             .frame(height: 500)
-        
             .padding()
             Spacer()
         }
+        }
+        .padding(.top, 20)
         .background(
             Image("choice")
                 .resizable()
@@ -209,11 +208,8 @@ struct SignUpView: View {
 struct ActivityIndicator: UIViewRepresentable {
     
     @Binding var isAnimating: Bool
-    
     func makeUIView(context: Context) -> UIActivityIndicatorView {
         let v = UIActivityIndicatorView()
-        let transfrom = CGAffineTransform.init(scaleX: 1.5, y: 1.5)
-        // v.transform = transfrom
         return v
     }
     

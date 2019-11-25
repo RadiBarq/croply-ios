@@ -11,11 +11,10 @@ import SwiftUI
 struct ProfileView: View {
     
     var optionsTitle = ["History", "Email", "Password", "Logout"]
-    
     @State private var shouldPresentSheet = false
     @State private var selectedItem = ""
     @State private var userName = "Radi Barq"
-    @State private var city = "nablus"
+    @State private var city = "Welcome back"
     @EnvironmentObject() var user: SessionUser
     
     var body: some View {
@@ -91,7 +90,7 @@ struct ProfileView: View {
             if self.selectedItem == "History" {
                 ScansHistoryView()
             } else if self.selectedItem == "Email" {
-                ChangeEmailView()
+                ChangeEmailView().environmentObject(self.user)
             } else if self.selectedItem == "Password" {
                 ChangePasswordView()
             } else if self.selectedItem == "About us" {

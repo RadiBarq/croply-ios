@@ -10,29 +10,16 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
-  
     var location = LocationManager()
+    var user: SessionUser = SessionUser()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         // Create the SwiftUI view that provides the window contents.
-        var user: SessionUser
-        let isSignedIn  = UserDefaults.standard.bool(forKey: "signed_in")
-        if isSignedIn {
-            let id  = UserDefaults.standard.integer(forKey: "id")
-            let username = UserDefaults.standard.string(forKey: "username")
-            let email = UserDefaults.standard.string(forKey: "email")
-            let sessionManagerUser = User(id: id, username: username!, email: email!, password: nil)
-            SessionManager.user = sessionManagerUser
-            user = SessionUser(id: id, username: username!, email: email!, signedInClicked: false, signedUpClicked: false)
-        } else {
-            user = SessionUser()
-        }
-        
+      
         let contentView = ContentView().environmentObject(user).environmentObject(location)
         
 //        let contentView =   DiseaseView(disease: Disease(id: 0, thumbnail: "https://miro.medium.com/max/3200/1*IbJF_6mRTMsG9gL0j8uz5Q.jpeg", image: "https://miro.medium.com/max/3200/1*IbJF_6mRTMsG9gL0j8uz5Q.jpeg", name: "Grape Leaf Blight", description: "radi", controlDescription:"proper spacing of plants to allow adequate air circulation is important+Yellowish in color it eventually turn the entire leaf yellow+Avoid overhead watering to keep the leave as dry as possible+This diseases also attacks watermelons and cantaloupes. Choose resistant varieties"))
@@ -69,6 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+      
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

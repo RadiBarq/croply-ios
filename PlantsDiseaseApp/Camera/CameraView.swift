@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct CameraView: View {
-    
     @State var showImagePicker = false
     @State var showCamera = false
     @State var showChangeImageAction: Bool = false
@@ -22,6 +21,7 @@ struct CameraView: View {
     @State private var detectionFinished = false
     @State var detectedDisease: Disease?
     @EnvironmentObject var user: SessionUser
+    @EnvironmentObject var location: LocationManager
     
     var changeImageSheet: ActionSheet {
         ActionSheet(
@@ -42,7 +42,6 @@ struct CameraView: View {
                 })
         ])
     }
-    
     var pickImageSheet: ActionSheet {
         ActionSheet(
             title: Text("Pick Image"),
@@ -80,12 +79,20 @@ struct CameraView: View {
                     Spacer()
                 }
                 .padding()
+                .sheet(isPresented: $detectionFinished, onDismiss: {
+                       self.detectionFinished = false
+                   }, content: {
+                       DiseaseView(disease: self.detectedDisease!)
+                   })
                 Spacer()
+                
                 Image(uiImage: uiImage ?? UIImage())
                     .resizable()
+                    .aspectRatio(contentMode: ContentMode.fit)
                     .onTapGesture {
                         self.showChangeImageAction = true
                 }
+                
                 Spacer()
                 HStack {
                     Button(action: {
@@ -118,19 +125,17 @@ struct CameraView: View {
                     .padding()
                     .background(Color.green)
                     .cornerRadius(10)
+                    
                 }
                 .padding()
                 .padding(.init(top: 0, leading: 80, bottom: 25, trailing: 80))
-            }
-            .sheet(isPresented: $detectionFinished) {
-                DiseaseView(disease: self.detectedDisease!)
+                .sheet(isPresented: $showImagePicker, onDismiss: {
+                    self.showImagePicker = false
+                }, content: {
+                    CameraViewController(isShown: self.$showImagePicker, image: self.$uiImage, showCamera: self.$showCamera)
+                })
             }
         }
-        .sheet(isPresented: $showImagePicker, onDismiss: {
-            self.showImagePicker = false
-        }, content: {
-            CameraViewController(isShown: self.$showImagePicker, image: self.$uiImage, showCamera: self.$showCamera)
-        })
         .actionSheet(isPresented: $showChangeImageAction) {
                 changeImageSheet
         }
@@ -141,26 +146,53 @@ struct CameraView: View {
             Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
         }
     }
-
+    
     func uploadClicked() {
         showIndicator = true
-        let scanRequest = Scan(userId: user.id, diseaseName: "Apple Scab", cropName: "Apple", lat: 32.234562, lng: 35.251255)
+        //let scanRequest = Scan(userId: user.id, diseaseName: "Apple Scab", cropName: "Apple", lat: 32.234562, lng: 35.251255)
         let postRequest = APIRequest(endpoint: "plant/add_scan_mobile")
         showIndicator = true
-        postRequest.UploadRequest(image: uiImage!)
-        postRequest.scanDisease(with: scanRequest) {
-            result in
-            self.showIndicator = false
+        // postRequest.UploadRequest(image: uiImage!)
+        postRequest.PredictImage(image: uiImage!){ result in
             switch result {
-            case .success(let disease):
-                self.diseaseDetected(disease: disease)
+            case .success(let response):
+                if response.result == -1{
+                    self.alertTitle = "Cannot detect disease!"
+                    self.alertMessage = "Please take a picture of only one leaf. We are working on improving the supported diseases in our app."
+                    self.shouldShowAlert = true
+                    self.showIndicator = false
+                    return
+                }
+                
+                let scanRequest = Scan(id: Int(response.result) + 1, userId: self.user.id, lat: self.location.lastKnownLocation?.coordinate.latitude ?? 0.0, lng: self.location.lastKnownLocation?.coordinate.longitude ?? 0.0)
+                postRequest.scanDisease(with: scanRequest) {
+                    result in
+                    self.showIndicator = false
+                    switch result {
+                    case .success(let disease):
+                        postRequest.UploadRequest(image: self.uiImage!, scanId: disease.scanId!) {result in }
+                        self.diseaseDetected(disease: disease)
+                    case .failure(let type):
+                        switch type {
+                        case .responseProblem:
+                            self.alertTitle = "Connection problem happened!"
+                            self.alertMessage = "Please try again later."
+                            self.shouldShowAlert = true
+                        case .decondingProblem, .encodingProblem:
+                            self.alertTitle = "Unexpected problem happened!"
+                            self.alertMessage = "We are working on the issue."
+                            self.shouldShowAlert = true
+                        }
+                    }
+                }
             case .failure(let type):
+                self.showIndicator = false
                 switch type {
                 case .responseProblem:
                     self.alertTitle = "Connection problem happened!"
                     self.alertMessage = "Please try again later."
                     self.shouldShowAlert = true
-                case .decondingProblem, .encodingProblem:
+                case .encodingProblem, .decondingProblem:
                     self.alertTitle = "Unexpected problem happened!"
                     self.alertMessage = "We are working on the issue."
                     self.shouldShowAlert = true
@@ -168,12 +200,20 @@ struct CameraView: View {
             }
         }
     }
+    
+    func parseModelResult(modelResult: String) -> (String, String) {
+        let result = modelResult.split(separator: "_").map{String($0)}
+        return (result[0], result[1])
+    }
+    
     func dismissImageClicked() {
         self.uiImage = nil
     }
     
     func diseaseDetected(disease: Disease) {
+        self.user.scansChanged = true
         self.detectedDisease = disease
+        dismissImageClicked()
         self.detectionFinished = true
     }
     

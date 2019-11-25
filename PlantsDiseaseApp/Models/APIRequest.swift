@@ -17,31 +17,31 @@ enum APIError: Error {
 }
 
 class NetworkManager: ObservableObject {
- //   var commonDiseases = [Disease]()
-  //  var recentScansDiseases = [Disease]()
     @Published var cropsDiseases = [Disease]()
     @Published var scansHistory = [Scan]()
     @Published var recentScansHistory = [String]()
     @Published var dashboardHeadlinesDic = [String: Array<String>]()
     @Published var diseasesLocoation = [Landmark]()
-   
     @Published var loadingScansHistory = true
-    
     public var cropsId = [Int]()
     @Published var dashboardDiseasesDic = [String: Array<Disease>]()
-    var rootURLString = "https://plantsdiseaseweb.azurewebsites.net/"
-    var recentScansURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_recent_scans_mobile")
-    var commonCropsURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_crops_mobile")
-    var commonDiseasesURL: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_common_diseases_mobile")
-    var scansHistoryURL: URL? =  URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_all_scans_mobile")
-    var diseaseByCropKind: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_crop_diseases_mobile")
-    var diseasesLocationURL: URL? = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/get_map_scans_mobile")
-    
+    @Published var dashbaordRecentScansIds = [Int]()
+    var rootURLString = "https://croply.azurewebsites.net/"
+    var recentScansURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_recent_scans_mobile")
+    var commonCropsURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_common_crops_mobile")
+    var commonDiseasesURL: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_common_diseases_mobile")
+    var scansHistoryURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_all_scans_mobile")
+    var diseaseByCropKind: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_crop_diseases_mobile")
+    var diseasesLocationURL: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_map_scans_mobile")
+    static var scanImageURLStrig = "https://croply.azurewebsites.net/img/scans/"
+    static var scanThumbnailURLString = "https://croply.azurewebsites.net/img/thumbnails/scans/"
+    static var diseaeImageURLString = "https://croply.azurewebsites.net/img/thumbnails/diseases/"
+    static var cropsImageURLString = "https://croply.azurewebsites.net/img/crops/"
     
     func dataIsReady() -> Bool {
-    
         return dashboardHeadlinesDic.count == 3
     }
+    
     func getScansHistory(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
         do {
             guard let url = scansHistoryURL else { return }
@@ -79,11 +79,43 @@ class NetworkManager: ObservableObject {
     }
     
     func getDiseasesLocation(completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
-
-            guard let url = diseasesLocationURL else { return }
+        
+        guard let url = diseasesLocationURL else { return }
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+        let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                completion(.failure(.responseProblem))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                    print(JSONString)
+                }
+                DispatchQueue.main.async {
+                    self.diseasesLocoation = response.scans.map {scan in
+                        Landmark(name: scan.disease?.name ?? "Apple Scab", location: .init(latitude: scan.lat, longitude: scan.lng))
+                    }
+                    completion(.success(response))
+                }
+            } catch {
+                completion(.failure(.decondingProblem))
+            }
+        }
+        dataTask.resume()
+    }
+    
+    func getDiseaseByCropKind(for user: User, completion: @escaping(Result<CommonDiseasesRequest, APIError>) -> Void) {
+        do {
+            guard let url = diseaseByCropKind else { return }
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "POST"
             urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
                     completion(.failure(.responseProblem))
@@ -92,14 +124,12 @@ class NetworkManager: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                    let response = try decoder.decode(CommonDiseasesRequest.self, from: jsonData)
                     if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                         print(JSONString)
                     }
                     DispatchQueue.main.async {
-                        self.diseasesLocoation = response.scans.map {scan in
-                            Landmark(name: scan.disease?.name ?? "Apple Scab", location: .init(latitude: scan.lat, longitude: scan.lng))
-                        }
+                        self.cropsDiseases = response.diseases
                         completion(.success(response))
                     }
                 } catch {
@@ -107,40 +137,10 @@ class NetworkManager: ObservableObject {
                 }
             }
             dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
         }
-    
-    func getDiseaseByCropKind(for user: User, completion: @escaping(Result<CommonDiseasesRequest, APIError>) -> Void) {
-           do {
-               guard let url = diseaseByCropKind else { return }
-               var urlRequest = URLRequest(url: url)
-               urlRequest.httpMethod = "POST"
-               urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
-               urlRequest.httpBody = try JSONEncoder().encode(user)
-               let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
-                   guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
-                       completion(.failure(.responseProblem))
-                       return
-                   }
-                   do {
-                       let decoder = JSONDecoder()
-                       decoder.keyDecodingStrategy = .convertFromSnakeCase
-                       let response = try decoder.decode(CommonDiseasesRequest.self, from: jsonData)
-                       if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
-                           print(JSONString)
-                       }
-                       DispatchQueue.main.async {
-                            self.cropsDiseases = response.diseases
-                           completion(.success(response))
-                       }
-                   } catch {
-                       completion(.failure(.decondingProblem))
-                   }
-               }
-               dataTask.resume()
-           } catch {
-               completion(.failure(.encodingProblem))
-           }
-       }
+    }
     
     func getRecentScans(for user: User, completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
         do {
@@ -168,6 +168,9 @@ class NetworkManager: ObservableObject {
                         }
                         self.dashboardHeadlinesDic["Recent scans"]  = response.scans.map { scan in
                             return scan.disease!.name
+                        }
+                        self.dashbaordRecentScansIds = response.scans.map { scan in
+                            return scan.id!
                         }
                         completion(.success(response))
                     }
@@ -257,7 +260,7 @@ struct APIRequest {
     
     let resourceURL: URL
     init(endpoint: String) {
-        let reourceString = "https://plantsdiseaseweb.azurewebsites.net/\(endpoint)"
+        let reourceString = "https://croply.azurewebsites.net/\(endpoint)"
         guard let resourceURL = URL(string: reourceString) else{fatalError()}
         self.resourceURL = resourceURL
     }
@@ -408,19 +411,20 @@ struct APIRequest {
         }
     }
     
-    func UploadRequest(image: UIImage) {
-        let url = URL(string: "https://plantsdiseaseweb.azurewebsites.net/plant/upload_photo_mobile")
+    func UploadRequest(image: UIImage, scanId: Int, completion: @escaping(Result<String, APIError>) -> Void) {
+        let url = URL(string: "https://croply.azurewebsites.net/plant/upload_photo_mobile")
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
         let boundary = generateBoundaryString()
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        let image_data = image.pngData()
+        let image_data = image.jpegData(compressionQuality: 0.8)
         if(image_data == nil) {
+            completion(.failure(.encodingProblem))
             return
         }
         let body = NSMutableData()
-        let fname = "test.png"
-        let mimetype = "image/png"
+        let fname = "\(scanId)" + ".jpeg"
+        let mimetype = "image/jpeg"
         body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
         body.append("Content-Disposition:form-data; name=\"test\"\r\n\r\n".data(using: String.Encoding.utf8)!)
         body.append("hi\r\n".data(using: String.Encoding.utf8)!)
@@ -436,27 +440,75 @@ struct APIRequest {
             (
             data, response, error) in
             guard ((data) != nil), let _:URLResponse = response, error == nil else {
-                print("error")
+                completion(.failure(.responseProblem))
                 return
             }
             if let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
-                print(dataString)
+                completion(.success(dataString as String))
             }
         })
         
         task.resume()
     }
     
-    func generateBoundaryString() -> String
-    {
+    
+    func PredictImage(image: UIImage, completion: @escaping(Result<PredictionResult, APIError>) -> Void) {
+        let url = URL(string: "https://croply-django.azurewebsites.net/predict")
+        //  let url = URL(string: "http://127.0.0.1:8000/predict")
+        let request = NSMutableURLRequest(url: url!)
+        request.httpMethod = "POST"
+        let boundary = generateBoundaryString()
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        let image_data = image.jpegData(compressionQuality: 0.5)
+        if(image_data == nil) {
+            completion(.failure(.encodingProblem))
+            return
+        }
+        
+        let body = NSMutableData()
+        let fname = "test.jpeg"
+        let mimetype = "image/jpeg"
+        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition:form-data; name=\"test\"\r\n\r\n".data(using: String.Encoding.utf8)!)
+        body.append("hi\r\n".data(using: String.Encoding.utf8)!)
+        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Disposition:form-data; name=\"file\"; filename=\"\(fname)\"\r\n".data(using: String.Encoding.utf8)!)
+        body.append("Content-Type: \(mimetype)\r\n\r\n".data(using: String.Encoding.utf8)!)
+        body.append(image_data!)
+        body.append("\r\n".data(using: String.Encoding.utf8)!)
+        body.append("--\(boundary)--\r\n".data(using: String.Encoding.utf8)!)
+        request.httpBody = body as Data
+        let session = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {
+            (
+            data, response, error) in
+            guard ((data) != nil), let _:URLResponse = response, error == nil, let jsonData = data else {
+                completion(.failure(.responseProblem))
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(PredictionResult.self, from: jsonData)
+                completion(.success(response))
+            } catch(let error) {
+                print(error)
+                completion(.failure(.decondingProblem))
+            }
+        })
+        task.resume()
+    }
+    func generateBoundaryString() -> String {
         return "Boundary-\(UUID().uuidString)"
     }
 }
 
-
 struct APIResult: Decodable{
     var result: String
     var user: User?
+}
+
+struct PredictionResult: Decodable {
+    var result: Double
 }
 
 struct ChangePasswordRequest: Encodable {

@@ -9,7 +9,6 @@
 import Foundation
 
 final class Crop: Codable {
-    
     var id: Int
     var name: String
     var image: String?

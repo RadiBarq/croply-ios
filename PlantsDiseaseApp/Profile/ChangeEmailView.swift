@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ChangeEmailView: View {
     
-    @State private var email: String = "radibarq@gmail.com"
+    @State private var email: String = ""
     @EnvironmentObject var user: SessionUser
     @Environment(\.presentationMode) var presentation
     @State private var alertTitle = ""
@@ -77,6 +77,9 @@ struct ChangeEmailView: View {
                 .alert(isPresented: $shouldShowAlert) {
                     Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("Ok")))
             }
+            .onAppear() {
+                self.email = self.user.email
+            }
         }
     }
     func changeEmailClicked() {
@@ -93,8 +96,9 @@ struct ChangeEmailView: View {
                     self.alertTitle = "Email has been changed"
                     self.alertMessage = ""
                     self.shouldShowAlert = true
-                    self.user.email = response.user!.email
-
+                     DispatchQueue.main.async {
+                        self.user.email = self.email
+                    }
                 case "email_error":
                     self.alertTitle = "Email entered is not available right now"
                     self.alertMessage = "Please try again with different different email."

@@ -20,9 +20,6 @@ struct DiseaseView: View {
     var diseaseName: String
     var user =  SessionManager.user!
     
-    var testHtml = """
-        Apple scab is a disease of Malus trees, such as apple trees, caused by the ascomycete fungus Venturia inaequalis. The disease manifests as dull black or grey-brown lesions on the surface of tree leaves,[1] buds or fruits. Lesions may also appear less frequently on the woody tissues of the tree. Fruits and the undersides of leaves are especially susceptible. The disease rarely kills its host, but can significantly reduce fruit yields and fruit quality. Affected fruits are less marketable due to the presence of the black fungal lesions. The infection cycle begins in the springtime, when suitable temperatures and moisture promote the release of V. inaequalis ascospores from leaf litter around the base of previously infected trees. These spores rise into the air and land on the surface of a susceptible tree, where they germinate and form a germ tube that can directly penetrate the plant's waxy cuticle. A fungal mycelium forms between the cuticle and underlying epidermal tissue, starting as a yellow spot that grows and ruptures to reveal a black lesion bearing asexually as the conidia are released and germinate on fresh areas of the host tree, which in turn produce another generation of conidial spores. This cycle of secondary infections continues throughout the summer, until the leaves and fruit fall from the tree at the onset of winter.Over the winter, V. inaequalis undergoes sexual reproduction in the leaf litter around the base of the tree, producing a new generation of ascospores that are released the following spring. Scab lesions located on the woody tissues may also overwinter in place, but will not undergo a sexual reproduction cycle; these lesions can still produce infective conidial spores in the spring.
-"""
     init(diseaseName: String) {
         self.diseaseName = diseaseName
     }
@@ -38,13 +35,13 @@ struct DiseaseView: View {
             if shouldShowIndicator {
                 HStack(alignment: .center) {
                         Spacer()
-                        ActivityIndicator(isAnimating: $shouldShowIndicator)
+                    ActivityIndicator(isAnimating: $shouldShowIndicator)
                             .position(y: 150)
                 }
             }
             else {
-                    ImageContainer(imageURL: "https://image.shutterstock.com/image-photo/cherry-leaf-isolated-on-white-260nw-1145339282.jpg")
-                    //.resizable()
+                ImageContainer(imageURL: NetworkManager.diseaeImageURLString +
+                        "\(disease!.id)" + ".jpg")
                     .frame(height: 400)
                 HStack {
                     Text(disease?.name ?? " ")
@@ -101,33 +98,6 @@ struct DiseaseView: View {
            // self.getDisease()
         }
     }
-    
-//    func getDisease() {
-//        if self.disease == nil {
-//            let scanRequest = Scan(userId: self.user.id, diseaseName: self.diseaseName, cropName: "Apple", lat: 32.234562, lng: 35.251255)
-//            let postRequest = APIRequest(endpoint: "plant/add_scan_mobile")
-//            postRequest.scanDisease(with: scanRequest) { result in
-//                self.shouldShowIndicator = false
-//                switch result {
-//                case .success(let disease):
-//                    self.disease = disease
-//                    self.controlDiseaseList =  self.disease?.controlDescription?.components(separatedBy: "+") ?? []
-//                case .failure(let type):
-//                    break
-//                    switch type {
-//                    case .responseProblem:
-//                        self.alertTitle = "Connection problem happened!"
-//                        self.alertMessage = "Please try again later."
-//                        self.shouldShowAlert = true
-//                    case .decondingProblem, .encodingProblem:
-//                        self.alertTitle = "Unexpected problem happened!"
-//                        self.alertMessage = "We are working on the issue."
-//                        self.shouldShowAlert = true
-//                    }
-//                }
-//            }
-//        }
-//    }
 }
 
 struct DiseaseView_Previews: PreviewProvider {
@@ -137,11 +107,8 @@ struct DiseaseView_Previews: PreviewProvider {
 }
 
 struct DescriptionWebView: UIViewRepresentable{
-    
     let htmlString: String
-    
     func makeUIView(context: UIViewRepresentableContext<DescriptionWebView>) -> WKWebView {
-        
         var webView = WKWebView()
         return WKWebView()
     }

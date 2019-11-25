@@ -10,19 +10,13 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    
-    
     //32.216105, 35.249491
-    
-    @State var landmarks: [Landmark] = [
-        Landmark(name: "Sydney Harbour Bridge", location: .init(latitude: 32.216105, longitude: 35.249491)),
-        Landmark(name: "Brooklyn Bridge", location: .init(latitude: 32.216105, longitude: 32.145665))]
     @State var selectedLandmark: Landmark? = nil
     @ObservedObject var networkingManager =  NetworkManager()
     @State var shouldShowIndicator = true
     
     var body: some View {
-        Group {
+        return Group {
             if shouldShowIndicator {ActivityIndicator(isAnimating: $shouldShowIndicator)}
             else {
                 ZStack {
@@ -34,19 +28,10 @@ struct MapView: View {
         }
         .onAppear() {
             self.networkingManager.getDiseasesLocation() { result in
-                self.shouldShowIndicator = false
+                            self.shouldShowIndicator = false
             }
         }
     }
-    
-    //    private func selectNextLandmark() {
-    //        if let selectedLandmark = selectedLandmark, let currentIndex = landmarks.firstIndex(where: { $0 == selectedLandmark }), currentIndex + 1 < landmarks.endIndex {
-    //            self.selectedLandmark = landmarks[currentIndex + 1]
-    //        } else {
-    //            selectedLandmark = landmarks.first
-    //        }
-    //    }
-    
 }
 
 struct MapView_Previews: PreviewProvider {
@@ -54,7 +39,6 @@ struct MapView_Previews: PreviewProvider {
         MapView()
     }
 }
-
 
 struct MapViewContainer: UIViewRepresentable {
     @Binding var landmarks: [Landmark]

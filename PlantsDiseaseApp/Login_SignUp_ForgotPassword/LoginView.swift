@@ -17,8 +17,9 @@ struct LoginView: View {
     @State private var showIndicator = false
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var user: SessionUser
-    
+
     var body: some View {
+        ScrollView {
         VStack {
             Spacer()
             HStack(alignment: .center) {
@@ -94,7 +95,6 @@ struct LoginView: View {
                         }) {
                             Text("Forgot password?")
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
                         }
                         Spacer()
                     }
@@ -113,7 +113,6 @@ struct LoginView: View {
                         }) {
                             Text("Sign up here")
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
                                 .font(.subheadline)
                         }
                         Spacer()
@@ -121,12 +120,13 @@ struct LoginView: View {
                     EmptyView()
                 }
             }
-            .colorScheme(.dark)
             .cornerRadius(15)
             .frame(height: 440)
             .padding()
             Spacer()
         }
+    }
+        .padding(.top, 20)
         .background(
             Image("choice")
                 .resizable()
@@ -196,7 +196,6 @@ struct LoginView: View {
     }
     
     func signupClicked() {
-        
         self.user.signedUpClicked = true
         self.user.signedInClicked = false
     }
