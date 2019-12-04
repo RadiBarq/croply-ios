@@ -10,9 +10,8 @@ import SwiftUI
 import WebKit
 
 struct DiseaseView: View {
-    
-     var disease: Disease?
-     var controlDiseaseList = [String]()
+    var disease: Disease?
+    var controlDiseaseList = [String]()
     @State var shouldShowIndicator = false
     @State private var shouldShowAlert = false
     @State private var alertTitle = ""
@@ -34,14 +33,14 @@ struct DiseaseView: View {
         return ScrollView(.vertical, showsIndicators: false){
             if shouldShowIndicator {
                 HStack(alignment: .center) {
-                        Spacer()
+                    Spacer()
                     ActivityIndicator(isAnimating: $shouldShowIndicator)
-                            .position(y: 150)
+                        .position(y: 150)
                 }
             }
             else {
                 ImageContainer(imageURL: NetworkManager.diseaeImageURLString +
-                        "\(disease!.id)" + ".jpg")
+                    "\(disease!.id)" + ".jpg")
                     .frame(height: 400)
                 HStack {
                     Text(disease?.name ?? " ")
@@ -94,9 +93,6 @@ struct DiseaseView: View {
             }
         }
         .edgesIgnoringSafeArea([.top])
-        .onAppear() {
-           // self.getDisease()
-        }
     }
 }
 

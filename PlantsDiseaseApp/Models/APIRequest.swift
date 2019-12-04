@@ -32,7 +32,7 @@ class NetworkManager: ObservableObject {
     var commonDiseasesURL: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_common_diseases_mobile")
     var scansHistoryURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_all_scans_mobile")
     var diseaseByCropKind: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_crop_diseases_mobile")
-    var diseasesLocationURL: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_map_scans_mobile")
+    var diseasesLocationURL: URL? = URL(string: "https://croply.azurewebsites.net/plant/get_map_markers_mobile")
     static var scanImageURLStrig = "https://croply.azurewebsites.net/img/scans/"
     static var scanThumbnailURLString = "https://croply.azurewebsites.net/img/thumbnails/scans/"
     static var diseaeImageURLString = "https://croply.azurewebsites.net/img/thumbnails/diseases/"
@@ -78,7 +78,7 @@ class NetworkManager: ObservableObject {
         }
     }
     
-    func getDiseasesLocation(completion: @escaping(Result<ScanHistoryRequest, APIError>) -> Void) {
+    func getDiseasesLocation(completion: @escaping(Result<ScansLocationRequest, APIError>) -> Void) {
         
         guard let url = diseasesLocationURL else { return }
         var urlRequest = URLRequest(url: url)
@@ -92,13 +92,13 @@ class NetworkManager: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let response = try decoder.decode(ScanHistoryRequest.self, from: jsonData)
+                let response = try decoder.decode(ScansLocationRequest.self, from: jsonData)
                 if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
                     print(JSONString)
                 }
                 DispatchQueue.main.async {
-                    self.diseasesLocoation = response.scans.map {scan in
-                        Landmark(name: scan.disease?.name ?? "Apple Scab", location: .init(latitude: scan.lat, longitude: scan.lng))
+                    self.diseasesLocoation = response.markers.map {marker in
+                        Landmark(name: marker.disease.name + " (" + String(marker.count) + ")", location: .init(latitude: marker.lat, longitude: marker.lng))
                     }
                     completion(.success(response))
                 }
@@ -257,8 +257,8 @@ class NetworkManager: ObservableObject {
     }
 }
 struct APIRequest {
-    
     let resourceURL: URL
+    let signUpUserURL: URL? = URL(string: "https://croply.azurewebsites.net/auth/register_mobile")
     init(endpoint: String) {
         let reourceString = "https://croply.azurewebsites.net/\(endpoint)"
         guard let resourceURL = URL(string: reourceString) else{fatalError()}
@@ -289,6 +289,35 @@ struct APIRequest {
         }
     }
     
+    
+    func signUpUser(user:User, completion: @escaping(Result<APIResult, APIError>) -> Void) {
+        do {
+            var urlRequest = URLRequest(url: signUpUserURL!)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField:  "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(user)
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                      let response = try JSONDecoder().decode(APIResult.self, from: jsonData)
+                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8)
+                    {
+                        print(JSONString)
+                    }
+                    completion(.success(response))
+                } catch {
+                    completion(.failure(.decondingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
+    
     func authenticate(user:User, completion: @escaping(Result<APIResult, APIError>) -> Void) {
         do {
             var urlRequest = URLRequest(url: resourceURL)
@@ -301,12 +330,12 @@ struct APIRequest {
                     return
                 }
                 do {
-                    let response = try JSONDecoder().decode(APIResult.self, from: jsonData)
+                      let response = try JSONDecoder().decode(APIResult.self, from: jsonData)
                     if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8)
                     {
                         print(JSONString)
                     }
-                    completion(.success(response))
+                      completion(.success(response))
                 } catch {
                     completion(.failure(.decondingProblem))
                 }
@@ -450,7 +479,6 @@ struct APIRequest {
         
         task.resume()
     }
-    
     
     func PredictImage(image: UIImage, completion: @escaping(Result<PredictionResult, APIError>) -> Void) {
         let url = URL(string: "https://croply-django.azurewebsites.net/predict")

@@ -158,10 +158,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "492"
-            endingLineNumber = "492"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "522"
+            endingLineNumber = "522"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +174,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
-            landmarkName = "scanDisease(with:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -190,10 +190,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "488"
-            endingLineNumber = "488"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "518"
+            endingLineNumber = "518"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -206,10 +206,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "526"
+            endingLineNumber = "526"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +222,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "499"
-            endingLineNumber = "499"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "529"
+            endingLineNumber = "529"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,10 +238,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "407"
-            endingLineNumber = "407"
-            landmarkName = "scanDisease(with:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "437"
+            endingLineNumber = "437"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,10 +254,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "490"
-            endingLineNumber = "490"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "520"
+            endingLineNumber = "520"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -270,10 +270,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "519"
+            endingLineNumber = "519"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,10 +302,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "494"
-            endingLineNumber = "494"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "524"
+            endingLineNumber = "524"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -366,10 +366,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "405"
-            endingLineNumber = "405"
-            landmarkName = "scanDisease(with:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "435"
+            endingLineNumber = "435"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -462,10 +462,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "497"
-            endingLineNumber = "497"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "527"
+            endingLineNumber = "527"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "A63741D5-767D-483D-8ACB-AAE047A7BB9B - 7b436dc78505e791"
@@ -510,10 +510,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "495"
-            endingLineNumber = "495"
-            landmarkName = "PredictImage(image:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "525"
+            endingLineNumber = "525"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -526,10 +526,10 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -542,10 +542,10 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -622,8 +622,8 @@
                   urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Camera/CameraView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
                   offsetFromSymbolStart = "412">
                </Location>
                <Location
@@ -637,8 +637,8 @@
                   urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Camera/CameraView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "165"
-                  endingLineNumber = "165"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
                   offsetFromSymbolStart = "84">
                </Location>
             </Locations>
@@ -654,10 +654,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
-            landmarkName = "UploadRequest(image:scanId:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "476"
+            endingLineNumber = "476"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -670,10 +670,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "451"
-            endingLineNumber = "451"
-            landmarkName = "UploadRequest(image:scanId:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "481"
+            endingLineNumber = "481"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -686,10 +686,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
-            landmarkName = "UploadRequest(image:scanId:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "475"
+            endingLineNumber = "475"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -712,16 +712,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A9CB4AAB-A664-477A-B168-88C8947C7BE4"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "453"
-            endingLineNumber = "453"
-            landmarkName = "APIRequest"
-            landmarkType = "14">
+            startingLineNumber = "483"
+            endingLineNumber = "483"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -734,10 +734,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "452"
-            endingLineNumber = "452"
-            landmarkName = "UploadRequest(image:scanId:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "482"
+            endingLineNumber = "482"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -752,8 +752,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -784,8 +784,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
             endingLineNumber = "171"
-            landmarkName = "getRecentScans(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "AD34CB30-5089-4B37-85B1-54CA069F867A - 8d5692c3f7eeeb05"
@@ -832,8 +832,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
             endingLineNumber = "175"
-            landmarkName = "getRecentScans(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -848,8 +848,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
             endingLineNumber = "172"
-            landmarkName = "getRecentScans(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -864,8 +864,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "B4F902F7-56FE-43AF-8746-D102BF31BD94 - e83eb44a51ac5431"
@@ -904,7 +904,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1710FA33-CFAA-4737-9B5A-E4CB26B8A215"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/TapBar/ContentView.swift"
@@ -914,38 +914,6 @@
             endingLineNumber = "20"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "1710FA33-CFAA-4737-9B5A-E4CB26B8A215 - 4c435ac563d4a2ca"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Croply.ContentView.body.getter : some"
-                  moduleName = "Croply"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/TapBar/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "488">
-               </Location>
-               <Location
-                  uuid = "1710FA33-CFAA-4737-9B5A-E4CB26B8A215 - c5457f143231306e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tag&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;)&gt; in Croply.ContentView.body.getter : some"
-                  moduleName = "Croply"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/TapBar/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "1492">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -958,10 +926,10 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -974,10 +942,42 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "8BE737EC-47B1-4E16-883D-28588E92C2FE - 7cfd61d3f3abd2ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Croply.HomeView.body.getter : some"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "8BE737EC-47B1-4E16-883D-28588E92C2FE - 25785883fbd42195"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Croply.ScanHistoryRequest, Croply.APIError&gt;) -&gt; () in closure #2 () -&gt; () in Croply.HomeView.body.getter : some"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -990,10 +990,10 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1006,10 +1006,42 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "31860CBC-06A1-464B-8093-7DDEA8F79E7B - 290c018f521d043c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Result&lt;Croply.CommonDiseasesRequest, Croply.APIError&gt;) -&gt; () in closure #2 () -&gt; () in Croply.HomeView.body.getter : some"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "31860CBC-06A1-464B-8093-7DDEA8F79E7B - 8bb01fee6f860b5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((key: Swift.String, value: Swift.Array&lt;Swift.String&gt;)) -&gt; Swift.String in closure #3 (Swift.Result&lt;Croply.CommonDiseasesRequest, Croply.APIError&gt;) -&gt; () in closure #2 () -&gt; () in Croply.HomeView.body.getter : some"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1022,10 +1054,10 @@
             filePath = "PlantsDiseaseApp/Home/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1040,8 +1072,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "509A7D6B-DBB0-4BF9-8F84-A7CF0A76CD66 - e3c342c6c5177d07"
@@ -1088,15 +1120,47 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "194"
             endingLineNumber = "194"
-            landmarkName = "getCommonCrops(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "8FF33163-58E6-43C6-8482-E62BAA83220D - 598eeb172b96e318"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Croply.NetworkManager.getCommonCrops(for: Croply.User, completion: (Swift.Result&lt;Croply.CommonCropsRequest, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "8FF33163-58E6-43C6-8482-E62BAA83220D - 4adabc831aa9fa95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Croply.NetworkManager.getCommonCrops(for: Croply.User, completion: (Swift.Result&lt;Croply.CommonCropsRequest, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BEF8ABFB-7EBC-45A0-9689-B4FB12559AF5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/TapBar/ContentView.swift"
@@ -1120,15 +1184,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
-            landmarkName = "getScansHistory(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E9D85E7D-316C-4C3D-895F-14783E7561B8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/Models/LoctionManager.swift"
@@ -1150,10 +1214,10 @@
             filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
-            landmarkName = "authenticate(user:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "342"
+            endingLineNumber = "342"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1168,8 +1232,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "245"
             endingLineNumber = "245"
-            landmarkName = "getCommonDiseases(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1184,8 +1248,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
             endingLineNumber = "210"
-            landmarkName = "getCommonCrops(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "5E8101E8-2458-405E-8A0F-1BB23463456A - e839b3bbd307517"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Croply.NetworkManager.getCommonCrops(for: Croply.User, completion: (Swift.Result&lt;Croply.CommonCropsRequest, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "5E8101E8-2458-405E-8A0F-1BB23463456A - 6adbb6cdcde67bcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Croply.Crop) -&gt; Swift.String in closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Croply.NetworkManager.getCommonCrops(for: Croply.User, completion: (Swift.Result&lt;Croply.CommonCropsRequest, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1200,8 +1296,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "168"
             endingLineNumber = "168"
-            landmarkName = "getRecentScans(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1216,8 +1312,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
             endingLineNumber = "134"
-            landmarkName = "getDiseaseByCropKind(for:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1232,8 +1328,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "getDiseasesLocation(completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1267,11 +1363,11 @@
                   offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  uuid = "C4D502EB-729C-4B6A-BF1B-988F8F219EC9 - 2600f7042e6a8b5c"
+                  uuid = "C4D502EB-729C-4B6A-BF1B-988F8F219EC9 - 7e52d51d400de601"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Croply.ScanHistoryRequest, Croply.APIError&gt;) -&gt; () in closure #2 () -&gt; () in Croply.MapView.body.getter : some"
+                  symbolName = "closure #1 (Swift.Result&lt;Croply.ScansLocationRequest, Croply.APIError&gt;) -&gt; () in closure #2 () -&gt; () in Croply.MapView.body.getter : some"
                   moduleName = "Croply"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Map/MapView.swift"
@@ -1288,7 +1384,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C4D687F-119A-4F50-AB36-CCF1ED292CE6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlantsDiseaseApp/TapBar/ContentView.swift"
@@ -1312,8 +1408,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "AF1861DE-5E5B-4D07-A805-4C1D76BEB5B6 - af14872aec5c0c90"
@@ -1360,8 +1456,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "FE6E98AF-CDBC-4631-B830-B24169BB0E4D - 69bfa2612367dad1"
@@ -1376,7 +1472,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "596">
+                  offsetFromSymbolStart = "588">
                </Location>
                <Location
                   uuid = "FE6E98AF-CDBC-4631-B830-B24169BB0E4D - a083d27a5bcc355b"
@@ -1408,8 +1504,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "11E6A052-A6C9-43EE-BCEC-9CC596C9CC8D - 28e08d80a35e43b2"
@@ -1439,7 +1535,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "596">
+                  offsetFromSymbolStart = "588">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1472,7 +1568,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "init(diseaseName:)"
+            landmarkName = "init(disease:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1488,8 +1584,200 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
-            landmarkName = "init(diseaseName:)"
+            landmarkName = "init(disease:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B84A11F1-34E6-4785-9AC3-3CF2BFE6D4CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6D2B8F6-0F06-4962-8107-FC8646D5D77C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88188D11-4E57-42D4-A054-7FB46833BBBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C78AC4A-F4A8-4CA4-AE0C-4483F03726A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "8C78AC4A-F4A8-4CA4-AE0C-4483F03726A0 - 9dd28f7ed73ced60"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Croply.APIRequest.authenticate(user: Croply.User, completion: (Swift.Result&lt;Croply.APIResult, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "786">
+               </Location>
+               <Location
+                  uuid = "8C78AC4A-F4A8-4CA4-AE0C-4483F03726A0 - 3c7ac8c95cf4f951"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Croply.APIRequest.authenticate(user: Croply.User, completion: (Swift.Result&lt;Croply.APIResult, Croply.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Croply"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harri/developer/PlantsDisease/PlantsDiseaseApp/Models/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "298"
+                  endingLineNumber = "298"
+                  offsetFromSymbolStart = "177">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6745C6D-31AF-4DD5-87AA-0593F8BCAE97"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Login_SignUp_ForgotPassword/SignUpView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "215008C4-C3E7-40D1-A05D-DC0B9F81583A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2A56D15-5508-41EE-896C-893A0FA1ABDC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8CB58E2D-D681-40F5-854B-1F2A9B4DD46D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65E0C56C-8F43-4773-93A6-944E89EEFD51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EC0F36C-729E-4D84-95BB-DD35D983BD64"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantsDiseaseApp/Models/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CD1C5AEE2326FC77002F8DC7"
-               BuildableName = "PlantsDiseaseApp.app"
+               BuildableName = "Croply.app"
                BlueprintName = "PlantsDiseaseApp"
                ReferencedContainer = "container:PlantsDiseaseApp.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD1C5AEE2326FC77002F8DC7"
-            BuildableName = "PlantsDiseaseApp.app"
+            BuildableName = "Croply.app"
             BlueprintName = "PlantsDiseaseApp"
             ReferencedContainer = "container:PlantsDiseaseApp.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD1C5AEE2326FC77002F8DC7"
-            BuildableName = "PlantsDiseaseApp.app"
+            BuildableName = "Croply.app"
             BlueprintName = "PlantsDiseaseApp"
             ReferencedContainer = "container:PlantsDiseaseApp.xcodeproj">
          </BuildableReference>

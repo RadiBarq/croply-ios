@@ -9,5 +9,5 @@
 import Foundation
 
 class CommonDiseasesRequest: Decodable {
-       var diseases = [Disease]()
+    var diseases = [Disease]()
 }

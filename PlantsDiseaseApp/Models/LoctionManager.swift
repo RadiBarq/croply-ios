@@ -10,10 +10,10 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
-    private let manager: CLLocationManager
     @Published var lastKnownLocation: CLLocation?
     @Published var latString: String = ""
     @Published var longString: String = ""
+    private let manager: CLLocationManager
     
     init(manager: CLLocationManager = CLLocationManager()) {
         self.manager = manager
@@ -28,13 +28,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObject {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         print(locations)
-         lastKnownLocation = locations.last
-         latString = String(format: "%f", lastKnownLocation?.coordinate.latitude ?? 0.0)
-         longString = String(format: "%f", lastKnownLocation?.coordinate.latitude ?? 0.0)
-         self.manager.stopUpdatingLocation()
+        print(locations)
+        lastKnownLocation = locations.last
+        latString = String(format: "%f", lastKnownLocation?.coordinate.latitude ?? 0.0)
+        longString = String(format: "%f", lastKnownLocation?.coordinate.latitude ?? 0.0)
+        self.manager.stopUpdatingLocation()
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             manager.startUpdatingLocation()

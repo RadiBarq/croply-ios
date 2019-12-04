@@ -10,7 +10,6 @@ import Foundation
 
 
 class RemoteImageURL: ObservableObject {
-    
     @Published var data = Data()
     @Published var stillLoading = true
     

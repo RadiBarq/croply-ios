@@ -125,6 +125,7 @@ struct LoginView: View {
             .padding()
             Spacer()
         }
+        .padding(.top, 15)
     }
         .padding(.top, 20)
         .background(
@@ -165,7 +166,6 @@ struct LoginView: View {
                         self.user.id = user.id
                         self.user.signedUpClicked = false
                         self.user.signedInClicked = false
-                       // UserDefaults.standard.set(user, forKey: "user")
                         UserDefaults.standard.set(self.user.email , forKey: "email")
                         UserDefaults.standard.set(self.user.id , forKey: "id")
                         UserDefaults.standard.set(self.user.username , forKey: "username")

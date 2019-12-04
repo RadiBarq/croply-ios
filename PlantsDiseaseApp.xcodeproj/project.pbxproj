@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B619767238D7CB90026160C /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B619766238D7CB90026160C /* Marker.swift */; };
+		4B619769238D7F680026160C /* ScansLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B619768238D7F680026160C /* ScansLocationRequest.swift */; };
 		4B79131F235F9188005C9613 /* ContentViewNotSigned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79131E235F9188005C9613 /* ContentViewNotSigned.swift */; };
 		CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */; };
 		CD1C5AF52326FC77002F8DC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C5AF42326FC77002F8DC7 /* SceneDelegate.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B619766238D7CB90026160C /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		4B619768238D7F680026160C /* ScansLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScansLocationRequest.swift; sourceTree = "<group>"; };
 		4B79131E235F9188005C9613 /* ContentViewNotSigned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewNotSigned.swift; sourceTree = "<group>"; };
 		CD1C5AEF2326FC77002F8DC7 /* Croply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Croply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1C5AF22326FC77002F8DC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				CDC626C4234B30F800284D0B /* Landmark.swift */,
 				CDC626C6234B3BC200284D0B /* LoctionManager.swift */,
 				CDC961682350F2BA007C669B /* RemoteImageURL.swift */,
+				4B619766238D7CB90026160C /* Marker.swift */,
+				4B619768238D7F680026160C /* ScansLocationRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				CDC626BE2343D0D800284D0B /* CommonCropsRequest.swift in Sources */,
 				CDC961692350F2BA007C669B /* RemoteImageURL.swift in Sources */,
 				CD406CA42329BCDD00B5DBD1 /* ChangeEmailView.swift in Sources */,
+				4B619767238D7CB90026160C /* Marker.swift in Sources */,
 				CD679A8D23413C4D00A5BFC3 /* ScanHistoryRequest.swift in Sources */,
 				CD679A8B233FCC2000A5BFC3 /* DiseaseListView.swift in Sources */,
 				CD1C5AF32326FC77002F8DC7 /* AppDelegate.swift in Sources */,
@@ -454,6 +461,7 @@
 				4B79131F235F9188005C9613 /* ContentViewNotSigned.swift in Sources */,
 				CD679A7D233E1A9300A5BFC3 /* Scan.swift in Sources */,
 				CDB57769232F63C300B19B37 /* LoginView.swift in Sources */,
+				4B619769238D7F680026160C /* ScansLocationRequest.swift in Sources */,
 				CD1C5AF72326FC77002F8DC7 /* ContentView.swift in Sources */,
 				CD406C9E2329AEF200B5DBD1 /* CameraView.swift in Sources */,
 				CDC51A7323340E3D008416F9 /* Extensions.swift in Sources */,

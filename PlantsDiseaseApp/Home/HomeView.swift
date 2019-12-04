@@ -50,6 +50,7 @@ struct HomeView: View {
                                                         .frame(width: 275, height: 150)
                                                     HStack {
                                                         Text((self.networkManager.dashboardHeadlinesDic[headline])![item])
+                                                            .font(.body)
                                                             .fontWeight(.bold)
                                                         Spacer()
                                                     }
@@ -62,11 +63,11 @@ struct HomeView: View {
                                                         .frame(width: 275, height: 150)
                                                     HStack {
                                                         Text((self.networkManager.dashboardHeadlinesDic[headline])![item])
+                                                            .font(.body)
                                                             .fontWeight(.bold)
                                                         Spacer()
                                                     }
                                                 }
-                                                
                                             }
                                             .padding(10)
                                         }
@@ -90,6 +91,7 @@ struct HomeView: View {
                                                     .frame(width: 275, height: 150)
                                                 HStack {
                                                     Text((self.networkManager.dashboardHeadlinesDic[headline])![item])
+                                                        .font(.body)
                                                         .fontWeight(.bold)
                                                     Spacer()
                                                 }
@@ -101,9 +103,8 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding()
+                    .padding(.leading, 15)
                 }
-                
                 if shouldShowIndicator {ActivityIndicator(isAnimating: $shouldShowIndicator)}
             }
             .navigationBarTitle("Discover")

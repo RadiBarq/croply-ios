@@ -23,113 +23,114 @@ struct SignUpView: View {
     
     var body: some View {
         ScrollView {
-        VStack {
-            Spacer()
-            HStack(alignment: .center) {
-                Image("grapes")
-                    .resizable()
-                    .frame(width: 75, height: 130, alignment: .center)
-            }
-            Form {
-                Section(header:
-                    Text("Username").foregroundColor(.green)
-                        .font(.headline)
-                        .padding(.top, 15)
-                    ,
+            VStack {
+                Spacer()
+                HStack(alignment: .center) {
+                    Image("grapes")
+                        .resizable()
+                        .frame(width: 75, height: 130, alignment: .center)
+                }
+                Form {
+                    Section(header:
+                        Text("Username").foregroundColor(.green)
+                            .font(.headline)
+                            .padding(.top, 15)
+                        ,
+                            footer:
+                        TextField("MohammadGhazal", text: $userName)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .font(.headline)
+                            .textContentType(.username)
+                    ){
+                        EmptyView()
+                    }
+                    Section(
+                        header:
+                        Text("Email")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                            .padding(.top, 15)
+                        ,
                         footer:
-                    TextField("MohammadGhazal", text: $userName)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .font(.headline)
-                        .textContentType(.username)
-                ){
-                    EmptyView()
-                }
-                Section(
-                    header:
-                    Text("Email")
-                        .font(.headline)
-                        .foregroundColor(.green)
-                        .padding(.top, 15)
-                    ,
-                    footer:
-                    TextField("radibaraq@gmail.com", text: $email)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .font(.headline)
-                        .textContentType(.emailAddress)
-                ){
-                    EmptyView()
-                }
-                Section (
-                    header:
-                    Text("Password")
-                        .font(.headline)
-                        .foregroundColor(.green)
-                        .padding(.top, 15),
-                    footer:
-                    SecureField("", text: $password)
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(5)
-                        .textContentType(.password)
-                    
-                ){
-                    EmptyView()
-                }
-                Section(footer:
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            self.signupClicked()
-                        }) {
-                            VStack {
-                                if !showIndicator {
-                                Text("Sign up")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(Color.white)
-                            }
-                                else{
-                            ActivityIndicator(isAnimating: $showIndicator)
+                        TextField("radibaraq@gmail.com", text: $email)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .font(.headline)
+                            .textContentType(.emailAddress)
+                    ){
+                        EmptyView()
+                    }
+                    Section (
+                        header:
+                        Text("Password")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                            .padding(.top, 15),
+                        footer:
+                        SecureField("", text: $password)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(5)
+                            .textContentType(.password)
+                        
+                    ){
+                        EmptyView()
+                    }
+                    Section(footer:
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                self.signupClicked()
+                            }) {
+                                VStack {
+                                    if !showIndicator {
+                                        Text("Sign up")
+                                            .fontWeight(.bold)
+                                            .foregroundColor(Color.white)
+                                    }
+                                    else{
+                                        ActivityIndicator(isAnimating: $showIndicator)
+                                    }
                                 }
                             }
+                            .frame(width: 150,alignment: .center)
+                            .padding()
+                            .background(Color.green)
+                            .cornerRadius(10)
+                            Spacer()
                         }
-                        .frame(width: 150,alignment: .center)
-                        .padding()
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        Spacer()
+                    ){
+                        EmptyView()
                     }
-                ){
-                    EmptyView()
-                }
-                .font(.headline)
-
-                Section(footer:
-                    HStack {
-                        Spacer()
-                        Text("Have an account?")
-                            .foregroundColor(.green)
-                        Button(action: {
-                            self.loginClicked()
-                        }) {
-                            Text("Sign in here")
-                                .fontWeight(.bold)
+                    .font(.headline)
+                    
+                    Section(footer:
+                        HStack {
+                            Spacer()
+                            Text("Have an account?")
+                                .foregroundColor(.green)
+                            Button(action: {
+                                self.loginClicked()
+                            }) {
+                                Text("Sign in here")
+                                    .fontWeight(.bold)
+                            }
+                            Spacer()
                         }
-                        Spacer()
+                    ){
+                        EmptyView()
                     }
-                ){
-                    EmptyView()
+                    .font(.subheadline)
                 }
-                .font(.subheadline)
+                .cornerRadius(15)
+                .frame(height: 500)
+                .padding()
+                Spacer()
             }
-            .cornerRadius(15)
-            .frame(height: 500)
-            .padding()
-            Spacer()
-        }
+            .padding(.top, 15)
         }
         .padding(.top, 20)
         .background(
@@ -146,7 +147,7 @@ struct SignUpView: View {
         self.user.signedInClicked = true
     }
     func signupClicked() {
-
+        
         if !email.isValidEmail() {
             alertTitle = "Invalid email address"
             alertMessage = "Make sure you entered a valid email address."
@@ -166,7 +167,7 @@ struct SignUpView: View {
         let currentUser = User(id: 0, username: userName, email: email, password: password)
         let postRequest = APIRequest(endpoint: "auth/register_mobile")
         showIndicator = true
-        postRequest.authenticate(user: currentUser, completion: { result in
+        postRequest.signUpUser(user: currentUser, completion: { result in
             self.showIndicator = false
             switch result {
             case .success(let response):
@@ -174,11 +175,16 @@ struct SignUpView: View {
                 case "success":
                     DispatchQueue.main.async {
                         guard let user = response.user else { return }
+                        SessionManager.user = user
                         self.user.email = user.email
                         self.user.username = user.username
                         self.user.id = user.id
                         self.user.signedUpClicked = false
                         self.user.signedInClicked = false
+                        UserDefaults.standard.set(self.user.email , forKey: "email")
+                        UserDefaults.standard.set(self.user.id , forKey: "id")
+                        UserDefaults.standard.set(self.user.username , forKey: "username")
+                        UserDefaults.standard.set(true , forKey: "signed_in")
                     }
                 case "email_error":
                     self.alertTitle = "This email address already signed up"
