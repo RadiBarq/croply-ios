@@ -78,15 +78,20 @@ struct MapViewContainer: UIViewRepresentable {
             guard let annotation = annotation as? LandmarkAnnotation else { return nil }
             let identifier = "Annotation"
             var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+          
+    
             if annotationView == nil {
                 annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView?.canShowCallout = true
                 annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             } else {
                 annotationView?.annotation = annotation
+                  annotationView?.markerTintColor = UIColor(red: CGFloat(annotation.red)/255 , green: CGFloat(annotation.green)/255, blue: CGFloat(annotation.blue)/255, alpha: 1)
             }
             return annotationView
         }
+        
+        
     }
     
     private func updateAnnotations(from mapView: MKMapView) {

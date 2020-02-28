@@ -20,6 +20,8 @@ struct CameraView: View {
     @State private var shouldShowAlert = false
     @State private var detectionFinished = false
     @State var detectedDisease: Disease?
+    @State var otherDieaseas: [Disease?]?
+    @State var accuraces: [Float]?
     @EnvironmentObject var user: SessionUser
     @EnvironmentObject var location: LocationManager
     
@@ -33,7 +35,6 @@ struct CameraView: View {
                 }),
                 .cancel(Text("Close"), action: {
                     self.showChangeImageAction = false
-                    
                     
                 }),
                 .destructive(Text("Remove"), action: {
@@ -82,7 +83,7 @@ struct CameraView: View {
                 .sheet(isPresented: $detectionFinished, onDismiss: {
                        self.detectionFinished = false
                    }, content: {
-                       DiseaseView(disease: self.detectedDisease!)
+                    DiseaseView(disease: self.detectedDisease!, otherDiseases: self.otherDieaseas!, accuraces: self.accuraces ?? [], showNavigation: true)
                    })
                 Spacer()
                 
@@ -156,7 +157,7 @@ struct CameraView: View {
         postRequest.PredictImage(image: uiImage!){ result in
             switch result {
             case .success(let response):
-                if response.result == -1{
+                if response.result1.id == 0 {
                     self.alertTitle = "Cannot detect disease!"
                     self.alertMessage = "Please take a picture of only one leaf. We are working on improving the supported diseases in our app."
                     self.shouldShowAlert = true
@@ -164,14 +165,14 @@ struct CameraView: View {
                     return
                 }
                 
-                let scanRequest = Scan(id: Int(response.result) + 1, userId: self.user.id, lat: self.location.lastKnownLocation?.coordinate.latitude ?? 0.0, lng: self.location.lastKnownLocation?.coordinate.longitude ?? 0.0)
+                let scanRequest = Scan(id: response.result1.id, userId: self.user.id, lat: self.location.lastKnownLocation?.coordinate.latitude ?? 0.0, lng: self.location.lastKnownLocation?.coordinate.longitude ?? 0.0, diseaseId: response.result1.id, diseaseId2: response.result2.id, diseaseId3: response.result3.id, accuracy: response.result1.prediction, accuracy2: response.result2.prediction, accuracy3: response.result3.prediction)
                 postRequest.scanDisease(with: scanRequest) {
                     result in
                     self.showIndicator = false
                     switch result {
-                    case .success(let disease):
-                        postRequest.UploadRequest(image: self.uiImage!, scanId: disease.scanId!) {result in }
-                        self.diseaseDetected(disease: disease)
+                    case .success(let scan):
+                        postRequest.UploadRequest(image: self.uiImage!, scanId: scan.disease!.scanId!) { result in }
+                        self.diseaseDetected(disease: scan.disease!, otherDiseases: [scan.disease2, scan.disease3], accuraces: [scan.accuracy, scan.accuracy2, scan.accuracy3])
                     case .failure(let type):
                         switch type {
                         case .responseProblem:
@@ -210,9 +211,11 @@ struct CameraView: View {
         self.uiImage = nil
     }
     
-    func diseaseDetected(disease: Disease) {
+    func diseaseDetected(disease: Disease, otherDiseases: [Disease?], accuraces: [Float]) {
         self.user.scansChanged = true
         self.detectedDisease = disease
+        self.otherDieaseas = otherDiseases
+        self.accuraces = accuraces
         dismissImageClicked()
         self.detectionFinished = true
     }

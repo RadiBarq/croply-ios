@@ -20,21 +20,21 @@ struct DiseaseListView: View {
     
     var body: some View {
         Group {
-        if shouldShowIndicator { ActivityIndicator(isAnimating: $shouldShowIndicator) }
-    
-        else {
-        List(self.networkingManager.cropsDiseases) { disease in
-            NavigationLink(destination: DiseaseView(disease: disease)) {
-                DiseaseCell(diseaseName: disease.name, imageURL: NetworkManager.diseaeImageURLString +
-                "\(disease.id)" + ".jpg", description: disease.description)
+            if shouldShowIndicator { ActivityIndicator(isAnimating: $shouldShowIndicator) }
+
+            else {
+                List(self.networkingManager.cropsDiseases) { disease in
+                    NavigationLink(destination: DiseaseView(disease: disease, otherDiseases: [], accuraces: [], showNavigation: false)) {
+                        DiseaseCell(diseaseName: disease.name, imageURL: NetworkManager.diseaeImageURLString +
+                            "\(disease.id)" + ".jpg", description: disease.description)
+                    }
                 }
-        }
-        .navigationBarTitle(self.cropName)
-        }
+                .navigationBarTitle(self.cropName)
+            }
         }
         .onAppear() {
             self.networkingManager.getDiseaseByCropKind(for: User(id: self.cropId, username: " ", email: " ", password:  " ")) { result in
-                  self.shouldShowIndicator = false
+                self.shouldShowIndicator = false
             }
         }
     }

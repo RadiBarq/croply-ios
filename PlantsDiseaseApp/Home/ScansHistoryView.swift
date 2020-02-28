@@ -18,11 +18,12 @@ struct ScansHistoryView: View {
     init() {
         networkingManager = NetworkManager()
     }
+    
     var body: some View {
         return NavigationView {
             if networkingManager.loadingScansHistory{ ActivityIndicator(isAnimating: $networkingManager.loadingScansHistory) }
             List(networkingManager.scansHistory) { scan in
-                NavigationLink(destination: DiseaseView(disease: scan.disease!)) {
+                NavigationLink(destination: DiseaseView(disease: scan.disease!, otherDiseases: [scan.disease2, scan.disease3], accuraces: [scan.accuracy, scan.accuracy2, scan.accuracy3], showNavigation: false)) {
                     HistoryCell(imageURL: NetworkManager.scanImageURLStrig +
                         "\(scan.id!)" + ".jpeg", diseaseName: scan.disease!.name, cropName: scan.crop!.name, createdAt: scan.createdAt)
                 }
@@ -72,7 +73,6 @@ fileprivate struct HistoryCell: View {
                 Spacer()
                 HStack(alignment: .top) {
                     Text(createdAt ?? " ")
-                        .foregroundColor(.white)
                         .font(.footnote)
                         .padding(.leading, 15)
                 }

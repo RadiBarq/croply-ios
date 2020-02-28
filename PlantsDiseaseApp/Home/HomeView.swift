@@ -39,7 +39,7 @@ struct HomeView: View {
                                     ForEach((self.networkManager.dashboardHeadlinesDic[headline])!.indices, id: \.self){
                                         item in
                                         NavigationLink(destination:
-                                            DiseaseView(disease: self.networkManager.dashboardDiseasesDic[headline]![item])
+                                            DiseaseView(disease: self.networkManager.dashboardDiseasesDic[headline]![item], otherDiseases: [], accuraces: [], showNavigation: false)
                                         ) {
                                             VStack {
                                                 if headline == "Recent scans" {

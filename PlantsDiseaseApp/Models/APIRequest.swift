@@ -19,6 +19,7 @@ enum APIError: Error {
 class NetworkManager: ObservableObject {
     @Published var cropsDiseases = [Disease]()
     @Published var scansHistory = [Scan]()
+    @Published var recentScans = [Scan]()
     @Published var recentScansHistory = [String]()
     @Published var dashboardHeadlinesDic = [String: Array<String>]()
     @Published var diseasesLocoation = [Landmark]()
@@ -26,6 +27,7 @@ class NetworkManager: ObservableObject {
     public var cropsId = [Int]()
     @Published var dashboardDiseasesDic = [String: Array<Disease>]()
     @Published var dashbaordRecentScansIds = [Int]()
+    
     var rootURLString = "https://croply.azurewebsites.net/"
     var recentScansURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_recent_scans_mobile")
     var commonCropsURL: URL? =  URL(string: "https://croply.azurewebsites.net/plant/get_common_crops_mobile")
@@ -98,7 +100,7 @@ class NetworkManager: ObservableObject {
                 }
                 DispatchQueue.main.async {
                     self.diseasesLocoation = response.markers.map {marker in
-                        Landmark(name: marker.disease.name + " (" + String(marker.count) + ")", location: .init(latitude: marker.lat, longitude: marker.lng))
+                        Landmark(name: marker.disease.name + " (" + String(marker.count) + ")", location: .init(latitude: marker.lat, longitude: marker.lng), red: marker.red, green: marker.green, blue: marker.blue)
                     }
                     completion(.success(response))
                 }
@@ -172,6 +174,9 @@ class NetworkManager: ObservableObject {
                         self.dashbaordRecentScansIds = response.scans.map { scan in
                             return scan.id!
                         }
+                        
+                        self.recentScans = response.scans
+                        
                         completion(.success(response))
                     }
                 } catch {
@@ -414,7 +419,7 @@ struct APIRequest {
     }
     
     
-    func scanDisease(with scanRequest: Scan, completion: @escaping(Result<Disease, APIError>) -> Void) {
+    func scanDisease(with scanRequest: Scan, completion: @escaping(Result<Scan, APIError>) -> Void) {
         do {
             var urlRequest = URLRequest(url: resourceURL)
             urlRequest.httpMethod = "POST"
@@ -422,13 +427,17 @@ struct APIRequest {
             urlRequest.httpBody = try JSONEncoder().encode(scanRequest)
             let dataTask = URLSession.shared.dataTask(with: urlRequest) { data, response,_ in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let jsonData = data else {
+                    if let JSONString = String(data: data!, encoding: String.Encoding.utf8)
+                            {
+                                           print(JSONString)
+                            }
                     completion(.failure(.responseProblem))
                     return
                 }
                 do {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let response = try decoder.decode(Disease.self, from: jsonData)
+                    let response = try decoder.decode(Scan.self, from: jsonData)
                     completion(.success(response))
                 } catch {
                     completion(.failure(.decondingProblem))
@@ -481,8 +490,8 @@ struct APIRequest {
     }
     
     func PredictImage(image: UIImage, completion: @escaping(Result<PredictionResult, APIError>) -> Void) {
-        let url = URL(string: "https://croply-django.azurewebsites.net/predict")
-        //  let url = URL(string: "http://127.0.0.1:8000/predict")
+      //  let url = URL(string: "https://croply-django.azurewebsites.net/predict")
+        let url = URL(string: "http://127.0.0.1:8000/predict")
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
         let boundary = generateBoundaryString()
@@ -536,7 +545,14 @@ struct APIResult: Decodable{
 }
 
 struct PredictionResult: Decodable {
-    var result: Double
+    var result1: Prediction
+    var result2: Prediction
+    var result3: Prediction
+}
+
+struct Prediction: Decodable {
+    var id: Int
+    var prediction: Float
 }
 
 struct ChangePasswordRequest: Encodable {

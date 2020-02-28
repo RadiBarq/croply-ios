@@ -13,4 +13,7 @@ class Marker: Codable {
     let lat: Double
     let lng: Double
     let disease: Disease
+    let red: Int
+    let green: Int
+    let blue: Int
 }
